@@ -53,6 +53,49 @@ UNSIGNED int variable; //un nombre entier positif
 char variable; //un caractère
 //Le string n'est pas présenté ici ca c'est un tableau de caractère.
 
+
+int variable = 5;
+float variable = 3.14;
+char variable = 'V';
+
+			</pre>	
+		</div>
+		<p> Maintenant, la syntaxe d'une fonction :</p>
+		<div class="code">
+			<pre class="prettyprint lang-cpp">
+
+//Pour définir une fonction il faut définir : son type, son nom et ses paramètres
+
+int maFonction(int parametre){
+	//ici mon code..
+	/*ici un
+	peu 
+	de
+	commentaire inutile*/
+}
+			</pre>	
+		</div>
+<p>On peut définir une fonction n'importe dans le code du moment que cette fonction soit déclarer avant d'être appelée.</br>
+Pour être plus précis ...</p>
+
+		<div class="code">
+			<pre class="prettyprint lang-cpp">	
+int maFonction(int);
+
+int main(
+	int argc, //CG : nombre d'argument reçu 
+	char *argv[], //CG : les arguments dans un tableaux
+	char *envp[]){	//CG : les variables d'environnements windows
+	//le début de l'execution d'un programme console
+	maFontion(5);
+}
+
+int maFonction(int parametre){
+	//ici mon code..
+	
+}
+
+//autant prendre l'habitude de déclarer les fonctions en haut du fichier.
 			</pre>	
 		</div>
 	</article>
