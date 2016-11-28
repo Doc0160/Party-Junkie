@@ -53,10 +53,12 @@ UNSIGNED int variable; //un nombre entier positif
 char variable; //un caractère
 //Le string n'est pas présenté ici ca c'est un tableau de caractère.
 
+bool variable; // Un veriable de type boolean : vrai ou faux/ TRUE or FALSE
 
 int variable = 5;
 float variable = 3.14;
 char variable = 'V';
+bool variable = true;
 
 			</pre>	
 		</div>
@@ -75,7 +77,7 @@ int maFonction(int parametre){
 }
 			</pre>	
 		</div>
-<p>On peut définir une fonction n'importe dans le code du moment que cette fonction soit déclarer avant d'être appelée.</br>
+<p>On peut définir une fonction n'importe où dans le code du moment que cette fonction soit déclarer avant d'être appelée.</br>
 Pour être plus précis ...</p>
 
 		<div class="code">
@@ -98,6 +100,92 @@ int maFonction(int parametre){
 //autant prendre l'habitude de déclarer les fonctions en haut du fichier.
 			</pre>	
 		</div>
+		<p>Si tu connais rien alors demande à Tristan</p>
+		<div class="code">
+			<pre class="prettyprint lang-cpp">
+
+//les conditions :
+
+int communaute = 9;
+
+if( communaute == 9 ){
+	//c'est la communauté de l'anneau
+}
+else if( communaute < 9){
+	//c'est un des deux autres films
+}
+else{
+	//tu mates Harry Potter et gandalf est gay
+}
+
+//on vient de voir la condition la plus basique du monde
+			</pre>
+		</div>
+		<p>
+			<table>
+				<caption>Les opérateurs logiques</caption>
+				<tr>
+					<td>ET</td>
+					<td>&&</td>
+					<td>true && true = true, true && false = false</td>
+				</tr>
+				<tr>
+					<td>OU</td>
+					<td>||</td>
+					<td>true || true = true, true || false = true, false || false = false</td>
+				</tr>
+				<tr>
+					<td>EGALE</td>
+					<td>==</td>
+					<td>true == true = true, true == false = false</td>
+				</tr>
+				<tr>
+					<td>N'est pas EGALE</td>
+					<td>!=</td>
+					<td>true != true = false, true != false = true</td>
+				</tr>
+				<tr>
+					<td>SUPERIEUR OU EGALE</td>
+					<td>>=</td>
+					<td>5 >= 2 = true, 5 >= 6 = false</td>
+				</tr>
+				<tr>
+					<td>INFERIEUR OU EGALE</td>
+					<td><=</td>
+					<td>5 <= 2 = false, 5 <= 6 = true</td>
+				</tr>
+				<tr>
+					<td>SUPERIEUR</td>
+					<td>></td>
+					<td>Think for yourself</td>
+				</tr>
+				<tr>
+					<td>INFERIEUR</td>
+					<td><</td>
+					<td>Think for yourself</td>
+				</tr>
+			</table>
+		</p>
+		<p>Et on tourne en rond !</p>
+		<div class="code">
+			<pre class="prettyprint lang-cpp">
+
+//les boucles :
+
+int anneau = 1;
+
+while(anneau < 2){
+	//et hop une boucle infinie !
+}
+
+
+for(int i = 0; i < 7; i++){
+	//je tourne 7 fois ma langue dans ma bouche avant de parler 
+}
+			</pre>
+		</div>
+		<p>Et voilà c'est tout pour aujourd'hui</p>
+		<img src="img/premisse/fly.gif">
 	</article>
 </div>
 

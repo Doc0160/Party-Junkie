@@ -261,3 +261,12 @@ img{
     display: block;
     margin-bottom: 15px;
 }
+
+table{
+	margin: auto;
+	margin-bottom: 25px;
+	padding: 0;
+}
+td{
+	border: 1px solid black;
+}
