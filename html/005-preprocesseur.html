@@ -34,7 +34,14 @@
 <div class="content" id="content">
 <article>
 <h1>Pre-processeur</h1>
-    <pre class="prettyprint lang-cpp">
+  <p>
+  Les préprocesseurs lexicaux sont les préprocesseurs de plus bas niveau, au sens où ils requièrent uniquement un mécanisme d'analyse lexicale. Ces préprocesseurs se contentent de procéder à des substitutions de chaînes de caractères en fonction de règles définies par l'utilisateur. On les utilise généralement pour instancier des macros, inclure d'autres fichiers (par opposition à des fonctionnalités de plus haut niveau telles que l'inclusion de modules/paquets/unités/composants) et permettre la compilation ou/et l'inclusion conditionnelle.
+  </p>
+  <p>
+    Le mécanisme des macros est fréquemment utilisé en C pour définir de petits extraits de code qui seront réutilisés à divers endroits du programme.
+    Les langages de programmation plus modernes se passent généralement de méta-programmation par macro-expansion de chaînes de caractères, et utilisent généralement des fonctions/méthodes traditionnelles, recopiées par le compilateur en ligne en fonction d'optimisations automatiques ou guidées. De même, plutôt que d'utiliser des macros pour définir des structures de données, ces langages utilisent souvent du polymorphisme paramétrique (aussi appelé templates, alias méthodes/classes génériques).
+  </p>
+  <pre class="prettyprint lang-cpp">
       #define test void main(void){}
 
       test
