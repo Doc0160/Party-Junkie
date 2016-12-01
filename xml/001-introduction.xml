@@ -3,9 +3,15 @@
 <article>
 <h1>Introduction</h1>
 <p>
-  <img src="../img/ram_is_slow/0.png" />
+  Voici à quoi ressemble un processeur:
+<img src="../img/ram_is_slow/0.png" /></p>
+<p>
+  Chaqun de ces coeurs se compose d'une unité de calcul, de registres(toute petite mémoire) ansi que deux niveaux de mémoire D-RAM appelé Cache.
+  
   <img src="../img/ram_is_slow/1.png" />
+</p>
   <img src="../img/ram_is_slow/2.png" />
   <img src="../img/ram_is_slow/3.png" />
+</p>
 </article>
 </div>
