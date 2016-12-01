@@ -18,12 +18,14 @@
     <pre class="prettyprint lang-cpp">
       void main(void){}
     </pre>
-    Ces macros peuvent prendre des "paramétres":
+    <p>
+    Ces macros peuvent prendre des "paramétres":</p>
     <pre class="prettyprint lang-cpp">
       #define min(X, Y)  ((X) < (Y) ? (X) : (Y))
       #define max(X, Y)  ((X) > (Y) ? (X) : (Y))
     </pre>
-    Rajouter # devent permet de transformer ce paramétre en string.
+    <p>
+    Rajouter # devent permet de transformer ce paramétre en string.</p>
     <pre class="prettyprint lang-cpp">
       #define str(s) #s
       void main(void){
