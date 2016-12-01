@@ -89,12 +89,12 @@ while ($a < $nb) {
     
     EatWhiteSpace($i, $f);
     // GET RID OF <?xml ....
-    while($f[$i] != "\n"){
+    while($f[$i] != "\n" && $i < strlen($f)){
         $i++;
     }
     // parse the full thing
     DoNode($i, $f, $array);
-    var_dump($array);
+    //var_dump($array);
 
     $page = '
 	<!DOCTYPE html>
