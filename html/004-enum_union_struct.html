@@ -33,10 +33,8 @@
 </div>
 <div class="content" id="content">
 <article>
-<h1>Introduction</h1>
+<h1>Les structures</h1>
 <p>
-Les structures:
-
 Une structure est un assemblage de variables de différents types, le tout de maniére groupée en mémoire. Contrairement aux tableaux qui vous obligent à utiliser le même type dans tout le tableau, vous pouvez créer une structure comportant des variables de types long, char, int et double à la fois.
 
 <pre class="prettyprint lang-cpp">
@@ -54,11 +52,16 @@ void main(void) {
     
     Projectile *pointer = &p;
     pointer->y = 2; // on peux acceder aux memebres directement depuis le pointer avec "->"
-    //equivaut à
+    /*
+       equivaut à
+    */
     (*pointer).y = 2;
 }
 </pre>
 </p>
+</article>
+
+<article>
 <p>
 Les unions:
 Les unions servent à acceder à la même partie de la mémoire de plusieurs façons
@@ -104,7 +107,7 @@ if(p == r.ul){
 
 Les bons exemples d'unions sont assez rares/ les unions sont rarement utilisées.
     
-Les enums:
+Les enums:<br>
     Le principal intérêt des type enum est de permettre de définir des ensembles de constantes entières(int) en les regroupant par thème. Cette façon de faire permet d'éviter d'utiliser des littéraux, ce qui a pour effet de rendre le code plus facile à lire. Par exemple vous peuvez utiliser un enum pour définir des couleurs.
 <pre class="prettyprint lang-cpp">
 enum color{
