@@ -41,7 +41,7 @@
     <p>Devient:</p>
     <pre class="prettyprint lang-cpp">
       void main(void){
-          echo("4");
+          printf("4");
       }
     </pre>
 </article>
@@ -64,5 +64,6 @@
     bite
   </pre>
   <p>Eh oui, bien sûr "bite" !</p>
+  <blockquote class="imgur-embed-pub" lang="en" data-id="ZfAOOen"><a href="//imgur.com/ZfAOOen"></a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
 </article>
 </div>
