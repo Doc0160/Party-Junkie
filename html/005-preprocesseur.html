@@ -54,7 +54,20 @@
     <pre class="prettyprint lang-cpp">
       #define min(X, Y)  ((X) < (Y) ? (X) : (Y))
       #define max(X, Y)  ((X) > (Y) ? (X) : (Y))
-      <pre>
+    </pre>
+    <pre class="prettyprint lang-cpp">
+      #define str(s) #s
+      void main(void){
+          echo(str(4));
+      }
+    </pre>
+    Devient:
+    <pre class="prettyprint lang-cpp">
+      #define str(s) #s
+      void main(void){
+          echo("4");
+      }
+    </pre>
 </article>
 
 	</div>
