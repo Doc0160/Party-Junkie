@@ -1,5 +1,5 @@
 $(document).ready(function(){
-	var song = new Audio('song/marioTheme.mp3');
+	var song = new Audio('https://doc0160.github.io/Party-Junkie/song/marioTheme.mp3');
 
 	$('#svg_song').click(function(){
 		$('#svg_song').toggleClass('invisible');
