@@ -162,8 +162,9 @@ while ($a < $nb) {
 </body>
 </html>
 ';
-
-    file_put_contents("../html/".str_replace(".xml", ".html", $name[$a]), $page);
+	$nameo = str_replace(".xml", ".html", $name[$a]);
+	$nameo = str_replace("_", " ", $nameo);
+    file_put_contents("../html/".$nameo, $page);
     
     $a++;
 }
