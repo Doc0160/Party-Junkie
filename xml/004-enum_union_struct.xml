@@ -30,7 +30,7 @@ void main(void) {
 </article>
 <article>
 <p>
-Les unions:
+<h1>Les unions:</h1>
 Les unions servent à acceder à la même partie de la mémoire de plusieurs façons
 
 <pre class="prettyprint lang-cpp">
@@ -70,11 +70,14 @@ if(p == r.ul){
 // ils sont égaux
 }
 </pre>
+</p>
+</article>
+<article>
 <p>
 
 Les bons exemples d'unions sont assez rares/ les unions sont rarement utilisées.
     
-Les enums:<br>
+<h1>Les enums:</h1>
     Le principal intérêt des type enum est de permettre de définir des ensembles de constantes entières(int) en les regroupant par thème. Cette façon de faire permet d'éviter d'utiliser des littéraux, ce qui a pour effet de rendre le code plus facile à lire. Par exemple vous peuvez utiliser un enum pour définir des couleurs.
 <pre class="prettyprint lang-cpp">
 enum color{
