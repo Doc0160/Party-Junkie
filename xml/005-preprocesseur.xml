@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <div>
 <article>
-  <h1>Pre-processeur</h1>
+  <h1>Preprocesseur</h1>
   <p>
   Les préprocesseurs lexicaux sont les préprocesseurs de plus bas niveau, au sens où ils requièrent uniquement un mécanisme d'analyse lexicale. Ces préprocesseurs se contentent de procéder à des substitutions de chaînes de caractères en fonction de règles définies par l'utilisateur. On les utilise généralement pour instancier des macros, inclure d'autres fichiers (par opposition à des fonctionnalités de plus haut niveau telles que l'inclusion de modules/paquets/unités/composants) et permettre la compilation ou/et l'inclusion conditionnelle.
+  </p>
+  <p>
+    Le préprocesseur est éxécuté avant la compilation.
   </p>
 </article>
 <article>
@@ -49,7 +52,7 @@
     Le préprocesseur C permet aussi la compilation conditionnelle, ce qui permet de disposer de plusieurs versions d'un même programme ou d'un extrait dans un même fichier source. Typiquement, les programmeurs C utilisent cette technique pour pouvoir compiler différemment le programme en fonction de son état d'avancement, de la plateforme de destination, des tests désirés, ou pour s'assurer que les fichiers d'en-tête ne sont inclus qu'une seule fois.
     La majorité des langages de programmation modernes n'utilisent pas cette fonctionnalité et dépendent plutôt d'une utilisation des habituels opérateurs if…then…else…, laissant au compilateur la tâche de supprimer le code inutile.
   </p>
-  <p>#if permet </p>
+  <p>#if permet d'éffacer ou de laisser le code en fonction d'une condition.</p>
   <pre class="prettyprint lang-cpp">
     #if 0
     void main(void){}
@@ -57,7 +60,7 @@
     bite
     #endif
   </pre>
-  <p>Devient</p>
+  <p>Devient.</p>
   <pre class="prettyprint lang-cpp">
     bite
   </pre>
