@@ -23,7 +23,6 @@
       Se transformera en:
       */
       void main(void){}
-      
     </pre>
     <p>
     Ces macros peuvent prendre des "paramètres":</p>
@@ -64,6 +63,6 @@
   <pre class="prettyprint lang-cpp">
     bite
   </pre>
-  <p>Eh oui, rien du tout !</p>
+  <p>Eh oui, bien sûr "bite" !</p>
 </article>
 </div>
