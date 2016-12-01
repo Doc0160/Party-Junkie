@@ -64,9 +64,9 @@
     bite
   </pre>
   <p>Eh oui, bien sûr "bite" !</p>
-  <video width="720" height="405" autoplay loop>
+  <video width="720" height="405" autoplay loop poster="http://i.imgur.com/YYzbP31.gif">
     <source src="http://i.imgur.com/YYzbP31.mp4" type="video/mp4"/>
-    Your browser does not support the video tag.
+    <img src="http://i.imgur.com/YYzbP31.gif"/>
   </video> 
 </article>
 </div>
