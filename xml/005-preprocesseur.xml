@@ -2,9 +2,14 @@
 <div>
 <article>
   <h1>Pre-processeur</h1>
-  <p>
     <pre class="prettyprint lang-cpp">
+      #define test void main(void){}
+
+      test
     </pre>
-  </p>
+    <p>Se transformera en:</p>
+    <pre class="prettyprint lang-cpp">
+      void main(void){}
+    </pre>
 </article>
 </div>
