@@ -69,4 +69,10 @@
     <img src="http://i.imgur.com/YYzbP31.gif"/>
   </video> 
 </article>
+<article>
+  <h1>Inclusion</h1>
+  <p>
+    L'usage le plus fréquent du préprocesseur C est la directive #include "<>" dont le rôle est de recopier le contenu d'un fichier dans le fichier courant.
+  </p>
+</article>
 </div>
