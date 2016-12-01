@@ -122,7 +122,7 @@ while ($a < $nb) {
 	    # code...
 	    $page .= '<li><a href="'.
                  str_replace(".xml", ".html", $name[$i]).'">'.
-                 str_replace(".xml", "", $name[$i]).'</a></li>';
+                  str_replace("_", " ", str_replace(".xml", "", $name[$i])).'</a></li>';
 	    $i++;
     }
     
@@ -163,7 +163,6 @@ while ($a < $nb) {
 </html>
 ';
 	$nameo = str_replace(".xml", ".html", $name[$a]);
-	$nameo = str_replace("_", " ", $nameo);
     file_put_contents("../html/".$nameo, $page);
     
     $a++;
