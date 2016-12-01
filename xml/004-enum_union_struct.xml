@@ -76,7 +76,7 @@ Les bons exemples d'unions sont assez rares/ les unions sont rarement utilisées
 </article>
 
 <article>
-<h1>Les enums:/h1>
+<h1>Les enums</h1>
 <p>Le principal intérêt des type enum est de permettre de définir des ensembles de constantes entières(int) en les regroupant par thème. Cette façon de faire permet d'éviter d'utiliser des littéraux, ce qui a pour effet de rendre le code plus facile à lire. Par exemple vous peuvez utiliser un enum pour définir des couleurs.
 </p>
 <pre class="prettyprint lang-cpp">
