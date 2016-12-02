@@ -196,60 +196,60 @@ C'est un concept essentiel de l'informatique. En effet, les processeurs des ordi
   Positionner un bit à 1
 
   Le principe est de combiner la valeur avec un masque grâce à l'opérateur OU. En effet, comme l'indique la table de vérité, les bits à 0 du masque vont laisser la valeur initiale inchangée, alors les bits à 1 vont s'imposer.
-<pre class="prettyprint lang-cpp">
-  /* mettre a 1 le bit 4 de b : */
-  unsigned a = 0x000F; /* 0000 0000 0000 1111 */
-  unsigned b = 0x0010; /* 0000 0000 0001 0000 */
-  unsigned c = a | b;  /* 0000 0000 0001 1111 soit 0x001F */
+  <pre class="prettyprint lang-cpp">
+    /* mettre a 1 le bit 4 de b : */
+    unsigned a = 0x000F; /* 0000 0000 0000 1111 */
+    unsigned b = 0x0010; /* 0000 0000 0001 0000 */
+    unsigned c = a | b;  /* 0000 0000 0001 1111 soit 0x001F */
 
-  printf ("%04X OU %04X = %04X\n", a, b, c);
-</pre>
+    printf ("%04X OU %04X = %04X\n", a, b, c);
+  </pre>
   Pour fabriquer le masque, il suffit d'utiliser un 1 que l'on décale à gauche de la valeur correspondante au poids du bit. Par exemple :
 
   Bit 0  : 1u << 0  = 0000 0000 0000 0001
   Bit 2  : 1u << 2  = 0000 0000 0000 0100
   Bit 15 : 1u << 15 = 1000 0000 0000 0000
-Comme pour toute manipulation de bits (y compris avec des constantes), on utilise des valeurs non signées (d'où le 'u').
+  Comme pour toute manipulation de bits (y compris avec des constantes), on utilise des valeurs non signées (d'où le 'u').
 
-Positionner un bit à 0
+  Positionner un bit à 0
 
-Le principe est de combiner la valeur avec un masque grâce à l'opérateur ET. En effet, comme l'indique la table de vérité, les bits à 1 du masque vont laisser la valeur initiale inchangée, alors les bits à 0 vont s'imposer.
+  Le principe est de combiner la valeur avec un masque grâce à l'opérateur ET. En effet, comme l'indique la table de vérité, les bits à 1 du masque vont laisser la valeur initiale inchangée, alors les bits à 0 vont s'imposer.
+  <pre class="prettyprint lang-cpp">
+    /* mettre a 0 le bit 3 de b : */
+    unsigned a = 0x000F; /* 0000 0000 0000 1111 */
+    unsigned b = 0xFFF7; /* 1111 1111 1111 0111 */
+    unsigned c = a & b;  /* 0000 0000 0000 0111 soit 0x0007 */
+
+    printf ("%04X OU %04X = %04X\n", a, b, c);
+  </pre>
+  Pour fabriquer le masque, il suffit d'utiliser un 1 que l'on décale à gauche de la valeur correspondante au poids du bit, puis on inverse les bits avec l'opérateur NON. Par exemple :
+
+  Bit 0  : ~(1u << 0)  = 1111 1111 1111 1110
+  Bit 2  : ~(1u << 2)  = 1111 1111 1111 1011
+  Bit 15 : ~(1u << 15) = 0111 1111 1111 1111
+  Tester la valeur d'un bit
+
+  Le principe est d'évaluer le resultat entre la valeur à tester d'une part et un masque à 0, sauf le bit à tester, avec l'opérateur AND. Les bits a 0 restent à 0. Le bit à un passe à un si la valeur lue est 1, sinon, il reste à 0. Si le résultat est 0, le bit est donc à 0. Si il n'est pas 0, il est à 1.
 <pre class="prettyprint lang-cpp">
-   /* mettre a 0 le bit 3 de b : */
-   unsigned a = 0x000F; /* 0000 0000 0000 1111 */
-   unsigned b = 0xFFF7; /* 1111 1111 1111 0111 */
-   unsigned c = a & b;  /* 0000 0000 0000 0111 soit 0x0007 */
+  /* tester l'état du bit 2 de a : */
+  unsigned a = 0x000F; /* 0000 0000 0000 1111 */
 
-   printf ("%04X OU %04X = %04X\n", a, b, c);
+  if (a & (1u << 2))
+  {
+  puts("bit 2 = 1");
+  }
+  else
+  {
+  puts("bit 2 = 0");
+  }
+
+  /* on peut aussi directement recuperer la valeur 0 ou 1
+  a l'aide des proprietes de l'operateur logique ! : */
+  printf ("bit 2 = %d\n", !!(a & (1u << 2)));
 </pre>
-Pour fabriquer le masque, il suffit d'utiliser un 1 que l'on décale à gauche de la valeur correspondante au poids du bit, puis on inverse les bits avec l'opérateur NON. Par exemple :
+  Conclusion
 
-Bit 0  : ~(1u << 0)  = 1111 1111 1111 1110
-Bit 2  : ~(1u << 2)  = 1111 1111 1111 1011
-Bit 15 : ~(1u << 15) = 0111 1111 1111 1111
-Tester la valeur d'un bit
-
-Le principe est d'évaluer le resultat entre la valeur à tester d'une part et un masque à 0, sauf le bit à tester, avec l'opérateur AND. Les bits a 0 restent à 0. Le bit à un passe à un si la valeur lue est 1, sinon, il reste à 0. Si le résultat est 0, le bit est donc à 0. Si il n'est pas 0, il est à 1.
-
-   /* tester l'état du bit 2 de a : */
-   unsigned a = 0x000F; /* 0000 0000 0000 1111 */
-
-   if (a & (1u << 2))
-   {
-      puts("bit 2 = 1");
-   }
-   else
-   {
-      puts("bit 2 = 0");
-   }
-
-   /* on peut aussi directement recuperer la valeur 0 ou 1
-      a l'aide des proprietes de l'operateur logique ! : */
-   printf ("bit 2 = %d\n", !!(a & (1u << 2)));
-
-   Conclusion
-
-Je laisse au lecteur le soin de refaire ces exercices, et trouver le moyen de positionner et tester plusieurs bits d'une même variable.
+  Je laisse au lecteur le soin de refaire ces exercices, et trouver le moyen de positionner et tester plusieurs bits d'une même variable.
 
 
   
