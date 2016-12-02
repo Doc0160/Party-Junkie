@@ -106,15 +106,23 @@ C'est un concept essentiel de l'informatique. En effet, les processeurs des ordi
     <li>SHL (Décalage à gauche)</li>
     <li>NOT (NON)</li>
   </ul>
-</p>
+  </p>
   <p>
     L'opérateur unaire NOT inverse l'état d'un bit selon le tableau suivant :
-  
-  Table de vérité NOT
-  A   NOT A
-  0   1
-  1   0
-  L'opérateur C est ~. Il agit sur chaque bit de la valeur :
+    
+    Table de vérité NOT
+    <table>
+      <tr>
+        A   NOT A
+      </tr>
+      <tr>
+        0   1
+      </tr>
+      <tr>
+        1   0
+      </tr>
+    </table>
+    L'opérateur C est ~. Il agit sur chaque bit de la valeur :
   </p>
   <pre class="prettyprint lang-cpp">
     unsigned a = 1;
