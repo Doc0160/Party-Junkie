@@ -42,14 +42,8 @@ $(document).ready(function(){
 	        {
 		        volume = Math.max(0, volume - 0.025);
 	        }
-	    
-	    /*if(audioGainNode != null)
-	        {*/
-		        console.log("Volume set to: " + volume);
-                song.volume = Math.pow(volume, 2.0);
-		        //audioGainNode.gain.value = Math.pow(volume, 2.0); // makes the volume more realistic
-	       // }
-	    
-	    //volumeAnimation = 400;
+		console.log("Volume set to: " + volume);
+        song.volume = Math.pow(volume, 2.0);
+        e.preventDefault();
     }
 })
