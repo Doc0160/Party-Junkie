@@ -70,8 +70,26 @@ C'est un concept essentiel de l'informatique. En effet, les processeurs des ordi
   
   <tr>
     <td>17</td>
-    <td>001 0001</td> 
+    <td>0001 0001</td> 
     <td>0x11</td>
+  </tr>
+  
+  <tr>
+    <td>18</td>
+    <td>0001 0010</td> 
+    <td>0x12</td>
+  </tr>
+
+  <tr>
+    <td>...</td>
+    <td>...</td> 
+    <td>...</td>
+  </tr>
+
+  <tr>
+    <td>255</td>
+    <td>1111 1111</td> 
+    <td>0xFF</td>
   </tr>
   
 </table>
