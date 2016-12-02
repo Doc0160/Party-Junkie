@@ -17,14 +17,14 @@ $(document).ready(function(){
     if($('#svg_song').addEventListener)
 	    {
 		    // IE9, Chrome, Safari, Opera
-		    $('#svg_song').addEventListener("mousewheel", cbScroll, false);
+		    document.getElementById('svg_song').addEventListener("mousewheel", cbScroll, false);
 		    // Firefox
-		    $('#svg_song').addEventListener("DOMMouseScroll", cbScroll, false);
+		    document.getElementById('svg_song').addEventListener("DOMMouseScroll", cbScroll, false);
 	    }
 	// IE 6/7/8
 	else
 	    {
-		    $('#svg_song').attachEvent("onmousewheel", cbScroll);
+		    document.getElementById('svg_song').attachEvent("onmousewheel", cbScroll);
 	    }
 
     
