@@ -133,6 +133,9 @@ C'est un concept essentiel de l'informatique. En effet, les processeurs des ordi
     unsigned b = ~a; /* b == 1111 1111 1111 1110  (en supposant 16-bit) */
   </pre>
   
+</article>
+<article>
+  <h1>AND</h1>
   <p>
     L'opérateur binaire AND combine l'état de 2 bits selon le tableau suivant :
     <br/>
@@ -162,6 +165,9 @@ C'est un concept essentiel de l'informatique. En effet, les processeurs des ordi
     unsigned c = a & b; /* c == 0000 0000 1111 0000 soit 0x00F0 */
   </pre>
 
+</article>
+<article>
+  <h1>OR</h1>
   <p>
     L'opérateur binaire OR combine l'état de 2 bits selon le tableau suivant :
     <br/>
