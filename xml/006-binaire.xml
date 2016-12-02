@@ -98,20 +98,22 @@ C'est un concept essentiel de l'informatique. En effet, les processeurs des ordi
   <p>
     Les opérateurs bits permettent de modifier et de tester un ou plusieurs bits d'une donnée. Ces opérateurs sont :
   </p>
-NOT (NON)
-AND (ET)
-OR (OU)
-XOR (OU exclusif)
-SHR (Décalage à droite)
-SHL (Décalage à gauche)
-NOT (NON)
-<p>
-L'opérateur unaire NOT inverse l'état d'un bit selon le tableau suivant :
-</p>
-Table de vérité NOT
-A   NOT A
-0   1
-1   0
+  <ul>
+    <li>NOT (NON)</li>
+    <li>AND (ET)</li>
+    <li>OR (OU)</li>
+    <li>XOR (OU exclusif)</li>
+    <li>SHR (Décalage à droite)</li>
+    <li>SHL (Décalage à gauche)</li>
+    <li>NOT (NON)</li>
+  </ul>
+  <p>
+    L'opérateur unaire NOT inverse l'état d'un bit selon le tableau suivant :
+  </p>
+  Table de vérité NOT
+  A   NOT A
+  0   1
+  1   0
 L'opérateur C est ~. Il agit sur chaque bit de la valeur :
 
    unsigned a = 1;
