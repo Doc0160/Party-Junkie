@@ -129,15 +129,15 @@ C'est un concept essentiel de l'informatique. En effet, les processeurs des ordi
   
   <p>
     Les opérateurs bits permettent de modifier et de tester un ou plusieurs bits d'une donnée. Ces opérateurs sont :
-  <ul>
-    <li>NOT (NON)</li>
-    <li>AND (ET)</li>
-    <li>OR (OU)</li>
-    <li>XOR (OU exclusif)</li>
-    <li>SHR (Décalage à droite)</li>
-    <li>SHL (Décalage à gauche)</li>
-    <li>NOT (NON)</li>
-  </ul>
+    <ul>
+      <li>NOT (NON)</li>
+      <li>AND (ET)</li>
+      <li>OR (OU)</li>
+      <li>XOR (OU exclusif)</li>
+      <li>SHR (Décalage à droite)</li>
+      <li>SHL (Décalage à gauche)</li>
+      <li>NOT (NON)</li>
+    </ul>
   </p>
   <p>
     L'opérateur unaire NOT inverse l'état d'un bit selon le tableau suivant :
@@ -158,14 +158,14 @@ C'est un concept essentiel de l'informatique. En effet, les processeurs des ordi
   </p>
   <pre class="prettyprint lang-cpp">
     unsigned a = 1;
-    unsigned b = ~a; /* b == 1111111111111110  (en supposant 16-bit) */
+    unsigned b = ~a; /* b == 1111 1111 1111 1110  (en supposant 16-bit) */
   </pre>
   
   <p>
     L'opérateur binaire AND combine l'état de 2 bits selon le tableau suivant :
-  <br/>
-  Table de vérité AND:
-  <table>
+    <br/>
+    Table de vérité AND:
+    <table>
       <tr>
         <th>A</th><th>B</th><th>A AND B</th>
       </tr>
@@ -182,19 +182,19 @@ C'est un concept essentiel de l'informatique. En effet, les processeurs des ordi
         <td>1</td><td>1</td><td>1</td>
       </tr>
     </table>
-  L'opérateur C est &. Il agit sur chaque bit de la valeur :
+    L'opérateur C est &. Il agit sur chaque bit de la valeur :
   </p>
   <pre class="prettyprint lang-cpp">
-    unsigned a = 0xF0F0;
-    unsigned b = 0x00FF;
-    unsigned c = a & b; /* c == 0000000011110000 soit 0x00F0 */
+    unsigned a = 0xF0F0; // 1111 0000 1111 0000
+    unsigned b = 0x00FF; // 0000 0000 1111 1111
+    unsigned c = a & b; /* c == 0000 0000 1111 0000 soit 0x00F0 */
   </pre>
 
   <p>
     L'opérateur binaire OR combine l'état de 2 bits selon le tableau suivant :
-  <br/>
-  Table de vérité OR:
-  <table>
+    <br/>
+    Table de vérité OR:
+    <table>
       <tr>
         <th>A</th><th>B</th><th>A OR B</th>
       </tr>
@@ -214,15 +214,15 @@ C'est un concept essentiel de l'informatique. En effet, les processeurs des ordi
     L'opérateur C est |. Il agit sur chaque bit de la valeur :
   </p>
   <pre class="prettyprint lang-cpp">
-    unsigned a = 0xF0F0;
-    unsigned b = 0x00FF;
+    unsigned a = 0xF0F0; // 1111 0000 1111 0000
+    unsigned b = 0x00FF; // 0000 0000 1111 1111
     unsigned c = a | b; /* c == 1111 0000 1111 1111 soit 0xF0FF */
   </pre>
   <p>
     L'opérateur binaire XOR combine l'état de 2 bits selon le tableau suivant :
-  <br/>
-  Table de vérité XOR:
-  <table>
+    <br/>
+    Table de vérité XOR:
+    <table>
       <tr>
         <th>A</th><th>B</th><th>A XOR B</th>
       </tr>
@@ -239,35 +239,36 @@ C'est un concept essentiel de l'informatique. En effet, les processeurs des ordi
         <td>1</td><td>1</td><td>0</td>
       </tr>
     </table>
-  L'opérateur C est ^. Il agit sur chaque bit de la valeur :
+    L'opérateur C est ^. Il agit sur chaque bit de la valeur :
   </p>
   <pre class="prettyprint lang-cpp">
-    unsigned a = 0xF0F0;
-    unsigned b = 0x00FF;
+    unsigned a = 0xF0F0; // 1111 0000 1111 0000
+    unsigned b = 0x00FF; // 0000 0000 1111 1111
     unsigned c = a ^ b; /* c == 1111 0000 0000 1111 soit 0xF00F */
   </pre>
   <p>
     L'opérateur binaire SHR a pour opérande de gauche la valeur initiale et pour opérande de droite le nombre de bits à décaler à droite. Les bits de poids faibles sont perdus et les bits de poids forts entrés (à gauche) sont à 0. Ce n'est pas une rotation.
+    
+    L'opérateur C est >>. Il agit sur chaque bit de la valeur :
   </p>
-  L'opérateur C est >>. Il agit sur chaque bit de la valeur :
-<pre class="prettyprint lang-cpp">
-  unsigned a = 0xF0F0;
-  unsigned b = 2;
-  unsigned c = a >> b; /* c == 0011 1100 0011 1100 soit 0x3C3C */
-</pre>
+  <pre class="prettyprint lang-cpp">
+    unsigned a = 0xF0F0; // 1111 0000 1111 0000
+    unsigned b = 2;
+    unsigned c = a >> b; /* c == 0011 1100 0011 1100 soit 0x3C3C */
+  </pre>
   <p>
     L'opérateur binaire SHL a pour opérande de gauche la valeur initiale et pour opérande de droite le nombre de bits à décaler à gauche. Les bits de poids forts sont perdus et les bits de poids faibles entrés (à droite) sont à 0. Ce n'est pas une rotation.
+    L'opérateur C est <<. Il agit sur chaque bit de la valeur :
   </p>
-  L'opérateur C est <<. Il agit sur chaque bit de la valeur :
-<pre class="prettyprint lang-cpp">
-  unsigned a = 0xF0F0;
-  unsigned b = 2;
-  unsigned c = a << b; /* c == 1100 0011 1100 0000 soit 0xC3C0 */
-</pre>
-<!--
-  Usages des opérateurs bits à bits
+  <pre class="prettyprint lang-cpp">
+    unsigned a = 0xF0F0; // 1111 0000 1111 0000
+    unsigned b = 2;
+    unsigned c = a << b; /* c == 1100 0011 1100 0000 soit 0xC3C0 */
+  </pre>
+  <!--
+      Usages des opérateurs bits à bits
 
-  Manipulations de l'état des bits d'une variable
+Manipulations de l'état des bits d'une variable
 
   Si la variable est entière et non signée, il est possible d'utiliser les opérateurs bits pour mettre un ou des bits à 0 ou à 1. Les usages connus sont :
 
