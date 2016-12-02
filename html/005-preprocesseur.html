@@ -102,6 +102,19 @@
     <source src="https://i.imgur.com/YYzbP31.mp4" type="video/mp4"/>
     <img src="https://i.imgur.com/YYzbP31.gif"/>
   </video>
+  <p>
+    #ifdef permet de faire la même chose mais en vérifiant qu'une macro est définie.
+    <pre class="prettyprint lang-cpp">
+      #define DEV
+      void main(void){
+      #ifdef DEV
+      printf("Version de développement");
+      #else
+      printf("Version de production");
+      #endif
+      }
+  </pre>
+  </p>
 </article>
 
 <article>
