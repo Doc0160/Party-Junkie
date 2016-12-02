@@ -228,6 +228,10 @@ C'est un concept essentiel de l'informatique. En effet, les processeurs des ordi
     unsigned b = 0x00FF; // 0000 0000 1111 1111
     unsigned c = a | b; /* c == 1111 0000 1111 1111 soit 0xF0FF */
   </pre>
+</article>
+
+<article>
+<h1>XOR</h1>
   <p>
     L'opérateur binaire XOR combine l'état de 2 bits selon le tableau suivant :
     <br/>
@@ -256,6 +260,10 @@ C'est un concept essentiel de l'informatique. En effet, les processeurs des ordi
     unsigned b = 0x00FF; // 0000 0000 1111 1111
     unsigned c = a ^ b; /* c == 1111 0000 0000 1111 soit 0xF00F */
   </pre>
+</article>
+
+<article>
+<h1>SHR</h1>
   <p>
     L'opérateur binaire SHR a pour opérande de gauche la valeur initiale et pour opérande de droite le nombre de bits à décaler à droite. Les bits de poids faibles sont perdus et les bits de poids forts entrés (à gauche) sont à 0. Ce n'est pas une rotation.
     
@@ -266,6 +274,10 @@ C'est un concept essentiel de l'informatique. En effet, les processeurs des ordi
     unsigned b = 2;
     unsigned c = a >> b; /* c == 0011 1100 0011 1100 soit 0x3C3C */
   </pre>
+</article>
+
+<article>
+<h1>SHL</h1>
   <p>
     L'opérateur binaire SHL a pour opérande de gauche la valeur initiale et pour opérande de droite le nombre de bits à décaler à gauche. Les bits de poids forts sont perdus et les bits de poids faibles entrés (à droite) sont à 0. Ce n'est pas une rotation.
     L'opérateur C est <<. Il agit sur chaque bit de la valeur :
