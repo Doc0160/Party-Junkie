@@ -97,7 +97,6 @@ C'est un concept essentiel de l'informatique. En effet, les processeurs des ordi
   
   <p>
     Les opérateurs bits permettent de modifier et de tester un ou plusieurs bits d'une donnée. Ces opérateurs sont :
-  </p>
   <ul>
     <li>NOT (NON)</li>
     <li>AND (ET)</li>
@@ -107,6 +106,7 @@ C'est un concept essentiel de l'informatique. En effet, les processeurs des ordi
     <li>SHL (Décalage à gauche)</li>
     <li>NOT (NON)</li>
   </ul>
+</p>
   <p>
     L'opérateur unaire NOT inverse l'état d'un bit selon le tableau suivant :
   
