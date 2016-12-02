@@ -254,7 +254,7 @@ code{
 	display: none;
 }
 
-img{
+img, video{
 	height: auto;
     margin: auto;
     max-width: 90%;
