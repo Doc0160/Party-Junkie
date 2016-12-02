@@ -109,12 +109,13 @@ C'est un concept essentiel de l'informatique. En effet, les processeurs des ordi
   </ul>
   <p>
     L'opérateur unaire NOT inverse l'état d'un bit selon le tableau suivant :
-  </p>
+  
   Table de vérité NOT
   A   NOT A
   0   1
   1   0
   L'opérateur C est ~. Il agit sur chaque bit de la valeur :
+  </p>
   <pre class="prettyprint lang-cpp">
     unsigned a = 1;
     unsigned b = ~a; /* b == 1111111111111110  (en supposant 16-bit) */
