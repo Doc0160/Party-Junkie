@@ -122,7 +122,7 @@ while ($a < $nb) {
 	    # code...
 	    $page .= '<li><a href="'.
                  str_replace(".xml", ".html", $name[$i]).'">'.
-                  str_replace("_", " ", str_replace(".xml", "", $name[$i])).'</a></li>';
+                  str_replace("-", " - ", str_replace("_", " ", str_replace(".xml", "", $name[$i]))).'</a></li>';
 	    $i++;
     }
     
