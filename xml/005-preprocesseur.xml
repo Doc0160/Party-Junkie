@@ -44,6 +44,7 @@
           printf("4");
       }
     </pre>
+    <p>#undef permet d'efacer une macro<p>
 </article>
 <article>
   <h1>La compilation conditionelle</h1>
