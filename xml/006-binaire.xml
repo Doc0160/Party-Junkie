@@ -119,9 +119,9 @@ L'opérateur C est ~. Il agit sur chaque bit de la valeur :
    unsigned a = 1;
    unsigned b = ~a; /* b == 1111111111111110  (en supposant 16-bit) */
 AND (ET)
-
+<p>
 L'opérateur binaire AND combine l'état de 2 bits selon le tableau suivant :
-
+</p>
 Table de vérité AND
 A   B   A AND B
 0   0   0
@@ -134,9 +134,9 @@ L'opérateur C est &. Il agit sur chaque bit de la valeur :
    unsigned b = 0x00FF;
    unsigned c = a & b; /* c == 0000000011110000 soit 0x00F0 */
 OR (OU)
-
+<p>
 L'opérateur binaire OR combine l'état de 2 bits selon le tableau suivant :
-
+</p>
 Table de vérité OR
 A   B   A OR B
 0   0   0
@@ -149,9 +149,9 @@ L'opérateur C est |. Il agit sur chaque bit de la valeur :
    unsigned b = 0x00FF;
    unsigned c = a | b; /* c == 1111 0000 1111 1111 soit 0xF0FF */
 XOR (OU exclusif)
-
+<p>
 L'opérateur binaire XOR combine l'état de 2 bits selon le tableau suivant :
-
+</p>
 Table de vérité XOR
 A   B   A XOR B
 0   0   0
