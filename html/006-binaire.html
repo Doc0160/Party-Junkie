@@ -146,97 +146,99 @@ C'est un concept essentiel de l'informatique. En effet, les processeurs des ordi
   A   NOT A
   0   1
   1   0
-L'opérateur C est ~. Il agit sur chaque bit de la valeur :
+  L'opérateur C est ~. Il agit sur chaque bit de la valeur :
+  <pre class="prettyprint lang-cpp">
+    unsigned a = 1;
+    unsigned b = ~a; /* b == 1111111111111110  (en supposant 16-bit) */
+  </pre>
+  
+  <p>
+    L'opérateur binaire AND combine l'état de 2 bits selon le tableau suivant :
+  </p>
+  Table de vérité AND
+  A   B   A AND B
+  0   0   0
+  0   1   0
+  1   0   0
+  1   1   1
+  L'opérateur C est &. Il agit sur chaque bit de la valeur :
+  <pre class="prettyprint lang-cpp">
+    unsigned a = 0xF0F0;
+    unsigned b = 0x00FF;
+    unsigned c = a & b; /* c == 0000000011110000 soit 0x00F0 */
+  </pre>
 
-   unsigned a = 1;
-   unsigned b = ~a; /* b == 1111111111111110  (en supposant 16-bit) */
-AND (ET)
-<p>
-L'opérateur binaire AND combine l'état de 2 bits selon le tableau suivant :
-</p>
-Table de vérité AND
-A   B   A AND B
-0   0   0
-0   1   0
-1   0   0
-1   1   1
-L'opérateur C est &. Il agit sur chaque bit de la valeur :
+  <p>
+    L'opérateur binaire OR combine l'état de 2 bits selon le tableau suivant :
+  </p>
+  Table de vérité OR
+  A   B   A OR B
+  0   0   0
+  0   1   1
+  1   0   1
+  1   1   1
+  L'opérateur C est |. Il agit sur chaque bit de la valeur :
+  <pre class="prettyprint lang-cpp">
+    unsigned a = 0xF0F0;
+    unsigned b = 0x00FF;
+    unsigned c = a | b; /* c == 1111 0000 1111 1111 soit 0xF0FF */
+  </pre>
+  <p>
+    L'opérateur binaire XOR combine l'état de 2 bits selon le tableau suivant :
+  </p>
+  Table de vérité XOR
+  A   B   A XOR B
+  0   0   0
+  0   1   1
+  1   0   1
+  1   1   0
+  L'opérateur C est ^. Il agit sur chaque bit de la valeur :
+  <pre class="prettyprint lang-cpp">
+    unsigned a = 0xF0F0;
+    unsigned b = 0x00FF;
+    unsigned c = a ^ b; /* c == 1111 0000 0000 1111 soit 0xF00F */
+  </pre>
+  <p>
+    L'opérateur binaire SHR a pour opérande de gauche la valeur initiale et pour opérande de droite le nombre de bits à décaler à droite. Les bits de poids faibles sont perdus et les bits de poids forts entrés (à gauche) sont à 0. Ce n'est pas une rotation.
+  </p>
+  L'opérateur C est >>. Il agit sur chaque bit de la valeur :
 
-   unsigned a = 0xF0F0;
-   unsigned b = 0x00FF;
-   unsigned c = a & b; /* c == 0000000011110000 soit 0x00F0 */
-OR (OU)
-<p>
-L'opérateur binaire OR combine l'état de 2 bits selon le tableau suivant :
-</p>
-Table de vérité OR
-A   B   A OR B
-0   0   0
-0   1   1
-1   0   1
-1   1   1
-L'opérateur C est |. Il agit sur chaque bit de la valeur :
+  unsigned a = 0xF0F0;
+  unsigned b = 2;
+  unsigned c = a >> b; /* c == 0011 1100 0011 1100 soit 0x3C3C */
 
-   unsigned a = 0xF0F0;
-   unsigned b = 0x00FF;
-   unsigned c = a | b; /* c == 1111 0000 1111 1111 soit 0xF0FF */
-XOR (OU exclusif)
-<p>
-L'opérateur binaire XOR combine l'état de 2 bits selon le tableau suivant :
-</p>
-Table de vérité XOR
-A   B   A XOR B
-0   0   0
-0   1   1
-1   0   1
-1   1   0
-L'opérateur C est ^. Il agit sur chaque bit de la valeur :
+  <p>
+    L'opérateur binaire SHL a pour opérande de gauche la valeur initiale et pour opérande de droite le nombre de bits à décaler à gauche. Les bits de poids forts sont perdus et les bits de poids faibles entrés (à droite) sont à 0. Ce n'est pas une rotation.
+  </p>
+  L'opérateur C est <<. Il agit sur chaque bit de la valeur :
 
-   unsigned a = 0xF0F0;
-   unsigned b = 0x00FF;
-   unsigned c = a ^ b; /* c == 1111 0000 0000 1111 soit 0xF00F */
-SHR (Décalage à droite)
+  unsigned a = 0xF0F0;
+  unsigned b = 2;
+  unsigned c = a << b; /* c == 1100 0011 1100 0000 soit 0xC3C0 */
+  Usages des opérateurs bits à bits
 
-L'opérateur binaire SHR a pour opérande de gauche la valeur initiale et pour opérande de droite le nombre de bits à décaler à droite. Les bits de poids faibles sont perdus et les bits de poids forts entrés (à gauche) sont à 0. Ce n'est pas une rotation.
+  Manipulations de l'état des bits d'une variable
 
-L'opérateur C est >>. Il agit sur chaque bit de la valeur :
+  Si la variable est entière et non signée, il est possible d'utiliser les opérateurs bits pour mettre un ou des bits à 0 ou à 1. Les usages connus sont :
 
-   unsigned a = 0xF0F0;
-   unsigned b = 2;
-   unsigned c = a >> b; /* c == 0011 1100 0011 1100 soit 0x3C3C */
-SHL (Décalage à gauche)
+  Compression de données.
+  Commande et état de registres matériels.
+  etc.
+  Positionner un bit à 1
 
-L'opérateur binaire SHL a pour opérande de gauche la valeur initiale et pour opérande de droite le nombre de bits à décaler à gauche. Les bits de poids forts sont perdus et les bits de poids faibles entrés (à droite) sont à 0. Ce n'est pas une rotation.
+  Le principe est de combiner la valeur avec un masque grâce à l'opérateur OU. En effet, comme l'indique la table de vérité, les bits à 0 du masque vont laisser la valeur initiale inchangée, alors les bits à 1 vont s'imposer.
 
-L'opérateur C est <<. Il agit sur chaque bit de la valeur :
+  /* mettre a 1 le bit 4 de b : */
+  unsigned a = 0x000F; /* 0000 0000 0000 1111 */
+  unsigned b = 0x0010; /* 0000 0000 0001 0000 */
+  unsigned c = a | b;  /* 0000 0000 0001 1111 soit 0x001F */
 
-   unsigned a = 0xF0F0;
-   unsigned b = 2;
-   unsigned c = a << b; /* c == 1100 0011 1100 0000 soit 0xC3C0 */
-Usages des opérateurs bits à bits
+  printf ("%04X OU %04X = %04X\n", a, b, c);
+  Pour fabriquer le masque, il suffit d'utiliser un 1 que l'on décale à gauche de la valeur correspondante au poids du bit. Par exemple :
 
-Manipulations de l'état des bits d'une variable
-
-Si la variable est entière et non signée, il est possible d'utiliser les opérateurs bits pour mettre un ou des bits à 0 ou à 1. Les usages connus sont :
-
-Compression de données.
-Commande et état de registres matériels.
-etc.
-Positionner un bit à 1
-
-Le principe est de combiner la valeur avec un masque grâce à l'opérateur OU. En effet, comme l'indique la table de vérité, les bits à 0 du masque vont laisser la valeur initiale inchangée, alors les bits à 1 vont s'imposer.
-
-   /* mettre a 1 le bit 4 de b : */
-   unsigned a = 0x000F; /* 0000 0000 0000 1111 */
-   unsigned b = 0x0010; /* 0000 0000 0001 0000 */
-   unsigned c = a | b;  /* 0000 0000 0001 1111 soit 0x001F */
-
-   printf ("%04X OU %04X = %04X\n", a, b, c);
-Pour fabriquer le masque, il suffit d'utiliser un 1 que l'on décale à gauche de la valeur correspondante au poids du bit. Par exemple :
-
-Bit 0  : 1u << 0  = 0000 0000 0000 0001
-Bit 2  : 1u << 2  = 0000 0000 0000 0100
-Bit 15 : 1u << 15 = 1000 0000 0000 0000
+  Bit 0  : 1u << 0  = 0000 0000 0000 0001
+  Bit 2  : 1u << 2  = 0000 0000 0000 0100
+  Bit 15 : 1u << 15 = 1000 0000 0000 0000
 Comme pour toute manipulation de bits (y compris avec des constantes), on utilise des valeurs non signées (d'où le 'u').
 
 Positionner un bit à 0
