@@ -14,7 +14,7 @@ $(document).ready(function(){
 	})
 	console.log('ok');
 
-    if($('#svg_song').addEventListener)
+    if(document.getElementById('svg_song').addEventListener)
 	    {
 		    // IE9, Chrome, Safari, Opera
 		    document.getElementById('svg_song').addEventListener("mousewheel", cbScroll, false);
