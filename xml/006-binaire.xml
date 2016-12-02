@@ -179,7 +179,8 @@ C'est un concept essentiel de l'informatique. En effet, les processeurs des ordi
         <td>1</td><td>1</td><td>1</td>
       </tr>
     </table>
-  L'opérateur C est |. Il agit sur chaque bit de la valeur :
+    L'opérateur C est |. Il agit sur chaque bit de la valeur :
+  </p>
   <pre class="prettyprint lang-cpp">
     unsigned a = 0xF0F0;
     unsigned b = 0x00FF;
@@ -187,14 +188,27 @@ C'est un concept essentiel de l'informatique. En effet, les processeurs des ordi
   </pre>
   <p>
     L'opérateur binaire XOR combine l'état de 2 bits selon le tableau suivant :
-  </p>
-  Table de vérité XOR
-  A   B   A XOR B
-  0   0   0
-  0   1   1
-  1   0   1
-  1   1   0
+  <br/>
+  Table de vérité XOR:
+  <table>
+      <tr>
+        <th>A</th><th>B</th><th>A XOR B</th>
+      </tr>
+      <tr>
+        <td>0</td><td>0</td><td>0</td>
+      </tr>
+      <tr>
+        <td>0</td><td>1</td><td>1</td>
+      </tr>
+      <tr>
+        <td>1</td><td>0</td><td>1</td>
+      </tr>
+      <tr>
+        <td>1</td><td>1</td><td>0</td>
+      </tr>
+    </table>
   L'opérateur C est ^. Il agit sur chaque bit de la valeur :
+  </p>
   <pre class="prettyprint lang-cpp">
     unsigned a = 0xF0F0;
     unsigned b = 0x00FF;
