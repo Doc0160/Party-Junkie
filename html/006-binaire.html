@@ -202,19 +202,20 @@ C'est un concept essentiel de l'informatique. En effet, les processeurs des ordi
     L'opérateur binaire SHR a pour opérande de gauche la valeur initiale et pour opérande de droite le nombre de bits à décaler à droite. Les bits de poids faibles sont perdus et les bits de poids forts entrés (à gauche) sont à 0. Ce n'est pas une rotation.
   </p>
   L'opérateur C est >>. Il agit sur chaque bit de la valeur :
-
+<pre class="prettyprint lang-cpp">
   unsigned a = 0xF0F0;
   unsigned b = 2;
   unsigned c = a >> b; /* c == 0011 1100 0011 1100 soit 0x3C3C */
-
+</pre>
   <p>
     L'opérateur binaire SHL a pour opérande de gauche la valeur initiale et pour opérande de droite le nombre de bits à décaler à gauche. Les bits de poids forts sont perdus et les bits de poids faibles entrés (à droite) sont à 0. Ce n'est pas une rotation.
   </p>
   L'opérateur C est <<. Il agit sur chaque bit de la valeur :
-
+<pre class="prettyprint lang-cpp">
   unsigned a = 0xF0F0;
   unsigned b = 2;
   unsigned c = a << b; /* c == 1100 0011 1100 0000 soit 0xC3C0 */
+</pre>
   Usages des opérateurs bits à bits
 
   Manipulations de l'état des bits d'une variable
@@ -227,13 +228,14 @@ C'est un concept essentiel de l'informatique. En effet, les processeurs des ordi
   Positionner un bit à 1
 
   Le principe est de combiner la valeur avec un masque grâce à l'opérateur OU. En effet, comme l'indique la table de vérité, les bits à 0 du masque vont laisser la valeur initiale inchangée, alors les bits à 1 vont s'imposer.
-
+<pre class="prettyprint lang-cpp">
   /* mettre a 1 le bit 4 de b : */
   unsigned a = 0x000F; /* 0000 0000 0000 1111 */
   unsigned b = 0x0010; /* 0000 0000 0001 0000 */
   unsigned c = a | b;  /* 0000 0000 0001 1111 soit 0x001F */
 
   printf ("%04X OU %04X = %04X\n", a, b, c);
+</pre>
   Pour fabriquer le masque, il suffit d'utiliser un 1 que l'on décale à gauche de la valeur correspondante au poids du bit. Par exemple :
 
   Bit 0  : 1u << 0  = 0000 0000 0000 0001
@@ -244,13 +246,14 @@ Comme pour toute manipulation de bits (y compris avec des constantes), on utilis
 Positionner un bit à 0
 
 Le principe est de combiner la valeur avec un masque grâce à l'opérateur ET. En effet, comme l'indique la table de vérité, les bits à 1 du masque vont laisser la valeur initiale inchangée, alors les bits à 0 vont s'imposer.
-
+<pre class="prettyprint lang-cpp">
    /* mettre a 0 le bit 3 de b : */
    unsigned a = 0x000F; /* 0000 0000 0000 1111 */
    unsigned b = 0xFFF7; /* 1111 1111 1111 0111 */
    unsigned c = a & b;  /* 0000 0000 0000 0111 soit 0x0007 */
 
    printf ("%04X OU %04X = %04X\n", a, b, c);
+</pre>
 Pour fabriquer le masque, il suffit d'utiliser un 1 que l'on décale à gauche de la valeur correspondante au poids du bit, puis on inverse les bits avec l'opérateur NON. Par exemple :
 
 Bit 0  : ~(1u << 0)  = 1111 1111 1111 1110
