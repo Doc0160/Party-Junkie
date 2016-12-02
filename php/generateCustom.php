@@ -119,10 +119,11 @@ while ($a < $nb) {
     
     $i =2;
     while ($i < $nb) {
-	    # code...
+		$temp = explode("-", $name[$i]);
 	    $page .= '<li><a href="'.
                  str_replace(".xml", ".html", $name[$i]).'">'.
-                  str_replace("-", " - ", str_replace("_", " ", str_replace(".xml", "", $name[$i]))).'</a></li>';
+				 '<span class="numbers">'.$temp[0]."</span>".
+                  ' - 'str_replace("_", " ", str_replace(".xml", "", $temp[1])).'</a></li>';
 	    $i++;
     }
     
