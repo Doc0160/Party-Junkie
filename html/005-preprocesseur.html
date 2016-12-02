@@ -110,7 +110,16 @@
     L'usage le plus fréquent du préprocesseur C est la directive #include "<>" dont le rôle est de recopier le contenu d'un fichier dans le fichier courant.
   </p>
   <pre class="prettyprint lang-cpp">
-    #include &lt;windows.h&gt;
+    // machin.cpp
+    void test(void) {
+    printf("test");
+    }
+
+    // main.cpp
+    #include &lt;machin.cpp&gt;
+    void main(void){
+    test();
+    }
   </pre>
 </article>
 
