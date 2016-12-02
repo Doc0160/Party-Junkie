@@ -109,7 +109,7 @@ C'est un concept essentiel de l'informatique. En effet, les processeurs des ordi
   </p>
   <p>
     L'opérateur unaire NOT inverse l'état d'un bit selon le tableau suivant :
-    
+    <br/>
     Table de vérité NOT
     <table>
       <tr>
@@ -131,14 +131,27 @@ C'est un concept essentiel de l'informatique. En effet, les processeurs des ordi
   
   <p>
     L'opérateur binaire AND combine l'état de 2 bits selon le tableau suivant :
-  </p>
+  <br/>
   Table de vérité AND
-  A   B   A AND B
-  0   0   0
-  0   1   0
-  1   0   0
-  1   1   1
+  <table>
+      <tr>
+        <th>A</th><th>B</th><th>A AND B</th>
+      </tr>
+      <tr>
+        <td>0</td><td>0</td><td>0</td>
+      </tr>
+      <tr>
+        <td>0</td><td>1</td><td>0</td>
+      </tr>
+      <tr>
+        <td>1</td><td>0</td><td>0</td>
+      </tr>
+      <tr>
+        <td>1</td><td>1</td><td>1</td>
+      </tr>
+    </table>
   L'opérateur C est &. Il agit sur chaque bit de la valeur :
+  </p>
   <pre class="prettyprint lang-cpp">
     unsigned a = 0xF0F0;
     unsigned b = 0x00FF;
