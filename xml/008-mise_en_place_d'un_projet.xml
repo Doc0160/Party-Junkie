@@ -157,7 +157,7 @@ WinMain(HINSTANCE Instance,
   </article>
   
   <article>
-    <h1>La compilation p2</h1>
+    <h1>L'invite de commande</h1>
     <p>
       Le compilateur C++ de Microsoft est "cl.exe".<br/>
       Mais même après avoir installé Visual Studio, vous ne pourrez pas
@@ -212,18 +212,23 @@ WinMain(HINSTANCE Instance,
       Miracle, on peut appeler le compilateur !
     </p>
   </article>
-  
-  <article>
-    <h1>La compilation p3</h1>
-    <p>
-      Une fois la parie 2 faite, nous pouvons continuer notre build.bat.
-    </p>
-  </article>
 
   <article>
-    <h1>Le shell</h1>
+    <h1>L'editeur</h1>
     <p>
-      
+      Dans le dossier W:/misc, je vais créer un "emacs.bat" qui lancera
+      mon éditeur de code (Emacs), cette étape est optinionelle.
+      <pre class="prettyprint lang-batch">
+        @echo off
+        D:\emacs\bin\runemacs.exe -q -l W:\misc\.emacs
+      </pre>
+    </p>
+  </article>
+  
+  <article>
+    <h1>La compilation p2</h1>
+    <p>
+      Une fois la parie 2 faite, nous pouvons continuer notre build.bat.<br/>
     </p>
   </article>
 </div>
