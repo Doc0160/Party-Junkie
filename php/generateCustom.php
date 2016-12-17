@@ -139,7 +139,7 @@ for ($a = $nb -1; $a > 1; $a--) {
              make_html_filename_from_xml_filename($name[$a]).".html\"/>
              <id>urn:uuid:1225c695-cfb8-4ebb-aaaa-80da344efa6a</id>
     <updated>".date("F d Y H:i:s.", filemtime("../xml/".$name[$a]))."</updated>
-    <summary>//TODO //PARTY //JUNKIE //RULES</summary>
+    <summary>//TODO //PARTY //JUNKIE //RULES //".filemtime("../xml/".$name[$a]))."</summary>
     </entry>
 
 ";
