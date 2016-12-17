@@ -33,8 +33,12 @@ WinMain(HINSTANCE Instance,
   
   <article>
     <h1>Librairies</h1>
+    <p>
+      Si on déscend dans la documentation jusqu'à la section "Requirements":
+    </p>
     <img src="../img/lux/requirements.png"/>
     <p>
+      On s'aperçois de tas de choses interresantes, l'une d'entre elle étant:<br/>
       User32.lib
     </p>
     <img src="../img/lux/mandrew.png"/>
