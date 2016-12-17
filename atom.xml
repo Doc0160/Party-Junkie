@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+       <title>Party Junkie</title>
+ <subtitle>Un titre secondaire.</subtitle>
+ <link href="https://doc0160.github.io/Party-Junkie/"/>
+ <updated>2010-05-13T18:30:02Z</updated>
+ <author>
+   <name>Tristan Magniez</name>
+   <email>Tristan.Magniez@viacesi.fr</email>
+ </author>
+ <id>//TODO //PARTY //JUNKIE //RULES</id>
+
+<entry>
+   <title>999 - des trucs</title>
+   <link href="https://doc0160.github.io/Party-Junkie/html/999.html"/>
+             <id>urn:uuid:1225c695-cfb8-4ebb-aaaa-80da344efa6a</id>
+    <updated>December 02 2016 08:06:24.</updated>
+    <summary>//TODO //PARTY //JUNKIE //RULES</summary>
+    </entry>
+
+<entry>
+   <title>008 - mise en place d'un projet</title>
+   <link href="https://doc0160.github.io/Party-Junkie/html/008.html"/>
+             <id>urn:uuid:1225c695-cfb8-4ebb-aaaa-80da344efa6a</id>
+    <updated>December 17 2016 07:21:05.</updated>
+    <summary>//TODO //PARTY //JUNKIE //RULES</summary>
+    </entry>
+
+<entry>
+   <title>007 - visual studio et winapi</title>
+   <link href="https://doc0160.github.io/Party-Junkie/html/007.html"/>
+             <id>urn:uuid:1225c695-cfb8-4ebb-aaaa-80da344efa6a</id>
+    <updated>December 17 2016 07:18:53.</updated>
+    <summary>//TODO //PARTY //JUNKIE //RULES</summary>
+    </entry>
+
+<entry>
+   <title>006 - binaire</title>
+   <link href="https://doc0160.github.io/Party-Junkie/html/006.html"/>
+             <id>urn:uuid:1225c695-cfb8-4ebb-aaaa-80da344efa6a</id>
+    <updated>December 02 2016 08:31:43.</updated>
+    <summary>//TODO //PARTY //JUNKIE //RULES</summary>
+    </entry>
+
+<entry>
+   <title>005 - preprocesseur</title>
+   <link href="https://doc0160.github.io/Party-Junkie/html/005.html"/>
+             <id>urn:uuid:1225c695-cfb8-4ebb-aaaa-80da344efa6a</id>
+    <updated>December 02 2016 08:38:13.</updated>
+    <summary>//TODO //PARTY //JUNKIE //RULES</summary>
+    </entry>
+
+<entry>
+   <title>004 - enum union struct</title>
+   <link href="https://doc0160.github.io/Party-Junkie/html/004.html"/>
+             <id>urn:uuid:1225c695-cfb8-4ebb-aaaa-80da344efa6a</id>
+    <updated>December 01 2016 16:59:47.</updated>
+    <summary>//TODO //PARTY //JUNKIE //RULES</summary>
+    </entry>
+
+<entry>
+   <title>003 - les pointeurs</title>
+   <link href="https://doc0160.github.io/Party-Junkie/html/003.html"/>
+             <id>urn:uuid:1225c695-cfb8-4ebb-aaaa-80da344efa6a</id>
+    <updated>December 02 2016 03:45:51.</updated>
+    <summary>//TODO //PARTY //JUNKIE //RULES</summary>
+    </entry>
+
+<entry>
+   <title>002 - premisse</title>
+   <link href="https://doc0160.github.io/Party-Junkie/html/002.html"/>
+             <id>urn:uuid:1225c695-cfb8-4ebb-aaaa-80da344efa6a</id>
+    <updated>December 01 2016 15:58:56.</updated>
+    <summary>//TODO //PARTY //JUNKIE //RULES</summary>
+    </entry>
+
+<entry>
+   <title>001 - introduction</title>
+   <link href="https://doc0160.github.io/Party-Junkie/html/001.html"/>
+             <id>urn:uuid:1225c695-cfb8-4ebb-aaaa-80da344efa6a</id>
+    <updated>December 02 2016 03:44:57.</updated>
+    <summary>//TODO //PARTY //JUNKIE //RULES</summary>
+    </entry>
+
+<entry>
+   <title>000 - presentation</title>
+   <link href="https://doc0160.github.io/Party-Junkie/html/000.html"/>
+             <id>urn:uuid:1225c695-cfb8-4ebb-aaaa-80da344efa6a</id>
+    <updated>December 01 2016 16:06:13.</updated>
+    <summary>//TODO //PARTY //JUNKIE //RULES</summary>
+    </entry>
+
+</feed>

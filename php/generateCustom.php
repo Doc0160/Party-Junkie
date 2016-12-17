@@ -1,88 +1,55 @@
 <?php
 
-function EatWhiteSpace(&$i, $string){
-    while(strlen($string) > $i &&
-          ($string[$i] == ' ' ||
-          $string[$i] == "\t" ||
-          $string[$i] == "\r" ||
-          $string[$i] == "\n")){
-        $i++;
-    }
-}
+require('generateCustomFunc.php');
 
-function ReadTag(&$i, $string){
-    $out = '';
-    EatWhiteSpace($i, $string);
-    if($string[$i] == '<'){
-        $i++;
-        while($string[$i] != '>') {
-            $out .= $string[$i];
-            $i++;
-        }
-        $i++;
-        return $out;
-    }
-}
+/*<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
 
-function ReadText(&$i, $string){
-   $text = "";
-    while(($string[$i] != '>' &&
-           $string[$i] != '<') &&
-          strlen($string) > $i){
-        $text .= $string[$i];
-        $i++;
-    }
-    return $text;
-}
+<title>Fil d'exemple</title>
+ <subtitle>Un titre secondaire.</subtitle>
+ <link href="http://example.org/"/>
+ <updated>2010-05-13T18:30:02Z</updated>
+ <author>
+   <name>Paul Martin</name>
+   <email>paulmartin@example.com</email>
+ </author>
+ <id>urn:uuid:60a76c80-d399-11d9-b91C-0003939e0af6</id>
 
-function ReadFullText(&$i, $string){
-    $text = "";
-    while(strlen($string) > $i){
-        if($string[$i] == '<'){
-            $tag = ReadTag($i, $string);
-            if($tag == "/article"){
-                return $text;
-            }else{
-                $text .= '<'.$tag.'>';
-            }
-        }
-        $text .= $string[$i];
-        $i++;
-    }
-    return $text;
-}
+ <entry>
+   <title>Des robots propulsés par Atom deviennent fous</title>
+   <link href="http://example.org/2003/12/13/atom03"/>
+   <id>urn:uuid:1225c695-cfb8-4ebb-aaaa-80da344efa6a</id>
+   <updated>2010-04-01T18:30:02Z</updated>
+   <summary>Poisson d'avril !</summary>
+</entry>
 
-function DoNode(&$i, $f, &$array) {
-    while($i < strlen($f)){
-        EatWhiteSpace($i, $f);
-        if(strlen($f)<=$i){
-            break;
-        }
-        if($f[$i] == '<') {
-            $tag = ReadTag($i, $f);
-            if($tag[0] == "/"){
-                return;
-            }else{
-                if($tag != "article"){
-                    DoNode($i, $f, $array[$tag]);
-                }else{
-                    $text = ReadFullText($i, $f);
-                    $array[$tag][] = trim($text);
-                }
-            }
-        }else{
-            $text = ReadText($i, $f);
-            $array[] = $text;
-        }
-    }
-}
+   </feed>*/
+//date("F d Y H:i:s.", filemtime($filename))
+$feed = "<?xml version=\"1.0\" encoding=\"utf-8\"?>
+<feed xmlns=\"http://www.w3.org/2005/Atom\">
 
-$a = 2;
+       <title>Party Junkie</title>
+ <subtitle>Un titre secondaire.</subtitle>
+ <link href=\"https://doc0160.github.io/Party-Junkie/\"/>
+ <updated>2010-05-13T18:30:02Z</updated>
+ <author>
+   <name>Tristan Magniez</name>
+   <email>Tristan.Magniez@viacesi.fr</email>
+ </author>
+ <id>//TODO //PARTY //JUNKIE //RULES</id>
 
+";
 $nb = sizeof(scandir('../xml/'));
 $name = scandir('../xml/');
 
-while ($a < $nb) {
+function make_html_filename_from_xml_filename($t){
+    return substr($t, 0, 3);
+}
+function make_title_from_xml_filename($t){
+    return str_replace("_", " ", str_replace(".xml", "", $t));
+}
+
+for ($a = $nb -1; $a > 1; $a--) {
     $i = 0;
     $array = [];
     $f = file_get_contents('../xml/'.$name[$a]);
@@ -116,14 +83,16 @@ while ($a < $nb) {
 
 	<div id="menu">
 		<ul>';
-    
     $i =2;
     while ($i < $nb) {
 		$temp = explode("-", $name[$i]);
-	    $page .= '<li><a href="'.
-                 str_replace(".xml", ".html", $name[$i]).'">'.
+	    $page .= '<li>'.
+                 '<a href="'.make_html_filename_from_xml_filename($name[$i]).'">'.
 				 '<span class="numbers">'.$temp[0]."</span>".
-                  ' - '.str_replace("_", " ", str_replace(".xml", "", $temp[1])).'</a></li>';
+                 ' - '.
+                 make_title_from_xml_filename($temp[1]).
+                 '</a>'.
+                 '</li>';
 	    $i++;
     }
     
@@ -142,14 +111,8 @@ while ($a < $nb) {
 	<div class="mountain1" id="mountain2"></div>
 </div>
 <div class="content" id="content">';
-
-    $j = 0;
-    while ($j < sizeof($array["div"]["article"])) {
-	    # code...
+    for($j = 0; $j < sizeof($array["div"]["article"]); $j++)
 	    $page .= "\n<article>\n".$array["div"]["article"][$j]."\n</article>\n";
-	    $j++;
-    }
-
     $page .= '
 	</div>
 
@@ -163,11 +126,24 @@ while ($a < $nb) {
 </body>
 </html>
 ';
-	$nameo = str_replace(".xml", ".html", $name[$a]);
-    echo $nameo."\n";
-    file_put_contents("../html/".$nameo, $page);
-    file_put_contents("../html/".substr($name[$a], 0, 3).".html", $page);
-    
-    $a++;
+	//$nameo = str_replace(".xml", ".html", $name[$a]);
+    //echo $nameo."\n";
+    //file_put_contents("../html/".$nameo, $page);
+    echo make_html_filename_from_xml_filename($name[$a]).".html\n";
+    file_put_contents("../html/".make_html_filename_from_xml_filename($name[$a]).".html", $page);
+    $temp = explode("-", $name[$a]);
+    $feed .= "<entry>
+   <title>".$temp[0]." - ".make_title_from_xml_filename($temp[1])."</title>
+   <link href=\"https://doc0160.github.io/Party-Junkie/html/".
+             make_html_filename_from_xml_filename($name[$a]).".html\"/>
+             <id>urn:uuid:1225c695-cfb8-4ebb-aaaa-80da344efa6a</id>
+    <updated>".date("F d Y H:i:s.", filemtime("../xml/".$name[$a]))."</updated>
+    <summary>//TODO //PARTY //JUNKIE //RULES</summary>
+    </entry>
+
+";
 }
+$feed .= "</feed>";
+file_put_contents("../atom.xml", $feed);
+echo $feed;
 ?>
