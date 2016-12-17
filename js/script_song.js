@@ -1,6 +1,6 @@
 $(document).ready(function(){
 	var song = new Audio('https://doc0160.github.io/Party-Junkie/song/marioTheme.mp3');
-
+    song.play();
 	$('#svg_song').click(function(){
 		$('#svg_song').toggleClass('invisible');
 		$('#svg_mute').removeClass();
@@ -14,18 +14,14 @@ $(document).ready(function(){
 	})
 	console.log('ok');
 
-    if(document.getElementById('svg_song').addEventListener)
-	    {
-		    // IE9, Chrome, Safari, Opera
-		    document.getElementById('svg_song').addEventListener("mousewheel", cbScroll, false);
-		    // Firefox
-		    document.getElementById('svg_song').addEventListener("DOMMouseScroll", cbScroll, false);
-	    }
-	// IE 6/7/8
-	else
-	    {
-		    document.getElementById('svg_song').attachEvent("onmousewheel", cbScroll);
-	    }
+    if(document.getElementById('svg_song').addEventListener){
+		// IE9, Chrome, Safari, Opera
+		document.getElementById('svg_song').addEventListener("mousewheel", cbScroll, false);
+		// Firefox
+		document.getElementById('svg_song').addEventListener("DOMMouseScroll", cbScroll, false);
+	} else { // IE 6/7/8
+		document.getElementById('svg_song').attachEvent("onmousewheel", cbScroll);
+	}
 
     
     var volume = 0.15;
