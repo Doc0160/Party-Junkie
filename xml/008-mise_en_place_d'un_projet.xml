@@ -122,6 +122,11 @@ WinMain(HINSTANCE Instance,
           des outils d'optimisation d'outils d'optimisation des outils de build,
           et toute cette folie...
         </p>
+        <p>
+          La raison pour laquelle je ne le fais plus c'est que l'on
+          fini par passer beaucoup de temps à parametrer ces outils,
+          et beaucoup moins à programmer.
+        </p>
       </div>
     </p>
     <p>
