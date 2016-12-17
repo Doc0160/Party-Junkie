@@ -57,7 +57,8 @@
       //TODO(doc): fix google coloartion code to include batch
     </p>
   </article>
-<article>
+  
+  <article>
     <h1>Créer des dossiers</h1>
     <p>
       <pre class="prettyprint lang-cpp">
@@ -74,5 +75,18 @@ WinMain(HINSTANCE Instance,
     <p>
       //TODO(doc): fix google coloartion code to include windows specific stuff
     </p>
-    </article>
+  </article>
+
+  <article>
+    <h1>La compilation</h1>
+    <p>
+      La méthode que je vais présenter choque et horifie absoluement tous
+      les dévelopeurs, et je m'en excuse.<br/>
+      Mais vous savez quoi ? C'est comme ça que je build mes trucs et je ne vais
+      pas changer de méthode.
+    </p>
+    <p>
+      A la base de mon project je crée un "build.bat".
+    </p>
+  </article>
 </div>
