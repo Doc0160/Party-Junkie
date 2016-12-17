@@ -1,11 +1,11 @@
-$(window).onbeforeunload = function(){
-
-    //sessionStorage.setItem("time", song.currentTime);
-    
-};
 
 $(document).ready(function(){
 	var song = new Audio('https://doc0160.github.io/Party-Junkie/song/marioTheme.mp3');
+    $(song).onbeforeunload = function(){
+
+        sessionStorage.setItem("time", song.currentTime);
+        
+    };
     if(!('volume' in sessionStorage)) {
         sessionStorage.setItem("volume", 0.1);
     }
