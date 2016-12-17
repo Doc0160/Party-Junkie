@@ -4,8 +4,8 @@
     <h1>WinAPI</h1>
     <p>
       Pour pouvoir intéragir avec Windows, notre programme a besoin d'utiliser un ensemble de fonctions assez spécifiques.
-      listes msdn
-      //TODO(doc): sickish complete thee thing
+      D'après Microsoft, le Microsoft Developer Network (MSDN) est la section de l'entreprise Microsoft qui s'occupe de ses relations avec les développeurs.
+      Mais MSDN se limite généralement à la documentation des produits microsoft.
     </p>
     <p>
       <a href="https://msdn.microsoft.com/fr-fr/library/windows/desktop/ms633559(v=vs.85).aspx">MSDN - WinMain</a>
@@ -14,6 +14,9 @@
   
   <article>
     <h1>Visual Studio</h1>
+    <p>
+      <a href="https://www.visualstudio.com/vs/community/">Visual Studio</a>
+    </p>
     <p>
       watch window
       register //
