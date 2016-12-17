@@ -101,4 +101,13 @@
     }
   </pre>
 </article>
+<article>
+  <h1>Macros courantes</h1>
+  <pre class="prettyprint lang-cpp">
+    #define ARRAY_SIZE(a) (sizeof(a) / sizeof(*a))
+    #define SWAP(a, b)  {(a) ^= (b); (b) ^= (a); (a) ^= (b);}
+    #define MAX(a, b) ((a) < (b) ? (b) : (a))
+    #define MIN(a, b) ((a) > (b) ? (b) : (a))
+  </pre>
+</article>
 </div>
