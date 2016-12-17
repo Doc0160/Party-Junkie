@@ -240,7 +240,7 @@ WinMain(HINSTANCE Instance,
       @echo off
       mkdir ..\build
       pushd ..\build
-      cl /Zi ..\code\win32_party.cpp
+      cl ..\code\win32_party.cpp
       popd
     </pre>
     <p>
