@@ -88,7 +88,7 @@ WinMain(HINSTANCE Instance,
   </article>
 
   <article>
-    <h1>La compilation</h1>
+    <h1>La compilation p1</h1>
     <p>
       La méthode que je vais présenter choque et horifie absoluement tous
       les dévelopeurs, et je m'en excuse.<br/>
@@ -113,6 +113,10 @@ WinMain(HINSTANCE Instance,
       "echo off" dis à la cmd de ne pas afficher la commande avant de
       l'éxécuter; et le @ avant de ne pas afficher "echo off" avant de l'éxécuter.
     </p>
+  </article>
+  
+  <article>
+    <h1>La compilation p2</h1>
     <p>
       Le compilateur C++ de Microsoft est "cl.exe".<br/>
       Mais même après avoir installé Visual Studio, vous ne pourrez pas
