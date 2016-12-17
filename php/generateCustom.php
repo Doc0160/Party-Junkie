@@ -52,6 +52,9 @@ function make_title_from_xml_filename($t){
                        )
     );
 }
+function make_num_from_xml_filename($t){
+    return explode("-", $t)[0];
+}
 
 for ($a = $nb -1; $a > 1; $a--) {
     $i = 0;
@@ -71,7 +74,8 @@ for ($a = $nb -1; $a > 1; $a--) {
 	<!DOCTYPE html>
 	<html name="html">
 	<head>
-		<title>PJ-'.make_title_from_xml_filename($name[$a]).'</title>
+		<title>PJ-'.make_num_from_xml_filename($name[$a])."-".
+            make_title_from_xml_filename($name[$a]).'</title>
 		<link rel="icon" type="image/png" href="../img/favicon.png" />
 		<link rel="alternate" type="application/atom+xml" title="Atom" href="../atom.xml" />
 		<link rel="stylesheet" type="text/css" href="../css/style.css">
