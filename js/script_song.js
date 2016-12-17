@@ -4,7 +4,7 @@ $(document).ready(function(){
     song.onunload = function(){
         sessionStorage.setItem("current_time", song.currentTime);
     };
-    song.ready(function(){
+    $(song).ready(function(){
 
         });
     if(!('volume' in sessionStorage)) {
