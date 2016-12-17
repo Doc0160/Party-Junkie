@@ -9,7 +9,7 @@ $(document).ready(function(){
     song.volume = Math.pow(parseFloat(sessionStorage.getItem("volume")), 2.0);
     song.loop = true;
     
-    var p = function() {
+    /*var p = function() {
         $('#svg_song').toggleClass('invisible');
         $('#svg_mute').toggleClass('invisible');
         if(sessionStorage.getItem("mute") == "true") {
@@ -19,19 +19,24 @@ $(document).ready(function(){
             sessionStorage.setItem("mute", "true");
             song.pause();
         }
-    };
-    if(sessionStorage.getItem("mute") == "false") {
-        song.autoplay = true;
+    };*/
+    var pl = function(){
         $('#svg_song').removeClass('invisible');
         $('#svg_mute').addClass('invisible');
         song.play();
-    } else {
+    };
+    var pa = function() {
         $('#svg_song').addClass('invisible');
         $('#svg_mute').removetoggleClass('invisible');
         song.pause();
+    };
+    if(sessionStorage.getItem("mute") == "true") {
+        pl();
+    } else {
+        pa();
     }
-	$('#svg_song').click(p);
-	$('#svg_mute').click(p);
+	$('#svg_song').click(pa);
+	$('#svg_mute').click(pl);
 	console.log('ok');
 
     if(document.getElementById('svg_song').addEventListener){
