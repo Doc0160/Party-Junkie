@@ -46,7 +46,7 @@ function make_html_filename_from_xml_filename($t){
     return substr($t, 0, 3).".html";
 }
 function make_title_from_xml_filename($t){
-    return str_replace("_", " ", str_replace(".xml", "", $t));
+    return str_replace("_", " ", str_replace(".xml", "", explode("-", $t)[1]));
 }
 
 for ($a = $nb -1; $a > 1; $a--) {
