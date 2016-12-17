@@ -1,6 +1,6 @@
 $(document).ready(function(){
 	var song = new Audio('https://doc0160.github.io/Party-Junkie/song/marioTheme.mp3');
-    if(!('message' in sessionStorage)) {
+    if(!('volume' in sessionStorage)) {
         sessionStorage.setItem("volume", 0.1)
     }
     song.volume = Math.pow(parseFloat(sessionStorage.getItem("volume")), 2.0);
