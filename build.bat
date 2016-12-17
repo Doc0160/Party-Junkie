@@ -1,7 +1,8 @@
 @echo off
 
 cd D:\___\Party-Junkie\html
-git rm *
+rm *
+rem git rm *
 
 cd D:\___\Party-Junkie\php
 php generateCustom.php
