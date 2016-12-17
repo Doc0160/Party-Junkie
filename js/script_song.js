@@ -14,7 +14,7 @@ $(document).ready(function(){
     if(!('current_time' in sessionStorage)) {
         sessionStorage.setItem("current_time", 0.0);
     } else {
-        song.currentTime = parseFloat(sessionStorage.getItem("mute"));
+        song.currentTime = parseFloat(sessionStorage.getItem("current_time"));
     }
     song.volume = Math.pow(parseFloat(sessionStorage.getItem("volume")), 2.0);
     song.loop = true;
