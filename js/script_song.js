@@ -1,6 +1,5 @@
 
 $(document).ready(function(){
-    var ec = new Evercookie();
 	var song = new Audio('https://doc0160.github.io/Party-Junkie/song/marioTheme.mp3');
     $(song).onbeforeunload = function(){
         sessionStorage.setItem("current_time", song.currentTime);
