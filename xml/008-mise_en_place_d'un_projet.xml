@@ -99,5 +99,13 @@ WinMain(HINSTANCE Instance,
       A la base de mon project je crée un "build.bat".
     </p>
     <img style="max-height: 100vh;" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/The_Scream.jpg/800px-The_Scream.jpg"/>
+    <p>
+      Un .bat est un fichier de script sous windows qui peut faire ce que
+      l'invite de commande peut faire.
+    </p>
+    <p>
+      Pour l'info, la plupart des développeurs utilise un
+      <a href="https://www.gnu.org/software/make/">make</a>-system
+    </p>
   </article>
 </div>
