@@ -119,8 +119,8 @@ for ($a = $nb -1; $a > 1; $a--) {
 
 
 <div id="sound_btn">
-	<img src="../img/speaker.svg" id="svg_song">
-	<img src="../img/mute.svg" id="svg_mute" class="invisible">
+	<img src="../img/speaker.svg" id="svg_song" class="invisible">
+	<img src="../img/mute.svg" id="svg_mute">
 </div>
 
 <script type="text/javascript" src="../js/script_song.js"></script>
