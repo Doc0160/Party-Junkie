@@ -180,8 +180,8 @@ WinMain(HINSTANCE Instance,
     <p>
       Pour éviter de devoir relancer vcvarsall.bat plusieurs fois,
       on va créer un shell.bat (à la racine de notre projet)
-      qui s'occupera de celà et que nous utiliserons
-      pour lancer une invite de commande.
+      qui s'occupera de celà ainsi que tout ce qu'on voudra éxécuter avant
+      de commencer notre session de programmation.
     </p>
     <pre class="prettyprint lang-batch">
       @echo off
@@ -194,6 +194,18 @@ WinMain(HINSTANCE Instance,
       en 64bits ("x86 spécifie une compilation 32bits).<br/>
       On en profite pour modifier la variable "path" pour y ajouter notre dossier,
       au cas où l'on voudrais y ajouter nous outils, etc.
+    </p>
+    <p>
+      Pour aller un pas plus loin, on va créer un racourci lançant notre invite de
+      commande déjà toute prête à être utilisée:
+      <ul>
+        <li>Click droit</li>
+        <li>Nouveau racourci</li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
     </p>
   </article>
   
