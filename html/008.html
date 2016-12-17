@@ -142,38 +142,6 @@ WinMain(HINSTANCE Instance,
       "echo off" dis à la cmd de ne pas afficher la commande avant de
       l'éxécuter; et le @ avant de ne pas afficher "echo off" avant de l'éxécuter.
     </p>
-</article>
-
-<article id="a6">
-<h1>La compilation p2</h1>
-    <p>
-      Le compilateur C++ de Microsoft est "cl.exe".<br/>
-      Mais même après avoir installé Visual Studio, vous ne pourrez pas
-      l'appeller depuis l'invite de commande.
-      La raison pour laquelle vous ne pouvez pas l'apellé c'est
-      que le chemin jusqu'à cet executable n'est pas dans la variable
-      d'environement 'path' (vous pouvez taper "set" dans la cmd pour
-      avoir la liste de ces variables d'environnement).
-    </p>
-    <p>
-      Pour corriger ça (ainsi que mettre en place d'autres choses),
-      l'équipe de développement de Visual Studio nous a déjà fait un .bat
-      que l'on peut utilisé et qui a été téléchargé avec Visual Studio.<br/>
-      Il se situe généralement à
-      "C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\vcvarsall.bat".<br/>
-      <span class="bold" style="color: red;">Verifiez bien que ce fichier existe.</span><br/>
-      En batch (le language de scripting de la cmd), call permet d'appeler
-      un autre .bat.<br/>
-      vcvarsall.bat n'a besoin d'être lancé qu'une seule fois par invite de commande,
-      alors généralement, je me crée un "_.bat" contenant:
-      <pre class="prettyprint lang-batch">
-        @echo off
-        call "C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\vcvarsall.bat" x64
-      </pre>
-      <br/>
-      Le "x64" spécifie au .bat de tout mettre en place pour une compilation
-      en 64bits ("x86 spécifie une compilation 32bits).
-    </p>
     <p>
       Pour l'info, la plupart des développeurs utilise un make-system ou
       build-system, tel que
@@ -214,6 +182,38 @@ WinMain(HINSTANCE Instance,
       Mais, pour avoir compilé de gros projets (plus gros que ce que je vais
       faire dans cette projet (0.5 Go de code en C++)), compiler sans ces
       outils ne prends jamais plus de 5 secondes.
+    </p>
+</article>
+
+<article id="a6">
+<h1>La compilation p2</h1>
+    <p>
+      Le compilateur C++ de Microsoft est "cl.exe".<br/>
+      Mais même après avoir installé Visual Studio, vous ne pourrez pas
+      l'appeller depuis l'invite de commande.
+      La raison pour laquelle vous ne pouvez pas l'apellé c'est
+      que le chemin jusqu'à cet executable n'est pas dans la variable
+      d'environement 'path' (vous pouvez taper "set" dans la cmd pour
+      avoir la liste de ces variables d'environnement).
+    </p>
+    <p>
+      Pour corriger ça (ainsi que mettre en place d'autres choses),
+      l'équipe de développement de Visual Studio nous a déjà fait un .bat
+      que l'on peut utilisé et qui a été téléchargé avec Visual Studio.<br/>
+      Il se situe généralement à
+      "C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\vcvarsall.bat".<br/>
+      <span class="bold" style="color: red;">Verifiez bien que ce fichier existe.</span><br/>
+      En batch (le language de scripting de la cmd), call permet d'appeler
+      un autre .bat.<br/>
+      vcvarsall.bat n'a besoin d'être lancé qu'une seule fois par invite de commande,
+      alors généralement, je me crée un "_.bat" contenant:
+      <pre class="prettyprint lang-batch">
+        @echo off
+        call "C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\vcvarsall.bat" x64
+      </pre>
+      <br/>
+      Le "x64" spécifie au .bat de tout mettre en place pour une compilation
+      en 64bits ("x86 spécifie une compilation 32bits).
     </p>
 </article>
 
