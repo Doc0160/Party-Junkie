@@ -138,9 +138,10 @@ for ($a = $nb -1; $a > 1; $a--) {
    <link href=\"https://doc0160.github.io/Party-Junkie/html/".
              make_html_filename_from_xml_filename($name[$a]).".html\"/>
              <id>//TODO //PARTY //JUNKIE //RULES //".$name[$a].
-             filemtime("../xml/".$name[$a])."</id>
+             " //".date("F d Y H:i:s.", filemtime("../xml/".$name[$a]))."</id>
     <updated>".date("F d Y H:i:s.", filemtime("../xml/".$name[$a]))."</updated>
-    <summary>//TODO //PARTY //JUNKIE //RULES //".filemtime("../xml/".$name[$a])."</summary>
+    <summary>".$temp[1]."
+//TODO //PARTY //JUNKIE //RULES</summary>
     </entry>
 
 ";

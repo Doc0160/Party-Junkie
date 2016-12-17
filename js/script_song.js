@@ -21,6 +21,7 @@ $(document).ready(function(){
         }
     };
     if(sessionStorage.getItem("mute") == "false") {
+        song.autoplay = true;
         p();
     }
 	$('#svg_song').click(p);
