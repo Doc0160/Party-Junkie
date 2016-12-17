@@ -1,36 +1,37 @@
 
 $(document).ready(function(){
+    var ec = new Evercookie();
 	var song = new Audio('https://doc0160.github.io/Party-Junkie/song/marioTheme.mp3');
     $(song).onbeforeunload = function(){
-        sessionStorage.setItem("current_time", song.currentTime);
+        ec.setItem("current_time", song.currentTime);
         alert(song.currentTime);
     };
-    if(!('volume' in sessionStorage)) {
-        sessionStorage.setItem("volume", 0.1);
+    if(!('volume' in ec)) {
+        ec.setItem("volume", 0.1);
     }
-    if(!('mute' in sessionStorage)) {
-        sessionStorage.setItem("mute", "false");
+    if(!('mute' in ec)) {
+        ec.setItem("mute", "false");
     }
-    if(!('current_time' in sessionStorage)) {
-        sessionStorage.setItem("current_time", 0);
+    if(!('current_time' in ec)) {
+        ec.setItem("current_time", 0);
     }
-    song.volume = Math.pow(parseFloat(sessionStorage.getItem("volume")), 2.0);
+    song.volume = Math.pow(parseFloat(ec.getItem("volume")), 2.0);
     song.loop = true;
     
     var pl = function(){
         $('#svg_song').removeClass('invisible');
         $('#svg_mute').addClass('invisible');
-        sessionStorage.setItem("mute", "false");
+        ec.setItem("mute", "false");
         song.play();
     };
     var pa = function() {
-        sessionStorage.setItem("current_time", song.currentTime);
+        ec.setItem("current_time", song.currentTime);
         $('#svg_song').addClass('invisible');
         $('#svg_mute').removeClass('invisible');
-        sessionStorage.setItem("mute", "true");
+        ec.setItem("mute", "true");
         song.pause();
     };
-    if(sessionStorage.getItem("mute") == "false") {
+    if(ec.getItem("mute") == "false") {
         pl();
     } else {
         pa();
@@ -53,12 +54,12 @@ $(document).ready(function(){
 	    var detail = Math.max(-1, Math.min(1, (e.wheelDelta || -e.detail)));
 	    
 	    if(detail > 0){
-		    sessionStorage.setItem("volume", Math.min(1, parseFloat(sessionStorage.getItem("volume")) + 0.025));
+		    ec.setItem("volume", Math.min(1, parseFloat(ec.getItem("volume")) + 0.025));
 	    } else {
-		    sessionStorage.setItem("volume", Math.max(0, parseFloat(sessionStorage.getItem("volume")) - 0.025));
+		    ec.setItem("volume", Math.max(0, parseFloat(ec.getItem("volume")) - 0.025));
 	    }
-		console.log("Volume set to: " + sessionStorage.getItem("volume"));
-        song.volume = Math.pow(parseFloat(sessionStorage.getItem("volume")), 2.0);
+		console.log("Volume set to: " + ec.getItem("volume"));
+        song.volume = Math.pow(parseFloat(ec.getItem("volume")), 2.0);
         e.preventDefault();
     }
 });
