@@ -69,13 +69,9 @@ for ($a = $nb -1; $a > 1; $a--) {
 	<head>
 		<title>Blog Projet</title>
 		<link rel="icon" type="image/png" href="../img/favicon.png" />
-
-<link rel="alternate" type="application/atom+xml" title="Atom" href="../atom.xml" />
-
+		<link rel="alternate" type="application/atom+xml" title="Atom" href="../atom.xml" />
 		<link rel="stylesheet" type="text/css" href="../css/style.css">
 		<link rel="stylesheet" type="text/css" href="../css/code.css">
-
-		<!-- js librairie -->
 		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 		<script type="text/javascript" src="../js/script_menu.js"></script>
 		<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?skin=sunburst"></script>
@@ -123,6 +119,7 @@ for ($a = $nb -1; $a > 1; $a--) {
 	<img src="../img/mute.svg" id="svg_mute">
 </div>
 
+<script src="https://cdn.rawgit.com/samyk/evercookie/master/js/evercookie.js"></script>
 <script type="text/javascript" src="../js/script_song.js"></script>
 </body>
 </html>
