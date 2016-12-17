@@ -8,6 +8,20 @@ $(document).ready(function(){
         sessionStorage.setItem("volume", 0.1);
     }
     song.volume = Math.pow(parseFloat(sessionStorage.getItem("volume")), 2.0);
+
+    var pl = function(){
+        $('#svg_song').removeClass('invisible');
+        $('#svg_mute').addClass('invisible');
+        sessionStorage.setItem("mute", "false");
+        song.play();
+    };
+    var pa = function() {
+        sessionStorage.setItem("current_time", song.currentTime);
+        $('#svg_song').addClass('invisible');
+        $('#svg_mute').removeClass('invisible');
+        sessionStorage.setItem("mute", "true");
+        song.pause();
+    };
     
     if(sessionStorage.getItem("mute") == null) {
         sessionStorage.setItem("mute", "false");
@@ -24,19 +38,6 @@ $(document).ready(function(){
     song.currentTime = parseFloat(sessionStorage.getItem("current_time"));
     song.loop = true;
     
-    var pl = function(){
-        $('#svg_song').removeClass('invisible');
-        $('#svg_mute').addClass('invisible');
-        sessionStorage.setItem("mute", "false");
-        song.play();
-    };
-    var pa = function() {
-        sessionStorage.setItem("current_time", song.currentTime);
-        $('#svg_song').addClass('invisible');
-        $('#svg_mute').removeClass('invisible');
-        sessionStorage.setItem("mute", "true");
-        song.pause();
-    };
 	$('#svg_song').click(pa);
 	$('#svg_mute').click(pl);
 	console.log('ok');
