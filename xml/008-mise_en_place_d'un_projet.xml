@@ -187,7 +187,7 @@ WinMain(HINSTANCE Instance,
       @echo off
       subst W: "D:\Party Junkie"
       call "C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\vcvarsall.bat" x64
-      set path="W:\misc\;%path%"
+      set path=W:\misc\;%path%
     </pre>
     <p>
       Le "x64" spécifie à vcvarsall.bat de tout mettre en place pour une compilation
@@ -201,11 +201,9 @@ WinMain(HINSTANCE Instance,
       <ul>
         <li>Click droit</li>
         <li>Nouveau racourci</li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
+        <li>%windir%\system32\cmd.exe /k W:\misc\shell.bat</li>
       </ul>
+      Voilà !
     </p>
   </article>
   
