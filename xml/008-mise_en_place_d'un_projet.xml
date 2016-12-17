@@ -60,7 +60,7 @@
         cd w:
         mkdir misc
         mkdir code
-        mkdir bin
+        mkdir build
       </pre>
     </p>
     <p>
@@ -238,6 +238,10 @@ WinMain(HINSTANCE Instance,
     </p>
     <pre class="prettyprint lang-batch">
       @echo off
+      mkdir ..\build
+      pushd ..\build
+      cl /Zi ..\code\win32_party.cpp
+      popd
     </pre>
     <p>
       "echo off" dis à la cmd de ne pas afficher la commande avant de
