@@ -83,8 +83,9 @@ for ($a = $nb -1; $a > 1; $a--) {
 		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 		<script type="text/javascript" src="../js/script_menu.js"></script>
 		<script type="text/javascript" src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?skin=sunburst"></script>
-	</head>
-	<body name="body">
+	</head>'
+    "<!--".date("F d Y H:i:s.", filemtime("../xml/".$name[$a]))."-->"
+	'<body name="body">
 
 	<div id="menu">
 		<ul>';
