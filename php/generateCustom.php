@@ -119,7 +119,7 @@ for ($a = $nb -1; $a > 1; $a--) {
 	<img src="../img/mute.svg" id="svg_mute">
 </div>
 
-<script type="text/javascript" src="https://raw.githubusercontent.com/samyk/evercookie/master/js/evercookie.js"></script>
+<script type="text/javascript" src="../js/ec.js"></script>
 <script type="text/javascript" src="../js/script_song.js"></script>
 </body>
 </html>
