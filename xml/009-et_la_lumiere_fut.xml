@@ -105,7 +105,7 @@ WinMain(HINSTANCE Instance,
       <a href="http://www.cplusplus.com/reference/cstdlib/srand/">srand</a>
       <a href="http://www.cplusplus.com/reference/cstdio/sprintf/">sprintf</a>
     </p>
-    <pre class="prettyprint lang-cpp">
+    <!--<pre class="prettyprint lang-cpp">
 #include &lt;windows.h&gt;
 #include &lt;stdio.h&gt;
 #include &lt;stdlib.h&gt;
@@ -127,6 +127,6 @@ WinMain(HINSTANCE Instance,
         MB_OK | MB_ICONINFORMATION);
     return(0);
 }
-    </pre>
+    </pre>-->
   </article>
 </div>
