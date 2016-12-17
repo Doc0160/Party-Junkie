@@ -145,5 +145,5 @@ for ($a = $nb -1; $a > 1; $a--) {
 }
 $feed .= "</feed>";
 file_put_contents("../atom.xml", $feed);
-echo "atom.xml";
+echo "atom.xml\n";
 ?>
