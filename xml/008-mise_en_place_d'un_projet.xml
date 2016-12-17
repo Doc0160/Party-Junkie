@@ -276,7 +276,13 @@ WinMain(HINSTANCE Instance,
       </pre>
       A ce niveau, nous pouvons compiler(taper build).<br/>
       Et taper "devenv win32_party.exe" pour lancer le débugeur.
+    </p>
+    <p>
+      Visual Studio ce lance avec comme seul objet dans l'explorateur de solution
+      notre .exe.
       <img src="../img/set_up/devenv.png" />
+      Click droit "Propriétés".<br/>
+      Modifiez "Répertoire de travail" pour pointer vers "W:\data\".
       <img src="../img/set_up/devenv1.png" />
     </p>
   </article>
