@@ -80,7 +80,8 @@ int CALLBACK
 WinMain(HINSTANCE Instance,
     HINSTANCE PrevInstance,
     LPSTR     CmdLine,
-    int       CmdShow){
+    int       CmdShow)
+{
     return(0);
 }
       </pre>
