@@ -4,26 +4,24 @@ $(document).ready(function(){
     song.onunload = function(){
         sessionStorage.setItem("current_time", song.currentTime);
     };
-    $(song).ready(function(){
-        if(sessionStorage.getItem("volume") == null) {
-            sessionStorage.setItem("volume", 0.1);
-        }
-        song.volume = Math.pow(parseFloat(sessionStorage.getItem("volume")), 2.0);
-        
-        if(sessionStorage.getItem("mute") == null) {
-            sessionStorage.setItem("mute", "false");
-        }
-        if(sessionStorage.getItem("mute") == "false") {
-            pl();
-        } else {
-            pa();
-        }
-        
-        if(sessionStorage.getItem("current_time") == null) {
-            sessionStorage.setItem("current_time", 0.0);
-        }
-        song.currentTime = parseFloat(sessionStorage.getItem("current_time"));
-    });
+    if(sessionStorage.getItem("volume") == null) {
+        sessionStorage.setItem("volume", 0.1);
+    }
+    song.volume = Math.pow(parseFloat(sessionStorage.getItem("volume")), 2.0);
+    
+    if(sessionStorage.getItem("mute") == null) {
+        sessionStorage.setItem("mute", "false");
+    }
+    if(sessionStorage.getItem("mute") == "false") {
+        pl();
+    } else {
+        pa();
+    }
+    
+    if(sessionStorage.getItem("current_time") == null) {
+        sessionStorage.setItem("current_time", 0.0);
+    }
+    song.currentTime = parseFloat(sessionStorage.getItem("current_time"));
     song.loop = true;
     
     var pl = function(){
