@@ -147,8 +147,9 @@ WinMain(HINSTANCE Instance,
         <img style="height: 150px;" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/The_Scream.jpg/800px-The_Scream.jpg"/>
         <p>
           Et genéralement les développeurs aiment utiliser des outils de build,
-          lançant des outils de build, lançant des outils de build,
-          lançant des scripts, lançant d'autres outils de build; et avec tout ça
+          lançant des outils de build, des outils de build lançant
+          des outils de build, eux même lançant des scripts,
+          lançant d'autres outils de build; et avec tout ça
           des outils d'analyse d'outils de build pour lancer
           des outils d'optimisation des outils de build, ainsi que
           des outils d'optimisation d'outils d'optimisation des outils de build,
@@ -297,14 +298,14 @@ WinMain(HINSTANCE Instance,
       le switch Zi qui permet d'activer la génération d'info pour le débeugeur
       de VS.
     </p>
-      <pre class="prettyprint lang-batch">
+    <pre class="prettyprint lang-batch">
       @echo off
       mkdir ..\build
       pushd ..\build
       cl -Zi ..\code\win32_party.cpp
       popd
-      </pre>
-      <p>
+    </pre>
+    <p>
       A ce niveau, nous pouvons compiler(taper build).<br/>
       Et taper "devenv win32_party.exe" pour lancer le débugeur.
     </p>
