@@ -1,8 +1,8 @@
-$(window).unload(function(){
+$(window).onbeforeunload = function(){
 
     sessionStorage.setItem("time", song.currentTime);
     
-});
+};
 
 $(document).ready(function(){
 	var song = new Audio('https://doc0160.github.io/Party-Junkie/song/marioTheme.mp3');
