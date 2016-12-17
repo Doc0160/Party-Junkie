@@ -274,7 +274,7 @@ WinMain(HINSTANCE Instance,
       cl -Zi ..\code\win32_party.cpp
       popd
       </pre>
-      A ce niveau, nous pouvons compiler.
+      A ce niveau, nous pouvons compiler(taper build).<br/>
       Et taper "devenv win32_party.exe" pour lancer le débugeur.
       <img src="../img/set_up/devenv.png" />
       <img src="../img/set_up/devenv1.png" />
