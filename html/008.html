@@ -208,12 +208,9 @@ WinMain(HINSTANCE Instance,
     </p>
     <p>
       Pour éviter de devoir relancer vcvarsall.bat plusieurs fois,
-      on va créer un .bat qui va ce lancer au démarage de la session:
-      Tou ce qui ce trouve dans le dossier
-      "C:\ProgramData\Microsoft\Windows\Start Menu\Programs\StartUp"
-      va ce lancer au démarage de toutes les sessions du poste actuel.<br/>
-      Il suffit de créer un _.bat dans ce dossier contenant
-      (à adapter sur votre machine):
+      on va créer un shell.bat (à la racine de notre projet)
+      qui s'occupera de celà et que nous utiliserons
+      pour lancer une invite de commande.
     </p>
     <pre class="prettyprint lang-batch">
       @echo off
@@ -230,6 +227,13 @@ WinMain(HINSTANCE Instance,
 <h1>La compilation p3</h1>
     <p>
       Une fois la parie 2 faite, nous pouvons continuer notre build.bat.
+    </p>
+</article>
+
+<article id="a8">
+<h1>Le shell</h1>
+    <p>
+      
     </p>
 </article>
 
