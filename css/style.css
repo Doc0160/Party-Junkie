@@ -264,7 +264,7 @@ code{
 	display: none;
 }
 
-img, video{
+article img, article video{
 	height: auto;
     margin: auto;
     max-width: 90%;
@@ -272,11 +272,11 @@ img, video{
     margin-bottom: 15px;
 }
 
-table{
+article table{
 	margin: auto;
 	margin-bottom: 25px;
 	padding: 0;
 }
-td{
+article td{
 	border: 1px solid black;
 }
