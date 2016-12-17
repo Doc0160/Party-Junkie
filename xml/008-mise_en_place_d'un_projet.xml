@@ -110,8 +110,7 @@ WinMain(HINSTANCE Instance,
       <a href="https://ninja-build.org/">Ninja</a> ou encore
       <a href="https://cmake.org/">CMake</a>.<br>
     </p>
-    <p>
-    <div class="two_column">
+    <p class="two_column">
       <img style="height: 100px;" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/The_Scream.jpg/800px-The_Scream.jpg"/>
       <p>
         Et genéralement les développeurs aiment utiliser des outils de build,
@@ -122,7 +121,6 @@ WinMain(HINSTANCE Instance,
         des outils d'optimisation d'outils d'optimisation des outils de build,
         et toute cette folie...
       </p>
-    </div>
     </p>
     <p>
       Et ils aiment ça.
