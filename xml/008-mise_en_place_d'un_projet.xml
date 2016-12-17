@@ -267,6 +267,7 @@ WinMain(HINSTANCE Instance,
       En parlant d'évolution, la toute premiére évolution va être de rajouter
       le switch Zi qui permet d'activer la génération d'info pour le débeugeur
       de VS.
+    </p>
       <pre class="prettyprint lang-batch">
       @echo off
       mkdir ..\build
@@ -274,6 +275,7 @@ WinMain(HINSTANCE Instance,
       cl -Zi ..\code\win32_party.cpp
       popd
       </pre>
+      <p>
       A ce niveau, nous pouvons compiler(taper build).<br/>
       Et taper "devenv win32_party.exe" pour lancer le débugeur.
     </p>
