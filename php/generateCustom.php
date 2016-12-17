@@ -74,7 +74,7 @@ for ($a = $nb -1; $a > 1; $a--) {
 		<link rel="stylesheet" type="text/css" href="../css/code.css">
 		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 		<script type="text/javascript" src="../js/script_menu.js"></script>
-		<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?skin=sunburst"></script>
+		<script type="text/javascript" src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?skin=sunburst"></script>
 	</head>
 	<body name="body">
 
@@ -119,7 +119,7 @@ for ($a = $nb -1; $a > 1; $a--) {
 	<img src="../img/mute.svg" id="svg_mute">
 </div>
 
-<script src="https://cdn.rawgit.com/samyk/evercookie/master/js/evercookie.js"></script>
+<script type="text/javascript" src="https://raw.githubusercontent.com/samyk/evercookie/master/js/evercookie.js"></script>
 <script type="text/javascript" src="../js/script_song.js"></script>
 </body>
 </html>
