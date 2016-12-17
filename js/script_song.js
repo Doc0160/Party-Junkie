@@ -1,6 +1,6 @@
 $(window).onbeforeunload = function(){
 
-    sessionStorage.setItem("time", song.currentTime);
+    //sessionStorage.setItem("time", song.currentTime);
     
 };
 
