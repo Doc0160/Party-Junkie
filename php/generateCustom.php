@@ -43,7 +43,7 @@ $nb = sizeof(scandir('../xml/'));
 $name = scandir('../xml/');
 
 function make_html_filename_from_xml_filename($t){
-    return substr($t, 0, 3);
+    return substr($t, 0, 3).".html";
 }
 function make_title_from_xml_filename($t){
     return str_replace("_", " ", str_replace(".xml", "", $t));
@@ -126,14 +126,14 @@ for ($a = $nb -1; $a > 1; $a--) {
 	//$nameo = str_replace(".xml", ".html", $name[$a]);
     //echo $nameo."\n";
     //file_put_contents("../html/".$nameo, $page);
-    echo make_html_filename_from_xml_filename($name[$a]).".html\n";
-    file_put_contents("../html/".make_html_filename_from_xml_filename($name[$a]).".html", $page);
+    echo make_html_filename_from_xml_filename($name[$a])."\n";
+    file_put_contents("../html/".make_html_filename_from_xml_filename($name[$a]), $page);
     $temp = explode("-", $name[$a]);
     $id = "";
     $feed .= "<entry>
    <title>".$temp[0]." - ".make_title_from_xml_filename($temp[1])."</title>
    <link href=\"https://doc0160.github.io/Party-Junkie/html/".
-             make_html_filename_from_xml_filename($name[$a]).".html\"/>
+             make_html_filename_from_xml_filename($name[$a])."\"/>
              <id>//TODO //PARTY //JUNKIE //RULES //".$name[$a]."</id>
     <updated>".date("F d Y H:i:s.", filemtime("../xml/".$name[$a]))."</updated>
     <summary>".$temp[1]."
