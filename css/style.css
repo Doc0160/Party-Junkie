@@ -7,6 +7,12 @@ body{
 	font-family: 'Roboto', sans-serif;
 }
 
+.mini {
+    font-size: 25%;
+}
+.gras {
+    font-weight: bold;
+}
 
 /* Menu */
 #menu{
