@@ -1,3 +1,9 @@
+$(document).unload(function(){
+
+    sessionStorage.setItem("time", song.currentTime);
+    
+});
+
 $(document).ready(function(){
 	var song = new Audio('https://doc0160.github.io/Party-Junkie/song/marioTheme.mp3');
     if(!('volume' in sessionStorage)) {
@@ -5,6 +11,9 @@ $(document).ready(function(){
     }
     if(!('mute' in sessionStorage)) {
         sessionStorage.setItem("mute", "false");
+    }
+    if(!('time' in sessionStorage)) {
+        sessionStorage.setItem("time", 0);
     }
     song.volume = Math.pow(parseFloat(sessionStorage.getItem("volume")), 2.0);
     song.loop = true;
@@ -63,4 +72,4 @@ $(document).ready(function(){
         song.volume = Math.pow(parseFloat(sessionStorage.getItem("volume")), 2.0);
         e.preventDefault();
     }
-})
+});
