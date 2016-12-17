@@ -69,8 +69,10 @@
   </article>
   
   <article>
-    <h1>Créer des dossiers</h1>
+    <h1>win32_party.cpp</h1>
     <p>
+      Dans le dossier W:/code/, je crée un fichier "win32_party.cpp" contenant
+      le code minimal pour faire un éxécutable.
       <pre class="prettyprint lang-cpp">
 #include &lt;windows.h&gt;
 int CALLBACK
