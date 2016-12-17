@@ -23,11 +23,13 @@ $(document).ready(function(){
     var pl = function(){
         $('#svg_song').removeClass('invisible');
         $('#svg_mute').addClass('invisible');
+        sessionStorage.setItem("mute", "false");
         song.play();
     };
     var pa = function() {
         $('#svg_song').addClass('invisible');
         $('#svg_mute').removeClass('invisible');
+        sessionStorage.setItem("mute", "true");
         song.pause();
     };
     if(sessionStorage.getItem("mute") == "true") {
