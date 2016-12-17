@@ -5,12 +5,12 @@ $(document).ready(function(){
         sessionStorage.setItem("current_time", song.currentTime);
     };
     $(song).ready(function(){
-        if(!('volume' in sessionStorage)) {
+        if(sessionStorage.getItem("volume") != null) {
             sessionStorage.setItem("volume", 0.1);
         }
         song.volume = Math.pow(parseFloat(sessionStorage.getItem("volume")), 2.0);
         
-        if(!('mute' in sessionStorage)) {
+        if(sessionStorage.getItem("mute") != null) {
             sessionStorage.setItem("mute", "false");
         }
         if(sessionStorage.getItem("mute") == "false") {
@@ -19,7 +19,7 @@ $(document).ready(function(){
             pa();
         }
         
-        if(!('current_time' in sessionStorage)) {
+        if(sessionStorage.getItem("currentTime") != null) {
             sessionStorage.setItem("current_time", 0.0);
         }
         song.currentTime = parseFloat(sessionStorage.getItem("current_time"));
