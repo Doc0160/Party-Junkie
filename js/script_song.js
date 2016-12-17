@@ -3,7 +3,7 @@ $(document).ready(function(){
     if(!('message' in sessionStorage)) {
         sessionStorage.setItem("volume", 0.1)
     }
-    song.volume = Math.pow(sessionStorage.getItem("volume"), 2.0);
+    song.volume = Math.pow(parseFloat(sessionStorage.getItem("volume")), 2.0);
     song.loop = true;
     
     song.play();
@@ -34,12 +34,12 @@ $(document).ready(function(){
 	    var detail = Math.max(-1, Math.min(1, (e.wheelDelta || -e.detail)));
 	    
 	    if(detail > 0){
-		    sessionStorage.setItem("volume", Math.min(1, sessionStorage.getItem("volume") + 0.025));
+		    sessionStorage.setItem("volume", Math.min(1, parseFloat(sessionStorage.getItem("volume")) + 0.025));
 	    } else {
-		    sessionStorage.setItem("volume", Math.max(0, sessionStorage.getItem("volume") - 0.025));
+		    sessionStorage.setItem("volume", Math.max(0, parseFloat(sessionStorage.getItem("volume")) - 0.025));
 	    }
 		console.log("Volume set to: " + sessionStorage.getItem("volume"));
-        song.volume = Math.pow(sessionStorage.getItem("volume"), 2.0);
+        song.volume = Math.pow(parseFloat(sessionStorage.getItem("volume")), 2.0);
         e.preventDefault();
     }
 })
