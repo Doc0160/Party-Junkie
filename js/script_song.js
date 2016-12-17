@@ -19,7 +19,7 @@ $(document).ready(function(){
             pa();
         }
         
-        if(sessionStorage.getItem("currentTime") == null) {
+        if(sessionStorage.getItem("current_time") == null) {
             sessionStorage.setItem("current_time", 0.0);
         }
         song.currentTime = parseFloat(sessionStorage.getItem("current_time"));
