@@ -187,10 +187,12 @@ WinMain(HINSTANCE Instance,
       @echo off
       subst W: "D:\Party Junkie"
       call "C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\vcvarsall.bat" x64
+      set path="W:\bin\;%path%"
     </pre>
     <p>
       Le "x64" spécifie à vcvarsall.bat de tout mettre en place pour une compilation
-      en 64bits ("x86 spécifie une compilation 32bits).
+      en 64bits ("x86 spécifie une compilation 32bits).<br/>
+      
     </p>
   </article>
   

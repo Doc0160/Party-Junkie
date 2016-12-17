@@ -14,7 +14,7 @@
 <entry>
    <title>999 - des trucs</title>
    <link href="https://doc0160.github.io/Party-Junkie/html/999.html"/>
-             <id>//TODO //PARTY //JUNKIE //RULES //999-des_trucs.xml //December 02 2016 08:06:24.</id>
+             <id>//TODO //PARTY //JUNKIE //RULES //999-des_trucs.xml</id>
     <updated>December 02 2016 08:06:24.</updated>
     <summary>des_trucs.xml
 //TODO //PARTY //JUNKIE //RULES</summary>
@@ -23,8 +23,8 @@
 <entry>
    <title>008 - mise en place d'un projet</title>
    <link href="https://doc0160.github.io/Party-Junkie/html/008.html"/>
-             <id>//TODO //PARTY //JUNKIE //RULES //008-mise_en_place_d'un_projet.xml //December 17 2016 14:24:42.</id>
-    <updated>December 17 2016 14:24:42.</updated>
+             <id>//TODO //PARTY //JUNKIE //RULES //008-mise_en_place_d'un_projet.xml</id>
+    <updated>December 17 2016 14:27:00.</updated>
     <summary>mise_en_place_d'un_projet.xml
 //TODO //PARTY //JUNKIE //RULES</summary>
     </entry>
@@ -32,7 +32,7 @@
 <entry>
    <title>007 - visual studio et winapi</title>
    <link href="https://doc0160.github.io/Party-Junkie/html/007.html"/>
-             <id>//TODO //PARTY //JUNKIE //RULES //007-visual_studio_et_winapi.xml //December 17 2016 07:18:53.</id>
+             <id>//TODO //PARTY //JUNKIE //RULES //007-visual_studio_et_winapi.xml</id>
     <updated>December 17 2016 07:18:53.</updated>
     <summary>visual_studio_et_winapi.xml
 //TODO //PARTY //JUNKIE //RULES</summary>
@@ -41,7 +41,7 @@
 <entry>
    <title>006 - binaire</title>
    <link href="https://doc0160.github.io/Party-Junkie/html/006.html"/>
-             <id>//TODO //PARTY //JUNKIE //RULES //006-binaire.xml //December 02 2016 08:31:43.</id>
+             <id>//TODO //PARTY //JUNKIE //RULES //006-binaire.xml</id>
     <updated>December 02 2016 08:31:43.</updated>
     <summary>binaire.xml
 //TODO //PARTY //JUNKIE //RULES</summary>
@@ -50,7 +50,7 @@
 <entry>
    <title>005 - preprocesseur</title>
    <link href="https://doc0160.github.io/Party-Junkie/html/005.html"/>
-             <id>//TODO //PARTY //JUNKIE //RULES //005-preprocesseur.xml //December 02 2016 08:38:13.</id>
+             <id>//TODO //PARTY //JUNKIE //RULES //005-preprocesseur.xml</id>
     <updated>December 02 2016 08:38:13.</updated>
     <summary>preprocesseur.xml
 //TODO //PARTY //JUNKIE //RULES</summary>
@@ -59,7 +59,7 @@
 <entry>
    <title>004 - enum union struct</title>
    <link href="https://doc0160.github.io/Party-Junkie/html/004.html"/>
-             <id>//TODO //PARTY //JUNKIE //RULES //004-enum_union_struct.xml //December 01 2016 16:59:47.</id>
+             <id>//TODO //PARTY //JUNKIE //RULES //004-enum_union_struct.xml</id>
     <updated>December 01 2016 16:59:47.</updated>
     <summary>enum_union_struct.xml
 //TODO //PARTY //JUNKIE //RULES</summary>
@@ -68,7 +68,7 @@
 <entry>
    <title>003 - les pointeurs</title>
    <link href="https://doc0160.github.io/Party-Junkie/html/003.html"/>
-             <id>//TODO //PARTY //JUNKIE //RULES //003-les_pointeurs.xml //December 02 2016 03:45:51.</id>
+             <id>//TODO //PARTY //JUNKIE //RULES //003-les_pointeurs.xml</id>
     <updated>December 02 2016 03:45:51.</updated>
     <summary>les_pointeurs.xml
 //TODO //PARTY //JUNKIE //RULES</summary>
@@ -77,7 +77,7 @@
 <entry>
    <title>002 - premisse</title>
    <link href="https://doc0160.github.io/Party-Junkie/html/002.html"/>
-             <id>//TODO //PARTY //JUNKIE //RULES //002-premisse.xml //December 01 2016 15:58:56.</id>
+             <id>//TODO //PARTY //JUNKIE //RULES //002-premisse.xml</id>
     <updated>December 01 2016 15:58:56.</updated>
     <summary>premisse.xml
 //TODO //PARTY //JUNKIE //RULES</summary>
@@ -86,7 +86,7 @@
 <entry>
    <title>001 - introduction</title>
    <link href="https://doc0160.github.io/Party-Junkie/html/001.html"/>
-             <id>//TODO //PARTY //JUNKIE //RULES //001-introduction.xml //December 02 2016 03:44:57.</id>
+             <id>//TODO //PARTY //JUNKIE //RULES //001-introduction.xml</id>
     <updated>December 02 2016 03:44:57.</updated>
     <summary>introduction.xml
 //TODO //PARTY //JUNKIE //RULES</summary>
@@ -95,7 +95,7 @@
 <entry>
    <title>000 - presentation</title>
    <link href="https://doc0160.github.io/Party-Junkie/html/000.html"/>
-             <id>//TODO //PARTY //JUNKIE //RULES //000-presentation.xml //December 01 2016 16:06:13.</id>
+             <id>//TODO //PARTY //JUNKIE //RULES //000-presentation.xml</id>
     <updated>December 01 2016 16:06:13.</updated>
     <summary>presentation.xml
 //TODO //PARTY //JUNKIE //RULES</summary>
