@@ -134,9 +134,11 @@ WinMain(HINSTANCE Instance,
     </p>
     <p>
       La premiére ligne de ce build.bat est la suivante:
-      <pre class="prettyprint lang-batch">
-        @echo off
-      </pre>
+    </p>
+    <pre class="prettyprint lang-batch">
+      @echo off
+    </pre>
+    <p>
       "echo off" dis à la cmd de ne pas afficher la commande avant de
       l'éxécuter; et le @ avant de ne pas afficher "echo off" avant de l'éxécuter.
     </p>
@@ -156,6 +158,10 @@ WinMain(HINSTANCE Instance,
       Il se situe généralement à
       "C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\vcvarsall.bat".<br/>
       <span class="bold" style="color: red;">Verifiez bien que ce fichier existe.</span><br/>
+      <pre class="prettyprint lang-batch">
+        @echo off
+        call "C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\vcvarsall.bat" x64
+      </pre>
     </p>
     <p>
       Pour l'info, la plupart des développeurs utilise un make-system ou
