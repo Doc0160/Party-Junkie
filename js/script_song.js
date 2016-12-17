@@ -5,20 +5,25 @@ $(document).ready(function(){
         sessionStorage.setItem("current_time", song.currentTime);
     };
     $(song).ready(function(){
-
-        });
-    if(!('volume' in sessionStorage)) {
-        sessionStorage.setItem("volume", 0.1);
-    }
-    if(!('mute' in sessionStorage)) {
-        sessionStorage.setItem("mute", "false");
-    }
-    if(!('current_time' in sessionStorage)) {
-        sessionStorage.setItem("current_time", 0.0);
-    } else {
+        if(!('volume' in sessionStorage)) {
+            sessionStorage.setItem("volume", 0.1);
+        }
+        song.volume = Math.pow(parseFloat(sessionStorage.getItem("volume")), 2.0);
+        
+        if(!('mute' in sessionStorage)) {
+            sessionStorage.setItem("mute", "false");
+        }
+        if(sessionStorage.getItem("mute") == "false") {
+            pl();
+        } else {
+            pa();
+        }
+        
+        if(!('current_time' in sessionStorage)) {
+            sessionStorage.setItem("current_time", 0.0);
+        }
         song.currentTime = parseFloat(sessionStorage.getItem("current_time"));
-    }
-    song.volume = Math.pow(parseFloat(sessionStorage.getItem("volume")), 2.0);
+    });
     song.loop = true;
     
     var pl = function(){
@@ -34,11 +39,6 @@ $(document).ready(function(){
         sessionStorage.setItem("mute", "true");
         song.pause();
     };
-    if(sessionStorage.getItem("mute") == "false") {
-        pl();
-    } else {
-        pa();
-    }
 	$('#svg_song').click(pa);
 	$('#svg_mute').click(pl);
 	console.log('ok');
