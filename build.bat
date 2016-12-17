@@ -1,7 +1,7 @@
 @echo off
 
-cd D:\___\Party-Junkie\html
-del * /q
+rem cd D:\___\Party-Junkie\html
+rem del * /q
 rem git rm *
 
 cd D:\___\Party-Junkie\php
