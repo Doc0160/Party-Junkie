@@ -33,6 +33,7 @@ WinMain(HINSTANCE Instance,
   
   <article>
     <h1>Librairies</h1>
+    <img src="../img/lux/requirements.png"/>
     <p>
       User32.lib
     </p>
