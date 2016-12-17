@@ -164,7 +164,9 @@ while ($a < $nb) {
 </html>
 ';
 	$nameo = str_replace(".xml", ".html", $name[$a]);
+    echo $nameo."\n";
     file_put_contents("../html/".$nameo, $page);
+    file_put_contents("../html/".substr($name[$a], 0, 3).".html", $page);
     
     $a++;
 }

@@ -2,6 +2,7 @@ $(document).ready(function(){
 	var song = new Audio('https://doc0160.github.io/Party-Junkie/song/marioTheme.mp3');
     var volume = 0.1;
     song.volume = Math.pow(volume, 2.0);
+    song.loop = true;
     song.play();
 	$('#svg_song').click(function(){
 		$('#svg_song').toggleClass('invisible');
