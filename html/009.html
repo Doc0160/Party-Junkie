@@ -156,17 +156,16 @@ WinMain(HINSTANCE Instance,
 {
 
     srand(time(NULL));
-    int score = 0;
     
     if(IDYES == MessageBox(0,
         "Tu veux un nombre aléatoire ?",
         "Party Junkie V-300",
         MB_YESNO | MB_ICONINFORMATION)){
-        vspfunc("Un nombre random entre 0 et 10: %d", rand()%10);
-        MessageBox(0,
-        buffer,
-        "Party Junkie V-300",
-        MB_OK | MB_ICONINFORMATION);
+            vspfunc("Un nombre random entre 0 et 10: %d", rand()%10);
+            MessageBox(0,
+            buffer,
+            "Party Junkie V-300",
+           MB_OK | MB_ICONINFORMATION);
     }
     return(0);
 }
