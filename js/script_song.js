@@ -27,7 +27,7 @@ $(document).ready(function(){
     };
     var pa = function() {
         $('#svg_song').addClass('invisible');
-        $('#svg_mute').removetoggleClass('invisible');
+        $('#svg_mute').removeClass('invisible');
         song.pause();
     };
     if(sessionStorage.getItem("mute") == "true") {
