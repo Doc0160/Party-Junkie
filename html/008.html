@@ -281,7 +281,28 @@ WinMain(HINSTANCE Instance,
       "pushd" permet de se déplacer dans un dossier de façon à pouvoir revenir
       au dossier où l'on était à l'origine avec "popd".
     </p>
-    <p></p>
+    <p>
+      Ce fichier "build.bat" va être la seule et unique façon dont on va compiler
+      notre programme.<br/>
+      Ce fichier va surement évoluer au fur et à meusure, mais ne sera jamais plus
+      compliqué que ce qu'il est actuellement.
+    </p>
+</article>
+
+<article id="a10">
+<h1>La compilation p3</h1>
+    <p>
+      En parlant d'évolution, la toute premiére évolution va être de rajouter
+      le switch Zi qui permet d'activer la génération d'info pour le débeugeur
+      de VS.
+      <pre class="prettyprint lang-batch">
+      @echo off
+      mkdir ..\build
+      pushd ..\build
+      cl -Zi ..\code\win32_party.cpp
+      popd
+    </pre>
+    </p>
 </article>
 
 	</div>
