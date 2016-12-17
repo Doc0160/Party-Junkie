@@ -9,7 +9,7 @@ $(document).ready(function(){
     song.volume = Math.pow(parseFloat(sessionStorage.getItem("volume")), 2.0);
     song.loop = true;
     if(sessionStorage.getItem("mute") == "false") {
-        song.play();
+        p();
     }
     p = function() {
         $('#svg_song').toggleClass('invisible');
@@ -23,7 +23,6 @@ $(document).ready(function(){
         }
     }
 	$('#svg_song').click(p);
-
 	$('#svg_mute').click(p);
 	console.log('ok');
 
