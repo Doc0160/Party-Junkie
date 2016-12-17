@@ -129,6 +129,7 @@ for ($a = $nb -1; $a > 1; $a--) {
     echo make_html_filename_from_xml_filename($name[$a]).".html\n";
     file_put_contents("../html/".make_html_filename_from_xml_filename($name[$a]).".html", $page);
     $temp = explode("-", $name[$a]);
+    $id = "";
     $feed .= "<entry>
    <title>".$temp[0]." - ".make_title_from_xml_filename($temp[1])."</title>
    <link href=\"https://doc0160.github.io/Party-Junkie/html/".
