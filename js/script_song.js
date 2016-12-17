@@ -12,7 +12,7 @@ $(document).ready(function(){
         sessionStorage.setItem("mute", "false");
     }
     if(!('current_time' in sessionStorage)) {
-        sessionStorage.setItem("current_time", 0);
+        sessionStorage.setItem("current_time", 0.0);
     } else {
         song.currentTime = parseFloat(sessionStorage.getItem("mute"));
     }
