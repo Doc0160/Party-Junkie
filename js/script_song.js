@@ -22,7 +22,13 @@ $(document).ready(function(){
     };
     if(sessionStorage.getItem("mute") == "false") {
         song.autoplay = true;
-        p();
+        $('#svg_song').removeClass('invisible');
+        $('#svg_mute').addClass('invisible');
+        song.play();
+    } else {
+        $('#svg_song').addClass('invisible');
+        $('#svg_mute').removetoggleClass('invisible');
+        song.pause();
     }
 	$('#svg_song').click(p);
 	$('#svg_mute').click(p);
