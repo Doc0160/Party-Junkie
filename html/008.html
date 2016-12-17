@@ -207,11 +207,12 @@ WinMain(HINSTANCE Instance,
       un autre .bat.<br/>
       vcvarsall.bat n'a besoin d'être lancé qu'une seule fois par invite de commande,
       alors généralement, je me crée un "_.bat" contenant:
-      <pre class="prettyprint lang-batch">
-        @echo off
-        call "C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\vcvarsall.bat" x64
-      </pre>
-      <br/>
+    </p>
+    <pre class="prettyprint lang-batch">
+      @echo off
+      call "C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\vcvarsall.bat" x64
+    </pre>
+    <p>
       Le "x64" spécifie à vcvarsall.bat de tout mettre en place pour une compilation
       en 64bits ("x86 spécifie une compilation 32bits).
     </p>
