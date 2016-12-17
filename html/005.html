@@ -29,7 +29,7 @@
 	<div class="mountain1" id="mountain2"></div>
 </div>
 <div class="content" id="content">
-<article>
+<article id="a0">
 <h1>Preprocesseur</h1>
   <p>
   Les préprocesseurs lexicaux sont les préprocesseurs de plus bas niveau, au sens où ils requièrent uniquement un mécanisme d'analyse lexicale. Ces préprocesseurs se contentent de procéder à des substitutions de chaînes de caractères en fonction de règles définies par l'utilisateur. On les utilise généralement pour instancier des macros, inclure d'autres fichiers (par opposition à des fonctionnalités de plus haut niveau telles que l'inclusion de modules/paquets/unités/composants) et permettre la compilation ou/et l'inclusion conditionnelle.
@@ -39,7 +39,7 @@
   </p>
 </article>
 
-<article>
+<article id="a1">
 <h1>Les macros</h1>
   <p>
     Le mécanisme des macros est fréquemment utilisé en C pour définir de petits extraits de code qui seront réutilisés à divers endroits du programme.
@@ -77,7 +77,7 @@
     <p>#undef permet d'efacer une macro<p>
 </article>
 
-<article>
+<article id="a2">
 <h1>La compilation conditionelle</h1>
   <p>
     Le préprocesseur C permet aussi la compilation conditionnelle, ce qui permet de disposer de plusieurs versions d'un même programme ou d'un extrait dans un même fichier source. Typiquement, les programmeurs C utilisent cette technique pour pouvoir compiler différemment le programme en fonction de son état d'avancement, de la plateforme de destination, des tests désirés, ou pour s'assurer que les fichiers d'en-tête ne sont inclus qu'une seule fois.
@@ -115,7 +115,7 @@
   </p>
 </article>
 
-<article>
+<article id="a3">
 <h1>Inclusion</h1>
   <p>
     L'usage le plus fréquent du préprocesseur C est la directive #include &lt;&gt; dont le rôle est de recopier le contenu d'un fichier dans le fichier courant.
@@ -134,7 +134,7 @@
   </pre>
 </article>
 
-<article>
+<article id="a4">
 <h1>Macros courantes</h1>
   <pre class="prettyprint lang-cpp">
     #define ARRAY_SIZE(a) (sizeof(a) / sizeof(*a))

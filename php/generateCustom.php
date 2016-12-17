@@ -109,7 +109,7 @@ for ($a = $nb -1; $a > 1; $a--) {
 </div>
 <div class="content" id="content">';
     for($j = 0; $j < sizeof($array["div"]["article"]); $j++)
-	    $page .= "\n<article>\n".$array["div"]["article"][$j]."\n</article>\n";
+	    $page .= "\n<article id=\"a".$j."\">\n".$array["div"]["article"][$j]."\n</article>\n";
     $page .= '
 	</div>
 
