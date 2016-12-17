@@ -205,6 +205,12 @@ WinMain(HINSTANCE Instance,
       </ul>
       Voilà !
     </p>
+    <p>
+      Maintenant, si voys double clickez sur ce racourci,
+      une invite de commande va s'ouvrir.<br/>
+      Tapez "cl".<br/>
+      Miracle, on peut appeler le compilateur !
+    </p>
   </article>
   
   <article>
