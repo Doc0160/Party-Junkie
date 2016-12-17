@@ -52,7 +52,7 @@
       je vais faire mon développement et lui attribuer une lettre:<br/>
       pour celà existe la commande "subst":
       <img src="../img/set_up/subst.png" />
-      Dans mon cas, ce sera subst W: "D:\\Party Junkie".
+      Dans mon cas, ce sera subst W: "D:\Party Junkie".
     </p>
     <p>
       Pour ceux qui ne savent pas ouvrir une invite de commande:
@@ -204,12 +204,20 @@ WinMain(HINSTANCE Instance,
       "C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\vcvarsall.bat".<br/>
       <span class="bold" style="color: red;">Verifiez bien que ce fichier existe.</span><br/>
       En batch (le language de scripting de la cmd), call permet d'appeler
-      un autre .bat.<br/>
-      vcvarsall.bat n'a besoin d'être lancé qu'une seule fois par invite de commande,
-      alors généralement, je me crée un "_.bat" contenant:
+      un autre .bat.
+    </p>
+    <p>
+      Pour éviter de devoir relancer vcvarsall.bat plusieurs fois,
+      on va créer un .bat qui va ce lancer au démarage de la session:
+      Tou ce qui ce trouve dans le dossier
+      "C:\ProgramData\Microsoft\Windows\Start Menu\Programs\StartUp"
+      va ce lancer au démarage de toutes les sessions du poste actuel.<br/>
+      Il suffit de créer un _.bat dans ce dossier contenant
+      (à adapter sur votre machine):
     </p>
     <pre class="prettyprint lang-batch">
       @echo off
+      subst W: "D:\Party Junkie"
       call "C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\vcvarsall.bat" x64
     </pre>
     <p>
