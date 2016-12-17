@@ -98,6 +98,6 @@ WinMain(HINSTANCE Instance,
     <p>
       A la base de mon project je crée un "build.bat".
     </p>
-    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/The_Scream.jpg/800px-The_Scream.jpg"/>
+    <img style="max-height: 100vh;" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/The_Scream.jpg/800px-The_Scream.jpg"/>
   </article>
 </div>
