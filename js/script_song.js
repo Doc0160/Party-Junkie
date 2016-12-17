@@ -28,7 +28,7 @@ $(document).ready(function(){
 	    }
 
     
-    var volume = 0.75;
+    var volume = 0.15;
     function cbScroll(e)
     {
 	    var e = window.event || e;
