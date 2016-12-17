@@ -1,6 +1,6 @@
 $(document).ready(function(){
 	var song = new Audio('https://doc0160.github.io/Party-Junkie/song/marioTheme.mp3');
-    var volume = 0.15;
+    var volume = 0.1;
     song.volume = Math.pow(volume, 2.0);
     song.play();
 	$('#svg_song').click(function(){
@@ -25,10 +25,7 @@ $(document).ready(function(){
 		document.getElementById('svg_song').attachEvent("onmousewheel", cbScroll);
 	}
 
-    
-    var volume = 0.15;
-    function cbScroll(e)
-    {
+    function cbScroll(e) {
 	    var e = window.event || e;
 	    var detail = Math.max(-1, Math.min(1, (e.wheelDelta || -e.detail)));
 	    
