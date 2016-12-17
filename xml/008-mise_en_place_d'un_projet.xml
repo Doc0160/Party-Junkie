@@ -109,6 +109,12 @@ WinMain(HINSTANCE Instance,
       avoir la liste de ces variables d'environnement).
     </p>
     <p>
+      Pour corriger ça (ainsi que mettre en place d'autres choses),
+      l'équipe de développement de Visual Studio nous a déjà fait un .bat
+      que l'on peut utilisé et qui a été téléchargé avec Visual Studio.<br/>
+      Il se situe généralement à
+      "C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\vcvarsall.bat".<br/>
+      <span class="bold">Verifiez bien que ce fichier existe.</span><br/>
       
       <pre class="prettyprint lang-batch">
         @echo off
