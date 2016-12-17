@@ -16,9 +16,11 @@
   </article>
   
   <article>
-    <h1>-</h1>
+    <h1>Le faux disque dur</h1>
     <p>
-      -
+      Le chemin vers un dique dur est très court: "C:/" ou encore "D:/".<br/>
+      Un truc que j'aime faire c'est prendre le dossier dans lequel
+      je vais faire mon développement et lui attribuer une lettre:
     </p>
   </article>
 </div>
