@@ -156,6 +156,13 @@ WinMain(HINSTANCE Instance,
       </div>
     </p>
     <p>
+      <div class="two_column">
+        <p>
+          Et ils aiment ça.
+        </p>
+        <img src="https://i.ytimg.com/i/jJ3-Fs8wmfxZXAo4IK02mA/mq1.jpg?v=df668c"/>
+    </p>
+    <p>
       La raison pour laquelle je ne le fais plus c'est que l'on
       fini par passer beaucoup de temps à parametrer ces outils,
       et beaucoup moins à programmer.<br/>
@@ -166,9 +173,6 @@ WinMain(HINSTANCE Instance,
       Mais, pour avoir compilé de gros projets (plus gros que ce que je vais
       faire dans cette projet (0.5 Go de code en C++)), compiler sans ces
       outils ne prends jamais plus de 5 secondes.
-    </p>
-    <p>
-      Et ils aiment ça.
     </p>
   </article>
 </div>
