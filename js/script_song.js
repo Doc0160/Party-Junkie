@@ -8,7 +8,11 @@ $(document).ready(function(){
     }
     song.volume = Math.pow(parseFloat(sessionStorage.getItem("volume")), 2.0);
     song.loop = true;
-    p = function() {
+    
+    if(sessionStorage.getItem("mute") == "false") {
+        p();
+    }
+    var p = function() {
         $('#svg_song').toggleClass('invisible');
         $('#svg_mute').toggleClass('invisible');
         if(sessionStorage.getItem("mute") == "true") {
@@ -19,9 +23,6 @@ $(document).ready(function(){
             song.pause();
         }
     };
-    if(sessionStorage.getItem("mute") == "false") {
-        p();
-    }
 	$('#svg_song').click(p);
 	$('#svg_mute').click(p);
 	console.log('ok');
