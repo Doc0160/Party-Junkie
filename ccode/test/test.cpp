@@ -5,7 +5,7 @@ WinMain(HINSTANCE Instance,
     LPSTR     CmdLine,
     int       CmdShow)
 {
-    MessageBox(Instance,
+    MessageBox(0,
         "Mandrew was a superdog. It's true.\nYou can tell from its bright green glowing poo.",
         "Party Junkie Rules",
         MB_OK | MB_ICONINFORMATION);
