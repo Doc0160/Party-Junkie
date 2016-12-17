@@ -32,7 +32,7 @@ $(document).ready(function(){
         sessionStorage.setItem("mute", "true");
         song.pause();
     };
-    if(sessionStorage.getItem("mute") == "true") {
+    if(sessionStorage.getItem("mute") == "false") {
         pl();
     } else {
         pa();
