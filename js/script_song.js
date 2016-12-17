@@ -36,6 +36,7 @@ $(document).ready(function(){
         song.play();
     };
     var pa = function() {
+        sessionStorage.setItem("time", song.currentTime);
         $('#svg_song').addClass('invisible');
         $('#svg_mute').removeClass('invisible');
         sessionStorage.setItem("mute", "true");
