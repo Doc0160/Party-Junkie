@@ -140,17 +140,17 @@ WinMain(HINSTANCE Instance,
       </div>
     </p>
     <p>
-          La raison pour laquelle je ne le fais plus c'est que l'on
-          fini par passer beaucoup de temps à parametrer ces outils,
-          et beaucoup moins à programmer.<br/>
-          La raison pour laquelle les programmeurs utilisent ce genre d'outils
-          est de faire un sorte de compiler que les parities du code necessaire,
-          et donc éviter de recompiler tout le projet (plus le projet est gros,
-          plus il prend du temps à compiler).<br/>
-          Mais, pour avoir compilé de gros projets (plus gros que ce que je vais
-          faire dans cette projet (0.5 Go de code en C++)), compiler sans ces
-          outils ne prends jamais plus de 5 secondes.
-        </p>
+      La raison pour laquelle je ne le fais plus c'est que l'on
+      fini par passer beaucoup de temps à parametrer ces outils,
+      et beaucoup moins à programmer.<br/>
+      La raison pour laquelle les programmeurs utilisent ce genre d'outils
+      est de faire un sorte de compiler que les parities du code necessaire,
+      et donc éviter de recompiler tout le projet (plus le projet est gros,
+      plus il prend du temps à compiler).<br/>
+      Mais, pour avoir compilé de gros projets (plus gros que ce que je vais
+      faire dans cette projet (0.5 Go de code en C++)), compiler sans ces
+      outils ne prends jamais plus de 5 secondes.
+    </p>
     <p>
       Et ils aiment ça.
     </p>
