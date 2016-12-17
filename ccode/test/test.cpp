@@ -308,7 +308,7 @@ WinMain(HINSTANCE Instance,
 			} break;
 		}
 	}
-	vspfunc("Votre score de dégeulasserie: %d/10", score);
+	sprintf(buffer, "Votre score de dégeulasserie: %d/10", score);
     MessageBox(0,
         buffer,
         "Party Junkie V-300",

@@ -129,25 +129,16 @@ WinMain(HINSTANCE Instance,
       <li>Laisser des gouttes d’urine sur le rebord de la cuvette.</li>
     </ul>
     <img src="../img/lux/WTF.jpg"/>
+    <p>
+      <a href="http://www.cplusplus.com/reference/cstdlib/rand/">rand</a>
+      <a href="http://www.cplusplus.com/reference/cstdlib/srand/">srand</a>
+      <a href="http://www.cplusplus.com/reference/cstdio/sprintf/">sprintf</a>
+    </p>
     <pre class="prettyprint lang-cpp">
 #include &lt;windows.h&gt;
 #include &lt;stdio.h&gt;
 #include &lt;stdlib.h&gt;
 #include &lt;time.h&gt;
-
-
-char buffer[80];
-int vspfunc(char *format, ...)
-{
-   va_list aptr;
-   int ret;
-
-   va_start(aptr, format);
-   ret = vsprintf(buffer, format, aptr);
-   va_end(aptr);
-
-   return(ret);
-}
 
 int CALLBACK
 WinMain(HINSTANCE Instance,
@@ -157,7 +148,8 @@ WinMain(HINSTANCE Instance,
 {
 
     srand(time(NULL));
-    vspfunc("Un nombre random entre 0 et 10: %d", rand()%10);
+    char buffer[80];
+    sprintf(buffer, "Un nombre random entre 0 et 10: %d", rand()%10);
     MessageBox(0,
         buffer,
         "Party Junkie V-300",
