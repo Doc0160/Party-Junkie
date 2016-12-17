@@ -91,7 +91,7 @@ for ($a = $nb -1; $a > 1; $a--) {
                  '<a href="'.make_html_filename_from_xml_filename($name[$i]).'">'.
 				 '<span class="numbers">'.$temp[0]."</span>".
                  ' - '.
-                 make_title_from_xml_filename($temp[1]).
+                 make_title_from_xml_filename($name[$i]).
                  '</a>'.
                  '</li>';
 	    $i++;
@@ -135,7 +135,7 @@ for ($a = $nb -1; $a > 1; $a--) {
     $temp = explode("-", $name[$a]);
     $id = "";
     $feed .= "<entry>
-   <title>".$temp[0]." - ".make_title_from_xml_filename($temp[1])."</title>
+   <title>".$temp[0]." - ".make_title_from_xml_filename($name[$a])."</title>
    <link href=\"https://doc0160.github.io/Party-Junkie/html/".
              make_html_filename_from_xml_filename($name[$a])."\"/>
              <id>//TODO //PARTY //JUNKIE //RULES //".$name[$a]."</id>
