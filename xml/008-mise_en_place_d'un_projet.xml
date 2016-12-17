@@ -288,7 +288,13 @@ WinMain(HINSTANCE Instance,
       Modifiez "Répertoire de travail" pour pointer vers "W:\data\".
       <img src="../img/set_up/devenv1.png" />
       On peut maintenant appuyer sur F11, qui veut dire
-      "Lance le programme et fait pause dès que t'arrive au main."
+      "Lance le programme et fait pause dès que t'arrive au main.".<br/>
+      Nous faisons ça pour forcer VS à trouver le fichier du code source.<br/>
+      A ce niveau, nous pouvons fermer VS et l'autoriser à enregistrer son fichier
+      .sln.
     </p>
+  </article>
+  <article>
+    
   </article>
 </div>
