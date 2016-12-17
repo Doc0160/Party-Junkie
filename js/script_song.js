@@ -1,4 +1,4 @@
-$(document).beforeunload(function(){
+$(document).unload(function(){
 
     sessionStorage.setItem("time", song.currentTime);
     
