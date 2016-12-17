@@ -8,5 +8,5 @@ php generateCustom.php
 
 cd D:\___\Party-Junkie\
 git add *
-git commit -m "yah"
+git commit -m "%time% %date%"
 git push
