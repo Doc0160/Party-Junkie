@@ -100,6 +100,18 @@ WinMain(HINSTANCE Instance,
     </p>
     <img style="max-height: 100vh;" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/The_Scream.jpg/800px-The_Scream.jpg"/>
     <p>
+      Un .bat est un fichier de script sous windows qui peut faire ce que
+      l'invite de commande peut faire.
+    </p>
+    <p>
+      La premiére ligne de ce build.bat est la suivante:
+      <pre class="prettyprint lang-batch">
+        @echo off
+      </pre>
+      "echo off" dis à la cmd de ne pas afficher la commande avant de
+      l'éxécuter; et le @ avant de ne pas afficher "echo off" avant de l'éxécuter.
+    </p>
+    <p>
       Le compilateur C++ de Microsoft est "cl.exe".<br/>
       Mais même après avoir installé Visual Studio, vous ne pourrez pas
       l'appeller depuis l'invite de commande.
@@ -114,15 +126,7 @@ WinMain(HINSTANCE Instance,
       que l'on peut utilisé et qui a été téléchargé avec Visual Studio.<br/>
       Il se situe généralement à
       "C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\vcvarsall.bat".<br/>
-      <span class="bold">Verifiez bien que ce fichier existe.</span><br/>
-      
-      <pre class="prettyprint lang-batch">
-        @echo off
-      </pre>
-    </p>
-    <p>
-      Un .bat est un fichier de script sous windows qui peut faire ce que
-      l'invite de commande peut faire.
+      <span class="bold" style="color: red;">Verifiez bien que ce fichier existe.</span><br/>
     </p>
     <p>
       Pour l'info, la plupart des développeurs utilise un make-system ou
