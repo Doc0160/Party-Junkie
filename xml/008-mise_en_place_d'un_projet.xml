@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <div>
   <article>
-    <h1>-</h1>
+    <h1>Explication</h1>
     <p>
-      -
+      Pour obtenir une meilleure flexibilitée dans la compilation,
+      ansi que de permettre l'utilisation d'un éditeur de code externe,
+      mais aussi d'autres raisons *cough* *cough* Vusial Studio Crashs *cough* *cough*,
+      nous allons voir comment former notre prope environement de développement.
     </p>
   </article>
   
