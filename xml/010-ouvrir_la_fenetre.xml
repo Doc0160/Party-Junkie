@@ -250,7 +250,7 @@
       <pre>
         //TODO(doc): do things
       </pre>
-      on va écrire:
+      On va écrire:
     </p>
     <pre class="prettyprint lang-cpp">
       MSG Message;
