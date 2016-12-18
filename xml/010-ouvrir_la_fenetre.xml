@@ -260,7 +260,7 @@
           //NOTE(doc): if MessageResult = 0; you have to stop your application
           if(MessageResult > 0)
           {
-              
+              TranslateMessage(&Message);
           }
           else
           {
