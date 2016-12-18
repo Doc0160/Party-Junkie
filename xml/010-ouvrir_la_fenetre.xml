@@ -45,8 +45,7 @@
     </pre>
     <p>
       Pour notre programme nous n'avons par besoin (pour l'instant) de
-      définir une icone (hIcon), un curseur (hCursor), ni de réserver plus
-      de mémoire pour la WNDCLASS (cbClsExtra & cbWndExtra), ni même
+      définir une icone (hIcon), un curseur (hCursor), ni même
       de définir une couleur de fond pour notre fenétre (hbrBackground).
       Nous n'aurons pas non plus de "Menu" (Fichiers, Edition, ...)
       (lpszMenuName).
