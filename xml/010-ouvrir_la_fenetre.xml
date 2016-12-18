@@ -295,7 +295,7 @@
     <pre class="prettyprint lang-cpp">
       case WM_PAINT:{
           PAINTSTRUCT Paint;
-          HDC Context = BeginPaint(Window, &Paint);
+          HDC DeviceContext = BeginPaint(Window, &Paint);
 
           EndPaint(Window, &Paint);
       }break;
