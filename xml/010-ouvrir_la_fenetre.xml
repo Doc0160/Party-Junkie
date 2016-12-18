@@ -243,6 +243,9 @@
       On va ensuite devoir le "traduire" avec
       <a href="https://msdn.microsoft.com/fr-fr/library/windows/desktop/ms644955(v=vs.85).aspx">TranslateMessage</a>.
       <br/>
+      Et enfin l'envoyer à Windows pour qu'il nous appelle à MainWindowCallback avec
+      <a href="https://msdn.microsoft.com/fr-fr/library/windows/desktop/ms644934(v=vs.85).aspx">DispatchMessage</a>.
+      <br/>
       A la place de
       <pre>
         //TODO(doc): do things
