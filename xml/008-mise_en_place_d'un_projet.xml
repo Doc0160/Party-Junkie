@@ -298,7 +298,29 @@ WinMain(HINSTANCE Instance,
   <article>
     Et voilà c'est tout.
     <p>
-      
+      Au final, ça devrais resembler à ça:
     </p>
+    <pre class="prettyprint">
+W:.
+|   build.bat
+|   Commande.lnk
+|
++---build
+|       vc140.pdb
+|       win32_party.exe
+|       win32_party.ilk
+|       win32_party.obj
+|       win32_party.pdb
+|       win32_party.sln
+|
++---code
+|       win32_party.cpp
+|
++---data
+\---misc
+        .emacs
+        emacs.bat
+        shell.bat
+    </pre>
   </article>
 </div>
