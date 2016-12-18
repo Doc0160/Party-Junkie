@@ -92,7 +92,7 @@ MainWindowCallback(HWND Window,
 }
     </pre>
     <p>
-      
+      Et nous pouvons compléter lpfnWndProc.
     </p>
     <pre class="prettyprint lang-cpp">
       WNDCLASS WindowClass = {0};
