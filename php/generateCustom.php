@@ -114,6 +114,7 @@ for ($a = $nb -1; $a > 1; $a--) {
     //file_put_contents("../html/".$nameo, $page);
     echo make_html_filename_from_xml_filename($name[$a])."\n";
     file_put_contents("../html/".make_html_filename_from_xml_filename($name[$a]), $page);
+    file_put_contents("../html/index.html", $page);
     $temp = explode("-", $name[$a]);
     $id = "";
     $feed .= "<entry>
