@@ -11,7 +11,7 @@
 		<script type="text/javascript" src="../js/script_menu.js"></script>
 		<script type="text/javascript" src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?skin=sunburst"></script>
 	</head>
-    <!--December 18 2016 09:05:42.-->
+    <!--December 18 2016 09:12:16.-->
     <body name="body">
 
 	<div id="menu">
@@ -215,6 +215,41 @@
       Pour ouvrir une fenétre sous windows, on utilise
       <a href="https://msdn.microsoft.com/en-us/library/windows/desktop/ms632680(v=vs.85).aspx">CreateWindowEx</a>.
     </p>
+    <pre class="prettyprint lang-cpp">
+      WNDCLASS WindowClass = {0};
+      WindowClass.style = CS_OWNDC|CS_HREDRAW|CS_VREDRAW;
+      WindowClass.lpfnWndProc = MainWindowCallback;
+      WindowClass.hInstance = Instance;
+      WindowClass.lpszClassName = "RainbowCreatorWindowClass";
+
+      if(RegisterClass(&WindowClass))
+      {
+
+
+CreateWindowEx(
+  0, //NOTE(doc): we don't need any of this
+  WindowClass.lpszClassName, //NOTE(doc): the window class name
+  "Taste the Rainbow", //NOTE(doc): The actual window title
+  WS_VISIBLE|WS_OVERLAPPEDWINDOW, //NOTE(doc): <a href="https://msdn.microsoft.com/fr-fr/library/windows/desktop/ms632600(v=vs.85).aspx">WS_OVERLAPPEDWINDOW</a>
+  0,
+  0,
+  nWidth,
+  nHeight,
+  hWndParent,
+  hMenu,
+  hInstance,
+  lpParam
+);
+
+
+      
+      }
+      else
+      {
+          MessageBox(0, "RegisterClass FAIL",
+              "Party Junkie Rules", MB_OK|MB_ICONERROR);
+      }
+    </pre>
 </article>
 
 	</div>
