@@ -11,7 +11,7 @@
 		<script type="text/javascript" src="../js/script_menu.js"></script>
 		<script type="text/javascript" src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?skin=sunburst"></script>
 	</head>
-    <!--December 18 2016 09:29:51.-->
+    <!--December 18 2016 09:32:30.-->
     <body name="body">
 
 	<div id="menu">
@@ -271,8 +271,19 @@
       de les passer à MainWindowCallback...<br/>
       Pour celà on va utiliser
       <a href="https://msdn.microsoft.com/fr-fr/library/windows/desktop/ms644936(v=vs.85).aspx">GetMessage</a>
-      qui va attendre qu'un message de Windows arrive.
+      qui va attendre qu'un message de Windows arrive.<br/>
+      A la place de
+      <pre>
+        //TODO(doc): do things
+      </pre>
+      on va écrire:
     </p>
+    <pre class="prettyprint lang-cpp">
+      MSG Message;
+      while(GetMessage(&Message)){
+
+      }
+    </pre>
 </article>
 
 	</div>
