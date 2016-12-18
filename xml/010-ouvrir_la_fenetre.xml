@@ -411,9 +411,12 @@ WinMain(HINSTANCE Instance,
     return(0);
 }
     </pre>
+    <p>
+      Feel the mighty power of programming !
+    </p>
     <div class="two_column">
     <img src="../img/a_window/party.gif"/>
     <img src="http://i.imgur.com/8HHok7a.gif"/>
-    </dib>
+    </div>
   </article>
 </div>
