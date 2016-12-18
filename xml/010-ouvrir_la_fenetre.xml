@@ -30,7 +30,8 @@
     <p>
       Pour notre programme nous n'avons par besoin (pour l'instant) de
       définir une icone (hIcon), un curseur (hCursor), ni de réserver plus
-      de mémoire pour la WNDCLASS (cbClsExtra & cbWndExtra).
+      de mémoire pour la WNDCLASS (cbClsExtra & cbWndExtra), ni même
+      de définir une couleur de fond pour notre fenétre (hbrBackground).
     </p>
   </article>
 </div>
