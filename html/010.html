@@ -11,7 +11,7 @@
 		<script type="text/javascript" src="../js/script_menu.js"></script>
 		<script type="text/javascript" src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?skin=sunburst"></script>
 	</head>
-    <!--December 18 2016 10:07:58.-->
+    <!--December 18 2016 10:11:32.-->
     <body name="body">
 
 	<div id="menu">
@@ -318,8 +318,17 @@
 <article id="a4">
 <h1>Bureacratie & Peinture</h1>
     <p>
-      
+      Windows va nous demander de peindre notre fenétre par l'intermédiaire
+      du message WM_PAINT.<br/>
+      <a href="https://msdn.microsoft.com/fr-fr/library/windows/desktop/dd183362(v=vs.85).aspx">BeginPaint</a>
+      <a href="https://msdn.microsoft.com/fr-fr/library/windows/desktop/dd162598(v=vs.85).aspx">EndPaint</a>
+      Donc on va rajouter un case dans le MainWindowCallback:
     </p>
+    <pre class="prettyprint lang-cpp">
+      case WM_PAINT:{
+          
+      }break;
+    </pre>
 </article>
 
 	</div>
