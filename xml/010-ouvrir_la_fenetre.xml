@@ -290,7 +290,8 @@
       <a href="https://msdn.microsoft.com/fr-fr/library/windows/desktop/dd183362(v=vs.85).aspx">BeginPaint</a>
       <a href="https://msdn.microsoft.com/fr-fr/library/windows/desktop/dd162768(v=vs.85).aspx">PAINTSTRUCT</a>
       <a href="https://msdn.microsoft.com/fr-fr/library/windows/desktop/dd162598(v=vs.85).aspx">EndPaint</a>
-      Donc on va rajouter un case dans le MainWindowCallback:
+      <a href="https://msdn.microsoft.com/en-us/library/windows/desktop/dd162778(v=vs.85).aspx">PatBlt</a>
+      <br/>Donc on va rajouter un case dans le MainWindowCallback:
     </p>
     <pre class="prettyprint lang-cpp">
       case WM_PAINT:{
