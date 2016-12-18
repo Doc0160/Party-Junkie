@@ -240,6 +240,8 @@
       Pour celà on va utiliser
       <a href="https://msdn.microsoft.com/fr-fr/library/windows/desktop/ms644936(v=vs.85).aspx">GetMessage</a>
       qui va attendre qu'un message de Windows arrive.<br/>
+      On va ensuite devoir le "traduire" avec
+      <a href="https://msdn.microsoft.com/fr-fr/library/windows/desktop/ms644955(v=vs.85).aspx">TranslateMessage</a>
       A la place de
       <pre>
         //TODO(doc): do things
