@@ -3,6 +3,7 @@
   <article>
     <h1></h1>
     <p>
+      Pour pouvoir ouvrir une fenétre, il faut d'abord l'"enregistrer" avec
       <a href="https://msdn.microsoft.com/fr-fr/library/windows/desktop/ms633586(v=vs.85).aspx">RegisterClass</a>
       <a href="https://msdn.microsoft.com/fr-fr/library/windows/desktop/ms633576(v=vs.85).aspx">WNDCLASS</a>
     </p>
