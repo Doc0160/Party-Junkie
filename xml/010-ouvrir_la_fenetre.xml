@@ -122,6 +122,7 @@
           LPARAM LParam)
       {
       switch(Message){
+      //NOTE(doc): when our windows is resized
       case WM_SIZE:{
 
       }break;
