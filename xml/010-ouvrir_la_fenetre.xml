@@ -15,5 +15,17 @@
     <pre class="prettyprint lang-cpp">
       WNDCLASS WindowClass = {0};
     </pre>
+    <p>
+      On va commencer par les champs qu'on connais: le champs hInstance.<br/>
+      L'instance de notre programme nous ai passé dans notre WinMain
+    </p>
+    <pre class="prettyprint lang-cpp">
+      WindowClass.hInstance = Instance;
+    </pre>
+    <p>
+      Il est toujours possible de récupérer l'instance de son programme de
+      n'importe où avec
+      <a href="https://msdn.microsoft.com/fr-fr/library/windows/desktop/ms683199(v=vs.85).aspx">GetModuleHndle(0);</a>
+    </p>
   </article>
 </div>
