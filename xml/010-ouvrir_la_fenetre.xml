@@ -171,8 +171,7 @@
 
       if(RegisterClass(&WindowClass))
       {
-          MessageBox(0, "RegisterClass SUCCESS",
-              "Party Junkie Rules", MB_OK|MB_ICONINFORMATION);
+          //TODO(doc): OPEN THE FREAKING WINDOW
       }
       else
       {
