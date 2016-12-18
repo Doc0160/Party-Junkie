@@ -71,6 +71,7 @@
   <article>
     <h1>CALLBACK WindowProc: Il vous manque des papiers</h1>
     <p>
+      "Window Procedure" va recevoir tous les messages venant de windows.<br/>
       <a href="https://msdn.microsoft.com/fr-fr/library/windows/desktop/ms633573(v=vs.85).aspx">WindowProc</a>
     </p>
   </article>
