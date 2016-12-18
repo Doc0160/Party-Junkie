@@ -11,7 +11,7 @@
 		<script type="text/javascript" src="../js/script_menu.js"></script>
 		<script type="text/javascript" src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?skin=sunburst"></script>
 	</head>
-    <!--December 18 2016 09:18:08.-->
+    <!--December 18 2016 09:21:34.-->
     <body name="body">
 
 	<div id="menu">
@@ -225,6 +225,7 @@
       if(RegisterClass(&WindowClass))
       {
 
+      HWND WindowHandle =
       CreateWindowEx(0, //NOTE(doc): we don't need any of <a href="https://msdn.microsoft.com/en-us/library/windows/desktop/ff700543(v=vs.85).aspx">this</a>
           WindowClass.lpszClassName, //NOTE(doc): the window class name
           "Taste the Rainbow", //NOTE(doc): The actual window title
@@ -237,12 +238,21 @@
           0, //NOTE(doc): we don't use menus
           Instance, //NOTE(doc): our program instance
           0); //NOTE(doc): don't need to pass a thing to our window
-      
+
+          if(WindowHandle)
+          {
+          }
+          else
+          {
+              MessageBox(0, "CreateWindowEx FAIL",
+                  "Rainbow", MB_OK|MB_ICONERROR);
+          }
+          
       }
       else
       {
           MessageBox(0, "RegisterClass FAIL",
-              "Party Junkie Rules", MB_OK|MB_ICONERROR);
+              "Rainbow", MB_OK|MB_ICONERROR);
       }
     </pre>
 </article>

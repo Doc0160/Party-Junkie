@@ -45,11 +45,33 @@ WinMain(HINSTANCE Instance,
     LPSTR     CmdLine,
     int       CmdShow)
 {
-	 WNDCLASS WindowClass = {0};
+	      WNDCLASS WindowClass = {0};
       WindowClass.style = CS_OWNDC|CS_HREDRAW|CS_VREDRAW;
-      WindowClass.lpfnWndProc = ; //TODO(doc): explain what to add here
+      WindowClass.lpfnWndProc = MainWindowCallback;
       WindowClass.hInstance = Instance;
-      //NOTE(doc): not PJ's window class name
       WindowClass.lpszClassName = "RainbowCreatorWindowClass";
+
+      if(RegisterClass(&WindowClass))
+      {
+
+      CreateWindowEx(0, //NOTE(doc): we don't need any of this
+          WindowClass.lpszClassName, //NOTE(doc): the window class name
+          "Taste the Rainbow", //NOTE(doc): The actual window title
+          WS_VISIBLE|WS_OVERLAPPEDWINDOW, //NOTE(doc): WS_OVERLAPPEDWINDOW
+          CW_USEDEFAULT, //NOTE(doc): default x position
+          CW_USEDEFAULT, //NOTE(doc): default y position
+          CW_USEDEFAULT, //NOTE(doc): default width
+          CW_USEDEFAULT, //NOTE(doc): default height
+          0, //NOTE(doc): if you want windows inside windows
+          0, //NOTE(doc): we don't use menus
+          Instance, //NOTE(doc): our program instance
+          0); //NOTE(doc): don't need to pass a thing to our window
+      
+      }
+      else
+      {
+          MessageBox(0, "RegisterClass FAIL",
+              "Party Junkie Rules", MB_OK|MB_ICONERROR);
+      }
     return(0);
 }
