@@ -66,7 +66,7 @@ WinMain(HINSTANCE Instance,
           0, //NOTE(doc): we don't use menus
           Instance, //NOTE(doc): our program instance
           0); //NOTE(doc): don't need to pass a thing to our window
-      
+		
       }
       else
       {
