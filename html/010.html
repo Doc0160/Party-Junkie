@@ -11,7 +11,7 @@
 		<script type="text/javascript" src="../js/script_menu.js"></script>
 		<script type="text/javascript" src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?skin=sunburst"></script>
 	</head>
-    <!--December 18 2016 08:18:01.-->
+    <!--December 18 2016 08:24:03.-->
     <body name="body">
 
 	<div id="menu">
@@ -107,7 +107,10 @@
       <a href="https://msdn.microsoft.com/fr-fr/library/windows/desktop/ms633573(v=vs.85).aspx">WindowProc</a>
     </p>
     <p>
-      
+      Cette documentation définit la signature de la fonction:
+      le nom de la fonction et le nom des paramétres ne sont pas important
+      pour former un WindowProc valide.<br/>
+      On va donc rajouter sa définition:
     </p>
     <pre class="prettyprint lang-cpp">
 LRESULT CALLBACK
@@ -119,12 +122,16 @@ MainWindowCallback(HWND Window,
     //TODO(doc): add smoething here;
 }
     </pre>
+    <p>
+      
+    </p>
     <pre class="prettyprint lang-cpp">
       WNDCLASS WindowClass = {0};
       WindowClass.style = CS_OWNDC|CS_HREDRAW|CS_VREDRAW;
       WindowClass.lpfnWndProc = MainWindowCallback;
       WindowClass.hInstance = Instance;
-      WindowClass.lpszClassName = "RainbowCreatorWindowClass"; //NOTE(doc): not PJ's window class name
+      //NOTE(doc): not PJ's window class name
+      WindowClass.lpszClassName = "RainbowCreatorWindowClass";
     </pre>
 </article>
 
