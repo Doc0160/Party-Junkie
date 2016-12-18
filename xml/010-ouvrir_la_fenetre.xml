@@ -16,6 +16,12 @@
       WNDCLASS WindowClass = {0};
     </pre>
     <p>
+      
+    </p>
+    <pre class="prettyprint lang-cpp">
+      WindowClass.style = CS_OWNDC|CS_HREDRAW|CS_VREDRAW;
+    </pre>
+    <p>
       On va commencer par les champs qu'on connais: le champs hInstance.<br/>
       L'instance de notre programme nous ai passé dans notre WinMain
     </p>
