@@ -65,7 +65,8 @@
       WindowClass.style = CS_OWNDC|CS_HREDRAW|CS_VREDRAW;
       WindowClass.lpfnWndProc = ; //TODO(doc): explain what to add here
       WindowClass.hInstance = Instance;
-      WindowClass.lpszClassName = "RainbowCreatorWindowClass"; //NOTE(doc): not PJ's window class name
+      //NOTE(doc): not PJ's window class name
+      WindowClass.lpszClassName = "RainbowCreatorWindowClass";
     </pre>
   </article>
   <article>
