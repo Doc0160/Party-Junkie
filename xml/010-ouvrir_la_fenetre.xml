@@ -67,4 +67,10 @@
       WindowClass.lpszClassName = "RainbowCreatorWindowClass"; //NOTE(doc): not PJ's window class name
     </pre>
   </article>
+  <article>
+    <h1>WindowProc</h1>
+    <p>
+      <a href="https://msdn.microsoft.com/fr-fr/library/windows/desktop/ms633573(v=vs.85).aspx">WindowProc</a>
+    </p>
+  </article>
 </div>
