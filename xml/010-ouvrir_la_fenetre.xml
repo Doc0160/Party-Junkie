@@ -27,5 +27,10 @@
       n'importe où avec
       <a href="https://msdn.microsoft.com/fr-fr/library/windows/desktop/ms683199(v=vs.85).aspx">GetModuleHndle(0);</a>
     </p>
+    <p>
+      Pour notre programme nous n'avons par besoin (pour l'instant) de
+      définir une icone (hIcon), un curseur (hCursor), ne de réserver plus
+      de mémoire pour la WNDCLASS (cbClsExtra & cbWndExtra).
+    </p>
   </article>
 </div>
