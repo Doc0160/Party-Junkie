@@ -121,7 +121,7 @@
           WPARAM WParam,
           LPARAM LParam)
       {
-      switch(Message){
+          switch(Message){
       
           //NOTE(doc): when our windows is resized
           case WM_SIZE:{
