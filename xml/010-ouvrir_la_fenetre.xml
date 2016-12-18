@@ -122,6 +122,9 @@
           LPARAM LParam)
       {
       switch(Message){
+      case WM_SIZE:{
+
+      }break;
       default:{
       DefWindowProc(Window, Message, WParam, LParam);
       }break;
