@@ -5,7 +5,8 @@
     <p>
       Pour pouvoir ouvrir une fenétre, il faut d'abord l'"enregistrer" avec
       <a href="https://msdn.microsoft.com/fr-fr/library/windows/desktop/ms633586(v=vs.85).aspx">RegisterClass</a>.<br/>
-      RegisterClass demande de remplir une structure <a href="https://msdn.microsoft.com/fr-fr/library/windows/desktop/ms633576(v=vs.85).aspx">WNDCLASS</a>
+      RegisterClass demande de remplir une structure
+      <a href="https://msdn.microsoft.com/fr-fr/library/windows/desktop/ms633576(v=vs.85).aspx">WNDCLASS</a>
       pour faire son job.
     </p>
     <p>
@@ -22,8 +23,11 @@
       WindowClass.style = CS_OWNDC|CS_HREDRAW|CS_VREDRAW;
     </pre>
     <p>
-      lpfnWndProc
+      Le champs "lpfnWndProc" sera abordé dans la prochaine section.
     </p>
+    <pre class="prettyprint lang-cpp">
+      WindowClass.lpfnWndProc = ;
+    </pre>
     <p>
       Pour notre programme nous n'avons par besoin
       de réserver plus de mémoire pour la WNDCLASS (cbClsExtra & cbWndExtra).
