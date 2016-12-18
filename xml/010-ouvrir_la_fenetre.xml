@@ -80,13 +80,20 @@
     </p>
     <pre class="prettyprint lang-cpp">
 LRESULT CALLBACK
-WindowProc(HWND Window,
+MainWindowCallback(HWND Window,
     UINT   Message,
     WPARAM WParam,
     LPARAM LParam)
 {
-
+    //TODO(doc): add smoething here;
 }
+    </pre>
+    <pre class="prettyprint lang-cpp">
+      WNDCLASS WindowClass = {0};
+      WindowClass.style = CS_OWNDC|CS_HREDRAW|CS_VREDRAW;
+      WindowClass.lpfnWndProc = MainWindowCallback;
+      WindowClass.hInstance = Instance;
+      WindowClass.lpszClassName = "RainbowCreatorWindowClass"; //NOTE(doc): not PJ's window class name
     </pre>
   </article>
 </div>
