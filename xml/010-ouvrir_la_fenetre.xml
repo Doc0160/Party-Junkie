@@ -297,7 +297,11 @@
       case WM_PAINT:{
           PAINTSTRUCT Paint; //NOTE(doc): will be filled by BeginPaint
           HDC DeviceContext = BeginPaint(Window, &Paint);
-
+          int X = Paint.rcPaint.left;
+          int Y = Paint.rcPaint.top;
+          int Height = Paint.rcPaint.bottom - Paint.rcPaint.top;
+          int Width = Paint.rcPaint.right - Paint.rcPaint.left;
+          PatBlt(DeviceContext, X, Y, Height, Width, BLACKNESS);
           EndPaint(Window, &Paint);
       }break;
     </pre>

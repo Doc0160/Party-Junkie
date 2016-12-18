@@ -11,7 +11,7 @@
 		<script type="text/javascript" src="../js/script_menu.js"></script>
 		<script type="text/javascript" src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?skin=sunburst"></script>
 	</head>
-    <!--December 18 2016 10:16:07.-->
+    <!--December 18 2016 10:20:13.-->
     <body name="body">
 
 	<div id="menu">
@@ -330,7 +330,11 @@
       case WM_PAINT:{
           PAINTSTRUCT Paint; //NOTE(doc): will be filled by BeginPaint
           HDC DeviceContext = BeginPaint(Window, &Paint);
-
+          int X = Paint.rcPaint.left;
+          int Y = Paint.rcPaint.top;
+          int Height = Paint.rcPaint.bottom - Paint.rcPaint.top;
+          int Width = Paint.rcPaint.right - Paint.rcPaint.left;
+          PatBlt(DeviceContext, X, Y, Height, Width, BLACKNESS);
           EndPaint(Window, &Paint);
       }break;
     </pre>
