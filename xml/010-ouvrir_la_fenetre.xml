@@ -203,7 +203,7 @@ CreateWindowEx(
   CW_USEDEFAULT, // NOTE(doc): default y position
   CW_USEDEFAULT, // NOTE(doc): default width
   CW_USEDEFAULT, // NOTE(doc): default height
-  hWndParent,
+  0, // NOTE(doc): if you want windows inside windows
   hMenu,
   hInstance,
   lpParam
