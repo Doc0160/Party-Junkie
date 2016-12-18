@@ -271,7 +271,6 @@
              //NOTE(doc): break the for loop
              break;
           }
-
       }
     </pre>
   </article>
