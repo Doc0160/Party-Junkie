@@ -8,5 +8,12 @@
       RegisterClass demande de remplir une structure <a href="https://msdn.microsoft.com/fr-fr/library/windows/desktop/ms633576(v=vs.85).aspx">WNDCLASS</a>
       pour faire son job.
     </p>
+    <p>
+      Donc, pour initialiser une variable WNDCLASS, et initialiser tous ces
+      champs à 0:
+    </p>
+    <pre class="prettyprint lang-cpp">
+      WNDCLASS WindowClass = {0};
+    </pre>
   </article>
 </div>
