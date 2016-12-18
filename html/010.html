@@ -11,7 +11,7 @@
 		<script type="text/javascript" src="../js/script_menu.js"></script>
 		<script type="text/javascript" src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?skin=sunburst"></script>
 	</head>
-    <!--December 18 2016 08:41:55.-->
+    <!--December 18 2016 08:43:20.-->
     <body name="body">
 
 	<div id="menu">
@@ -152,27 +152,29 @@
           WPARAM WParam,
           LPARAM LParam)
       {
-      switch(Message){
-      //NOTE(doc): when our windows is resized
-      case WM_SIZE:{
+          switch(Message){
+          //NOTE(doc): when our windows is resized
+         case WM_SIZE:{
 
-      }break;
-      //NOTE(doc): when windows "destroy" our window
-      case WM_DESTROY:{
+          }break;
+          //NOTE(doc): when windows "destroy" our window
+          case WM_DESTROY:{
 
-      }break;
-      //NOTE(doc): when the user click on the little red "X"
-      case WM_CLOSE:{
+          }break;
+           //NOTE(doc): when the user click on the little red "X"
+          case WM_CLOSE:{
 
-      }break;
-      //NOTE(doc): when our windows gain or loses focus
-      case WM_ACTIVATEAPP:{
+          }break;
+          //NOTE(doc): when our windows gain or loses focus
+          case WM_ACTIVATEAPP:{
 
-      }break;
-      default:{
-      DefWindowProc(Window, Message, WParam, LParam);
-      }break;
-      }
+          }break;
+          //NOTE(doc): for every thing else
+          default:{
+          //NOTE(doc): call the default behaviour
+              DefWindowProc(Window, Message, WParam, LParam);
+          }break;
+          }
       }
     </pre>
 </article>
