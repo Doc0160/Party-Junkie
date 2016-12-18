@@ -82,14 +82,14 @@
       On va donc rajouter sa définition:
     </p>
     <pre class="prettyprint lang-cpp">
-LRESULT CALLBACK
-MainWindowCallback(HWND Window,
-    UINT   Message,
-    WPARAM WParam,
-    LPARAM LParam)
-{
-    //TODO(doc): add smoething here;
-}
+      LRESULT CALLBACK
+      MainWindowCallback(HWND Window,
+          UINT   Message,
+          WPARAM WParam,
+          LPARAM LParam)
+      {
+          //TODO(doc): add smoething here;
+      }
     </pre>
     <p>
       Et nous pouvons compléter lpfnWndProc.
