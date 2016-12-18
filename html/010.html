@@ -11,7 +11,7 @@
 		<script type="text/javascript" src="../js/script_menu.js"></script>
 		<script type="text/javascript" src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?skin=sunburst"></script>
 	</head>
-    <!--December 18 2016 09:32:30.-->
+    <!--December 18 2016 09:38:42.-->
     <body name="body">
 
 	<div id="menu">
@@ -280,7 +280,22 @@
     </p>
     <pre class="prettyprint lang-cpp">
       MSG Message;
-      while(GetMessage(&Message)){
+      for(;;){
+          BOOL MessageResult =
+              GetMessage(&Message,
+                  0, // NOTE(doc): do not filter witch window of our program
+                  0,0); // NOTE(doc): do not filter witch messages
+
+          //NOTE(doc): if MessageResult = 0; you have to stop your application
+          if(MessageResult > 0)
+          {
+              
+          }
+          else
+          {
+             //NOTE(doc): break the for loop
+             break;
+          }
 
       }
     </pre>
