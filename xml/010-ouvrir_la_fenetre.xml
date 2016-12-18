@@ -58,7 +58,8 @@
       WindowClass.lpszClassName = "RainbowCreatorWindowClass";
     </pre>
     <P>
-      On se retrouve au final avec:
+      Après tout ça, il faut appeller "RegisterClass" en lui
+      passant notre structure.
     </p>
     <pre class="prettyprint lang-cpp">
       WNDCLASS WindowClass = {0};
@@ -67,6 +68,8 @@
       WindowClass.hInstance = Instance;
       //NOTE(doc): not PJ's window class name
       WindowClass.lpszClassName = "RainbowCreatorWindowClass";
+
+      RegisterClass("RainbowCreatorWindowClass");
     </pre>
   </article>
   <article>
@@ -153,6 +156,8 @@
           }
           return(Result);
       }
+    </pre>
+    <pre class="prettyprint lang-cpp">
     </pre>
   </article>
 </div>

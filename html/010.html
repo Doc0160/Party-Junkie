@@ -11,7 +11,7 @@
 		<script type="text/javascript" src="../js/script_menu.js"></script>
 		<script type="text/javascript" src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?skin=sunburst"></script>
 	</head>
-    <!--December 18 2016 08:48:41.-->
+    <!--December 18 2016 08:53:48.-->
     <body name="body">
 
 	<div id="menu">
@@ -88,7 +88,8 @@
       WindowClass.lpszClassName = "RainbowCreatorWindowClass";
     </pre>
     <P>
-      On se retrouve au final avec:
+      Après tout ça, il faut appeller "RegisterClass" en lui
+      passant notre structure.
     </p>
     <pre class="prettyprint lang-cpp">
       WNDCLASS WindowClass = {0};
@@ -97,6 +98,8 @@
       WindowClass.hInstance = Instance;
       //NOTE(doc): not PJ's window class name
       WindowClass.lpszClassName = "RainbowCreatorWindowClass";
+
+      RegisterClass("RainbowCreatorWindowClass");
     </pre>
 </article>
 
@@ -184,6 +187,8 @@
           }
           return(Result);
       }
+    </pre>
+    <pre class="prettyprint lang-cpp">
     </pre>
 </article>
 
