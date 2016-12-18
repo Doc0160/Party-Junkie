@@ -11,7 +11,7 @@
 		<script type="text/javascript" src="../js/script_menu.js"></script>
 		<script type="text/javascript" src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?skin=sunburst"></script>
 	</head>
-    <!--December 18 2016 08:57:29.-->
+    <!--December 18 2016 09:00:05.-->
     <body name="body">
 
 	<div id="menu">
@@ -98,17 +98,6 @@
       WindowClass.hInstance = Instance;
       //NOTE(doc): not PJ's window class name
       WindowClass.lpszClassName = "RainbowCreatorWindowClass";
-
-      if(RegisterClass(&WindowClass))
-      {
-          MessageBox(0, "RegisterClass SUCCESS",
-              "Party Junkie Rules", MB_OK|MB_ICONINFORMATION);
-      }
-      else
-      {
-          MessageBox(0, "RegisterClass FAIL",
-              "Party Junkie Rules", MB_OK|MB_ICONERROR);
-      }
     </pre>
 </article>
 
@@ -197,7 +186,31 @@
           return(Result);
       }
     </pre>
+</article>
+
+<article id="a2">
+<p>
+      Maintenant que nous avons une struct WNDCLASS compléte, nous pouvons
+      la register:
+    </p>
     <pre class="prettyprint lang-cpp">
+      WNDCLASS WindowClass = {0};
+      WindowClass.style = CS_OWNDC|CS_HREDRAW|CS_VREDRAW;
+      WindowClass.lpfnWndProc = MainWindowCallback;
+      WindowClass.hInstance = Instance;
+      //NOTE(doc): not PJ's window class name
+      WindowClass.lpszClassName = "RainbowCreatorWindowClass";
+
+      if(RegisterClass(&WindowClass))
+      {
+          MessageBox(0, "RegisterClass SUCCESS",
+              "Party Junkie Rules", MB_OK|MB_ICONINFORMATION);
+      }
+      else
+      {
+          MessageBox(0, "RegisterClass FAIL",
+              "Party Junkie Rules", MB_OK|MB_ICONERROR);
+      }
     </pre>
 </article>
 

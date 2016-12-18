@@ -68,17 +68,6 @@
       WindowClass.hInstance = Instance;
       //NOTE(doc): not PJ's window class name
       WindowClass.lpszClassName = "RainbowCreatorWindowClass";
-
-      if(RegisterClass(&WindowClass))
-      {
-          MessageBox(0, "RegisterClass SUCCESS",
-              "Party Junkie Rules", MB_OK|MB_ICONINFORMATION);
-      }
-      else
-      {
-          MessageBox(0, "RegisterClass FAIL",
-              "Party Junkie Rules", MB_OK|MB_ICONERROR);
-      }
     </pre>
   </article>
   <article>
@@ -166,7 +155,30 @@
           return(Result);
       }
     </pre>
+  </article>
+  <article>
+    <p>
+      Maintenant que nous avons une struct WNDCLASS compléte, nous pouvons
+      la register:
+    </p>
     <pre class="prettyprint lang-cpp">
+      WNDCLASS WindowClass = {0};
+      WindowClass.style = CS_OWNDC|CS_HREDRAW|CS_VREDRAW;
+      WindowClass.lpfnWndProc = MainWindowCallback;
+      WindowClass.hInstance = Instance;
+      //NOTE(doc): not PJ's window class name
+      WindowClass.lpszClassName = "RainbowCreatorWindowClass";
+
+      if(RegisterClass(&WindowClass))
+      {
+          MessageBox(0, "RegisterClass SUCCESS",
+              "Party Junkie Rules", MB_OK|MB_ICONINFORMATION);
+      }
+      else
+      {
+          MessageBox(0, "RegisterClass FAIL",
+              "Party Junkie Rules", MB_OK|MB_ICONERROR);
+      }
     </pre>
   </article>
 </div>
