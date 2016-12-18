@@ -314,7 +314,7 @@
     <p>
       <a href="https://doc0160.github.io/Party-Junkie/ccode/test2/test2.cpp">test2.cpp</a>
     </p>
-    <pre class="prettyprint lang-cpp">
+    <!--<pre class="prettyprint lang-cpp">
 #include &lt;windows.h&gt;
 
 LRESULT CALLBACK
@@ -413,7 +413,7 @@ WinMain(HINSTANCE Instance,
     }
     return(0);
 }
-    </pre>
+    </pre>-->
     <p>
       Feel the mighty power of programming !
     </p>
