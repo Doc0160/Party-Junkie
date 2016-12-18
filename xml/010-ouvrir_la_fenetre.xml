@@ -209,6 +209,7 @@
 
           if(WindowHandle)
           {
+          
           }
           else
           {
@@ -223,5 +224,10 @@
               "Rainbow", MB_OK|MB_ICONERROR);
       }
     </pre>
+    <p>
+      Et si on compile et on lance l'application ...<br/>
+      Une fenétre apparait ! ....<br/>
+      Et le programme s'arête ... :'(
+    </p>
   </article>
 </div>
