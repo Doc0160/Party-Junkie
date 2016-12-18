@@ -71,11 +71,13 @@
 
       if(RegisterClass(&WindowClass))
       {
-
+          MessageBox(0, "RegisterClass SUCCESS",
+              "Party Junkie Rules", MB_OK|MB_ICONINFORMATION);
       }
       else
       {
-
+          MessageBox(0, "RegisterClass FAIL",
+              "Party Junkie Rules", MB_OK|MB_ICONERROR);
       }
     </pre>
   </article>
