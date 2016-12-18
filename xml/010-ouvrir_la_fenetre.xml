@@ -121,7 +121,7 @@
           WPARAM WParam,
           LPARAM LParam)
       {
-          LRESULT result = 0;
+          LRESULT Result = 0;
           switch(Message){
       
           //NOTE(doc): when our windows is resized
@@ -147,11 +147,11 @@
           //NOTE(doc): for every thing else
           default:{
               //NOTE(doc): call the default behaviour
-              DefWindowProc(Window, Message, WParam, LParam);
+              Result = DefWindowProc(Window, Message, WParam, LParam);
           }break;
               
           }
-          return(result);
+          return(Result);
       }
     </pre>
   </article>
