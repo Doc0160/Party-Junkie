@@ -11,7 +11,7 @@
 		<script type="text/javascript" src="../js/script_menu.js"></script>
 		<script type="text/javascript" src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?skin=sunburst"></script>
 	</head>
-    <!--December 18 2016 10:14:06.-->
+    <!--December 18 2016 10:14:16.-->
     <body name="body">
 
 	<div id="menu">
@@ -328,7 +328,7 @@
     <pre class="prettyprint lang-cpp">
       case WM_PAINT:{
           PAINTSTRUCT Paint;
-          HDC DC = BeginPaint(Window, &Paint);
+          HDC Context = BeginPaint(Window, &Paint);
 
           EndPaint(Window, &Paint);
       }break;
