@@ -11,7 +11,7 @@
 		<script type="text/javascript" src="../js/script_menu.js"></script>
 		<script type="text/javascript" src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?skin=sunburst"></script>
 	</head>
-    <!--December 18 2016 07:53:09.-->
+    <!--December 18 2016 07:55:36.-->
     <body name="body">
 
 	<div id="menu">
@@ -51,6 +51,13 @@
     <pre class="prettyprint lang-cpp">
       WindowClass.style = CS_OWNDC|CS_HREDRAW|CS_VREDRAW;
     </pre>
+    <p>
+      lpfnWndProc
+    </p>
+    <p>
+      Pour notre programme nous n'avons par besoin
+      de réserver plus de mémoire pour la WNDCLASS (cbClsExtra & cbWndExtra).
+    </p>
     <p>
       On va commencer par les champs qu'on connais: le champs hInstance.<br/>
       L'instance de notre programme nous ai passé dans notre WinMain
