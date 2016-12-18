@@ -133,6 +133,10 @@
       case WM_CLOSE:{
 
       }break;
+      //NOTE(doc): when our windows gain or loses focus
+      case WM_ACTIVATEAPP:{
+
+      }break;
       default:{
       DefWindowProc(Window, Message, WParam, LParam);
       }break;
