@@ -11,7 +11,7 @@
 		<script type="text/javascript" src="../js/script_menu.js"></script>
 		<script type="text/javascript" src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?skin=sunburst"></script>
 	</head>
-    <!--December 18 2016 09:12:16.-->
+    <!--December 18 2016 09:13:29.-->
     <body name="body">
 
 	<div id="menu">
@@ -231,10 +231,10 @@ CreateWindowEx(
   WindowClass.lpszClassName, //NOTE(doc): the window class name
   "Taste the Rainbow", //NOTE(doc): The actual window title
   WS_VISIBLE|WS_OVERLAPPEDWINDOW, //NOTE(doc): <a href="https://msdn.microsoft.com/fr-fr/library/windows/desktop/ms632600(v=vs.85).aspx">WS_OVERLAPPEDWINDOW</a>
-  0,
-  0,
-  nWidth,
-  nHeight,
+  CW_USEDEFAULT, // NOTE(doc): default x position
+  CW_USEDEFAULT, // NOTE(doc): default y position
+  CW_USEDEFAULT, // NOTE(doc): default width
+  CW_USEDEFAULT, // NOTE(doc): default height
   hWndParent,
   hMenu,
   hInstance,
