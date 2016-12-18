@@ -20,6 +20,7 @@
       <a href="https://msdn.microsoft.com/fr-fr/library/windows/desktop/ff729176(v=vs.85).aspx">Window Class Styles</a>
     </p>
     <pre class="prettyprint lang-cpp">
+      //TODO(doc): check if this even matters nowdays
       WindowClass.style = CS_OWNDC|CS_HREDRAW|CS_VREDRAW;
     </pre>
     <p>
