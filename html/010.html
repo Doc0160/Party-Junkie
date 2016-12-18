@@ -11,7 +11,7 @@
 		<script type="text/javascript" src="../js/script_menu.js"></script>
 		<script type="text/javascript" src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?skin=sunburst"></script>
 	</head>
-    <!--December 18 2016 08:39:30.-->
+    <!--December 18 2016 08:40:47.-->
     <body name="body">
 
 	<div id="menu">
@@ -156,7 +156,12 @@
       case WM_SIZE:{
 
       }break;
+      //NOTE(doc): when windows "destroy" our window
       case WM_DESTROY:{
+
+      }break;
+      //NOTE(doc): when the user click on the little red "X"
+      case WM_CLOSE:{
 
       }break;
       default:{

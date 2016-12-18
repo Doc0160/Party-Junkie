@@ -125,7 +125,12 @@
       case WM_SIZE:{
 
       }break;
+      //NOTE(doc): when windows "destroy" our window
       case WM_DESTROY:{
+
+      }break;
+      //NOTE(doc): when the user click on the little red "X"
+      case WM_CLOSE:{
 
       }break;
       default:{
