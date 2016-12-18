@@ -264,7 +264,7 @@
           if(MessageResult > 0)
           {
               TranslateMessage(&Message);
-              DispatchMessage(Message);
+              DispatchMessage(&Message);
           }
           else
           {
