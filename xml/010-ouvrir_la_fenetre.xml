@@ -121,6 +121,7 @@
           WPARAM WParam,
           LPARAM LParam)
       {
+          LRESULT result = 0;
           switch(Message){
       
           //NOTE(doc): when our windows is resized
@@ -150,6 +151,7 @@
           }break;
               
           }
+          return(result);
       }
     </pre>
   </article>
