@@ -181,7 +181,7 @@
     </pre>
     <p>
       Pour ouvrir une fenétre sous windows, on utilise
-      <a href="https://msdn.microsoft.com/en-us/library/windows/desktop/ms632680(v=vs.85).aspx">CreateWindowEx</a>
+      <a href="https://msdn.microsoft.com/en-us/library/windows/desktop/ms632680(v=vs.85).aspx">CreateWindowEx</a>.
     </p>
   </article>
 </div>
