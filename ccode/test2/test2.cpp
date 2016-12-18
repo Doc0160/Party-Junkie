@@ -54,7 +54,7 @@ WinMain(HINSTANCE Instance,
       if(RegisterClass(&WindowClass))
       {
 
-      CreateWindowEx(0, //NOTE(doc): we don't need any of this
+      HWND WindowHandle = CreateWindowEx(0, //NOTE(doc): we don't need any of this
           WindowClass.lpszClassName, //NOTE(doc): the window class name
           "Taste the Rainbow", //NOTE(doc): The actual window title
           WS_VISIBLE|WS_OVERLAPPEDWINDOW, //NOTE(doc): WS_OVERLAPPEDWINDOW
@@ -66,7 +66,36 @@ WinMain(HINSTANCE Instance,
           0, //NOTE(doc): we don't use menus
           Instance, //NOTE(doc): our program instance
           0); //NOTE(doc): don't need to pass a thing to our window
+		MSG Message;
 		
+		if(WindowHandle)
+          {
+                    for(;;){
+          BOOL MessageResult =
+              GetMessage(&Message,
+                  0, // NOTE(doc): do not filter witch window of our program
+                  0,0); // NOTE(doc): do not filter witch messages
+
+          //NOTE(doc): if MessageResult = 0; you have to stop your application
+          if(MessageResult > 0)
+          {
+              TranslateMessage(&Message);
+              DispatchMessage(&Message);
+          }
+          else
+          {
+             //NOTE(doc): break the for loop
+             break;
+          }
+
+      }
+          }
+          else
+          {
+              MessageBox(0, "CreateWindowEx FAIL",
+                  "Rainbow", MB_OK|MB_ICONERROR);
+          }
+
       }
       else
       {
