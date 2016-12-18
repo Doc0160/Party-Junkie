@@ -69,7 +69,14 @@
       //NOTE(doc): not PJ's window class name
       WindowClass.lpszClassName = "RainbowCreatorWindowClass";
 
-      RegisterClass(&WindowClass);
+      if(RegisterClass(&WindowClass))
+      {
+
+      }
+      else
+      {
+
+      }
     </pre>
   </article>
   <article>
