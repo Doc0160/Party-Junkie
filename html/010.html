@@ -11,7 +11,7 @@
 		<script type="text/javascript" src="../js/script_menu.js"></script>
 		<script type="text/javascript" src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?skin=sunburst"></script>
 	</head>
-    <!--December 18 2016 08:26:07.-->
+    <!--December 18 2016 08:31:03.-->
     <body name="body">
 
 	<div id="menu">
@@ -133,6 +133,13 @@
       WindowClass.hInstance = Instance;
       WindowClass.lpszClassName = "RainbowCreatorWindowClass";
     </pre>
+    <p>
+      MainWindowCallback doit répondre aux messages que windows lui evoi
+      pour que tout se passe bien et que windows sache que note fenétre
+      est toujours active / [répond aux action de l'utilisateur] /
+      [n'ai pas freezé].
+      <a href="https://msdn.microsoft.com/fr-fr/library/windows/desktop/ms644927(v=vs.85).aspx#system_defined">Liste de tous les messages systeme existant</a>
+    </p>
 </article>
 
 	</div>
