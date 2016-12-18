@@ -40,13 +40,15 @@
       n'importe où avec
       <a href="https://msdn.microsoft.com/fr-fr/library/windows/desktop/ms683199(v=vs.85).aspx">GetModuleHndle(0);</a>
     </p>
-    <pre class="prettyprint lang-cpp">
-      WindowClass.lpszClassName = "RainbowCreatorWindowClass";
-    </pre>
     <p>
       Pour notre programme nous n'avons par besoin (pour l'instant) de
       définir une icone (hIcon), un curseur (hCursor), ni même
       de définir une couleur de fond pour notre fenétre (hbrBackground).
+    </p>
+    <pre class="prettyprint lang-cpp">
+      WindowClass.lpszClassName = "RainbowCreatorWindowClass";
+    </pre>
+    <p>
       Nous n'aurons pas non plus de "Menu" (Fichiers, Edition, ...)
       (lpszMenuName).
     </p>
