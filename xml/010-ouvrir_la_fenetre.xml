@@ -140,7 +140,7 @@
           }break;
           //NOTE(doc): for every thing else
           default:{
-          //NOTE(doc): call the default behaviour
+              //NOTE(doc): call the default behaviour
               DefWindowProc(Window, Message, WParam, LParam);
           }break;
           }
