@@ -2,7 +2,7 @@
 	<!DOCTYPE html>
 	<html name="html">
 	<head>
-		<title>PJ-004-enum union struct</title>
+		<title>PJ-011-faire des dessins</title>
 		<link rel="icon" type="image/png" href="../img/favicon.png" />
 		<link rel="alternate" type="application/atom+xml" title="Atom" href="../atom.xml" />
 		<link rel="stylesheet" type="text/css" href="../css/style.css">
@@ -11,7 +11,7 @@
 		<script type="text/javascript" src="../js/script_menu.js"></script>
 		<script type="text/javascript" src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?skin=sunburst"></script>
 	</head>
-    <!--December 01 2016 16:59:47.-->
+    <!--December 22 2016 08:46:20.-->
     <body name="body">
 
 	<div id="menu">
@@ -31,96 +31,10 @@
 </div>
 <div class="content" id="content">
 <article id="a0">
-<h1>Les structures</h1>
-<p>
-Une structure est un assemblage de variables de différents types, le tout de maniére groupée en mémoire. Contrairement aux tableaux qui vous obligent à utiliser le même type dans tout le tableau, vous pouvez créer une structure comportant des variables de types long, char, int et double à la fois.
-</p>
-<pre class="prettyprint lang-cpp">
-struct Projectile {
-    int Damage;
-    char x;
-    char y;
-};
+<h1></h1>
+    <p>
 
-void main(void) {
-    Projectile p; // create variable p of type Projectile
-    p = {0}; // clear it to zero
-    p.Damage = 1000; // set its damage
-    p.x += 10;
-    
-    Projectile *pointer = &p;
-    pointer->y = 2; // on peux acceder aux memebres directement depuis le pointer avec "->"
-    /*
-       equivaut à
-    */
-    (*pointer).y = 2;
-}
-</pre>
-</article>
-
-<article id="a1">
-<h1>Les unions</h1>
-<p>
-Les unions servent à acceder à la même partie de la mémoire de plusieurs façons
-</p>
-<pre class="prettyprint lang-cpp">
-struct Point {
-    int x;
-    int y;
-};
-
-struct Rectangle {
-    union {
-        struct {
-            Point ul; // up left
-            Point dr; // down right
-        };
-        struct {
-            int x0;
-            int y0;
-            int x1;
-            int y1;
-        };
-    };
-};
-
-void main(void){
-
-Rectangle r;
-r.x0 = 10;
-r.y0 = 10;
-r.x1 = -1;
-r.y1 = -1;
-
-Point p;
-p.x = 10;
-p.y = 10;
-
-if(p == r.ul){
-// ils sont égaux
-}
-</pre>
-<p>
-Les bons exemples d'unions sont assez rares/ les unions sont rarement utilisées.
-</p>
-</article>
-
-<article id="a2">
-<h1>Les enums</h1>
-<p>Le principal intérêt des type enum est de permettre de définir des ensembles de constantes entières(int) en les regroupant par thème. Cette façon de faire permet d'éviter d'utiliser des littéraux, ce qui a pour effet de rendre le code plus facile à lire. Par exemple vous peuvez utiliser un enum pour définir des couleurs.
-</p>
-<pre class="prettyprint lang-cpp">
-enum color{
-    white = 0xFFFFFF, // 0x... indique la représentaion hexadécimale d'un nombre
-    black = 0,
-    red = 0xFF0000,
-    green = 0xFF00,
-    blue = 0xFF
-};
-void main(void) {
-    SetColor(color.red); // fonction imaginaire
-}
-    </pre>
+    </p>
 </article>
 
 	</div>
