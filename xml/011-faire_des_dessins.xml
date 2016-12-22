@@ -9,13 +9,15 @@
     <p>
       Ce n'est pas la méthode la plus efficiente:
       de nos jours, tout passe par la carte graphique.
-    </p>
-    <p>
       Mais ce projet ayant pour but de montrer comment faire un
       jeu depuis zero, je préfére montrer comment
       implémenter cette partie. De plus, au moment
       de rajouter l'utilisation du GPU, nous aurrons un zolie
       boost de performance gratuite.
+    </p>
+    <p>
+      Donc, ça remonte au temps où nous n'avions pas
+      grand chose en termes de GPU.
     </p>
   </article>
 </div>
