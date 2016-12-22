@@ -1,9 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <div>
   <article>
-    <h1></h1>
+    <h1>Backbuffer</h1>
     <p>
-
+      Nous allons mettre un place un buffer (une zone de la mémoire)
+      que nous passerons à windows pour que windows l'affiche à l'écran.
+    </p>
+    <p>
+      Ce n'est pas la méthode la plus efficiente:
+      de nos jours, tout passe par la carte graphique.
     </p>
   </article>
 </div>
