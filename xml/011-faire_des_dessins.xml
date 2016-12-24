@@ -188,9 +188,11 @@ MainWindowCallback(HWND Window,
   
   <article>
     <h1>La bureaucratie ...</h1>
-    <p>
+    <pre>
       ResizeDIBSSection()
+
+      WM_SIZE
       <a href="https://msdn.microsoft.com/fr-fr/library/windows/desktop/ms633503(v=vs.85).aspx">GetClientRect</a>
-    </p>
+    </pre>
   </article>
 </div>
