@@ -32,7 +32,8 @@
       <a href="https://msdn.microsoft.com/fr-fr/library/windows/desktop/ms644936(v=vs.85).aspx">GetMessage</a>
       ?<br/>
       Cette méthode <b>attend<b> que windows est un message à pop de la queue
-      de messages. Et pendant ce temps, notre application ne fais rien.
+      de messages. Et pendant ce temps, notre application ne fais strictement rien.
+      C'est un gos désavantage pour pouvoir faire un jeu video.
     </p>
   </article>
 </div>
