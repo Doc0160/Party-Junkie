@@ -27,7 +27,7 @@
   </article>
   
   <article>
-    <h1>Quitter notre application</h1>
+    <h1>Quitter notre application?</h1>
     <p>
       Pour rajouter rapidement la fonction de fermeture à notre application,
       nous aurions pour rajouter un appel à
@@ -57,6 +57,13 @@
     <p>
       Dans note cas, c'est windows qui fait ce grand nettoyage après
       la fin de notre application.
+    </p>
+  </article>
+
+  <article>
+    <h1>Quitter notre application!</h1>
+    <p>
+
     </p>
   </article>
   
