@@ -32,7 +32,7 @@
       Pour rajouter rapidement la fonction de fermeture à notre application,
       nous aurions pour rajouter un appel à
       <a href="https://msdn.microsoft.com/fr-fr/library/windows/desktop/ms644945(v=vs.85).aspx">PostQuitMessage</a>
-      (avec 0 comme code de fermeture) lors du message WM_CLOSE.<br/>
+      (avec 0 comme code de fermeture) lors du message WM_CLOSE & WM_DESTROY.<br/>
       Mais ce n'est pas la façon dont on va le faire.
     </p>
     <p>
