@@ -14,10 +14,10 @@ MainWindowCallback(HWND Window,
 			OutputDebugString("WM_SIZE\n");
 		}break;
 		case WM_DESTROY:{
-			OutputDebugString("WM_DESTROY\n");
+			Running = false;
 		}break;
 		case WM_CLOSE:{
-			OutputDebugString("WM_CLOSE\n");
+			Running = false;
 		}break;
 		case WM_ACTIVATEAPP:{
 			OutputDebugString("WM_ACTIVATEAPP\n");
