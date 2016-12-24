@@ -181,6 +181,9 @@ MainWindowCallback(HWND Window,
       l'utilisation de static sur une fonction. Cette fonction ne
       pourra être utilisé que dans le fichier où elle a été définie.
     </p>
+    <p>
+      Et maintenant notre fenétre se ferme !
+    </p>
   </article>
   
   <article>

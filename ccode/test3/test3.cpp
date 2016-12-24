@@ -2,6 +2,7 @@
 
 #define local_persist static
 #define global_variable static
+#define internal static
 
 global_variable bool Running;
 
