@@ -35,5 +35,8 @@
       de messages. Et pendant ce temps, notre application ne fais strictement rien.
       C'est un gos désavantage pour pouvoir faire un jeu video.
     </p>
+    <p>
+      <a href="https://msdn.microsoft.com/fr-fr/library/windows/desktop/ms644943(v=vs.85).aspx">PeekMessage</a>
+    </p>
   </article>
 </div>
