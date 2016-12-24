@@ -116,7 +116,32 @@ MainWindowCallback(HWND Window,
         }break;
         case WM_CLOSE:{
             Running = false;
-            }break;
+        }break;
+    </pre>
+    <p>
+      Et modifier la boucle infinie pour qu'elle s'arête en fonction de Running.
+    </p>
+    <pre class="prettyprint lang-cpp">
+      // ........
+      if(WindowHandle)
+        {
+            Running = true;
+            MSG Message;
+            while(Running)
+            {
+                BOOL MessageResult = GetMessage(&Message,0,0,0);
+                if(MessageResult > 0)
+                {
+                    TranslateMessage(&Message);
+                    DispatchMessage(&Message);
+                }
+                else
+                {
+                    break;
+                }
+            }
+        }
+      // .......
     </pre>
   </article>
   
