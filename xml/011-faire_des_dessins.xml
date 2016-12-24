@@ -41,7 +41,8 @@
       La POO impose une symétrie compléte du constructeur et du
       destructeur pour l'allocation et la désalocation des ressources.<br/>
       Ce que ça veux dire c'est qu'à chaque action que l'on fait,
-      si il y a une quelconque façon de netoyer ça, tu dois le faire.
+      si il y a une quelconque façon de netoyer ça, tu dois le faire.<br/>
+      Et qu'il faut faire ça même si il n'y a pas besoin de netoyer.
     </p>
   </article>
   
