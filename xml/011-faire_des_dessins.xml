@@ -104,7 +104,9 @@ MainWindowCallback(HWND Window,
     <p>
       //SIDENOTE(doc): static limite l'acessibilité d'une variable
       au block dans lequel elle a été créee et ne la détruit pas
-      à la sortie du block (un block c'est tout ce qui est entre "{" et "}".
+      à la sortie du block (un block c'est tout ce qui est entre "{" et "}").
+      Lorque static est utilisé en dehors d'un block, il limite
+      l'acessibilité au fichier.
     </p>
   </article>
   
