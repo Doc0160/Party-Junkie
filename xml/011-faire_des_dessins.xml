@@ -28,6 +28,8 @@
   <article>
     <h1>MainWindowCallback</h1>
     <p>
+      Vous vous souvenez de
+      <a href="https://msdn.microsoft.com/fr-fr/library/windows/desktop/ms644936(v=vs.85).aspx">GetMessage</a>
       
     </p>
   </article>
