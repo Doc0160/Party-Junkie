@@ -22,6 +22,11 @@ body{
     display: flex;
 }
 
+.pixel_art {
+    line-height: 100%;
+    margin-left: 5%;
+}
+
 .tooltip {
     position: relative;
     display: inline-block;

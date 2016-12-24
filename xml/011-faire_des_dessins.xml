@@ -63,9 +63,10 @@
   <article>
     <h1>Quitter notre application!</h1>
     <p>
-      On va utiliser une variable globale.
+      Pour gérer la fermeture de notre application,
+      on va utiliser une variable globale.
     </p>
-    <pre class="red tooltip" style="margin-left: 5%;">
+    <pre class="red pixelart tooltip">
    ▄▄▄▄▄▄▄▄       
  ▄▀ ▄   ▄  ▀▄     
 █   █   █    █    
@@ -82,6 +83,9 @@
      █   █        
      █   █        
      <span class="tooltiptext">Robert, développeur expérimenté.</span>
+    </pre>
+    <pre>
+
     </pre>
   </article>
   
