@@ -117,7 +117,7 @@ MainWindowCallback(HWND Window,
         case WM_CLOSE:{
             Running = false;
             }break;
-  </pre>
+    </pre>
   </article>
   
   <article>
