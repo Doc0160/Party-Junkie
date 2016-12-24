@@ -116,8 +116,8 @@ MainWindowCallback(HWND Window,
       "toucher ses choses" (//TODO(doc): trouver de meilleurs termes ?).
       Donc le plus clair on peut faire dans notre code pour indiquer
       ce que l'on peut/ne peut pas acceder, le mieux c'est.
-      Le probléme avec les variables globales
-      c'est que .
+      Et c'est dans cette optique là que les variables globales posent
+      un probléme.
     </p>
     <p>
       On va aussi modifier les messages WM_CLOSE & WM_DESTROY.
