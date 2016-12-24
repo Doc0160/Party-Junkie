@@ -36,7 +36,10 @@
       C'est un gos désavantage pour pouvoir faire un jeu video.
     </p>
     <p>
+      La solution est d'utiliser
       <a href="https://msdn.microsoft.com/fr-fr/library/windows/desktop/ms644943(v=vs.85).aspx">PeekMessage</a>
+      pour vérifier si il y a des messages dans la queue avant de chercher à
+      les récuperer.
     </p>
   </article>
 </div>
