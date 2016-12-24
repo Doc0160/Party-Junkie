@@ -25,6 +25,7 @@
       (moteur graphique) fonctionne.
     </p>
   </article>
+  
   <article>
     <h1>Quitter notre application</h1>
     <p>
@@ -34,7 +35,16 @@
       (avec 0 comme code de fermeture) lors du message WM_CLOSE.<br/>
       Mais ce n'est pas la façon dont on va le faire.
     </p>
+    <p>
+      //SIDENOTE: Pour les gens ayant beaucoup d'expérience avec la POO,
+      arrêtez de vous tirer les cheveux. Vous allez finir chauve.<br/>
+      La POO impose une symétrie compléte du constructeur et du
+      destructeur pour l'allocation et la désalocation des ressources.<br/>
+      Ce que ça veux dire c'est qu'à chaque action que l'on fait,
+      si il y a une quelconque façon de netoyer ça, tu dois le faire.
+    </p>
   </article>
+  
   <article>
     <h1>MainWindowCallback</h1>
     <p>
