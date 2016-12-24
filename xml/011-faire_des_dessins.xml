@@ -89,6 +89,7 @@
     <pre class="prettyprint lang-cpp">
 #include &lt;windows.h&gt;
 
+//TODO(doc): this is a global for now
 static bool Running;
 
 LRESULT CALLBACK
