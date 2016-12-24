@@ -2,40 +2,40 @@
 $(document).ready(function(){
 	var song = new Audio('https://doc0160.github.io/Party-Junkie/song/marioTheme.mp3');
     song.onunload = function(){
-        sessionStorage.setItem("current_time", song.currentTime);
+        localStorage.setItem("current_time", song.currentTime);
     };
-    if(sessionStorage.getItem("volume") == null) {
-        sessionStorage.setItem("volume", 0.1);
+    if(localStorage.getItem("volume") == null) {
+        localStorage.setItem("volume", 0.1);
     }
-    song.volume = Math.pow(parseFloat(sessionStorage.getItem("volume")), 2.0);
+    song.volume = Math.pow(parseFloat(localStorage.getItem("volume")), 2.0);
 
     var pl = function(){
         $('#svg_song').removeClass('invisible');
         $('#svg_mute').addClass('invisible');
-        sessionStorage.setItem("mute", "false");
+        localStorage.setItem("mute", "false");
         song.play();
     };
     var pa = function() {
-        sessionStorage.setItem("current_time", song.currentTime);
+        localStorage.setItem("current_time", song.currentTime);
         $('#svg_song').addClass('invisible');
         $('#svg_mute').removeClass('invisible');
-        sessionStorage.setItem("mute", "true");
+        localStorage.setItem("mute", "true");
         song.pause();
     };
     
-    if(sessionStorage.getItem("mute") == null) {
-        sessionStorage.setItem("mute", "false");
+    if(localStorage.getItem("mute") == null) {
+        localStorage.setItem("mute", "false");
     }
-    if(sessionStorage.getItem("mute") == "false") {
+    if(localStorage.getItem("mute") == "false") {
         pl();
     } else {
         pa();
     }
     
-    if(sessionStorage.getItem("current_time") == null) {
-        sessionStorage.setItem("current_time", 0.0);
+    if(localStorage.getItem("current_time") == null) {
+        localStorage.setItem("current_time", 0.0);
     }
-    song.currentTime = parseFloat(sessionStorage.getItem("current_time"));
+    song.currentTime = parseFloat(localStorage.getItem("current_time"));
     song.loop = true;
     
 	$('#svg_song').click(pa);
@@ -56,12 +56,12 @@ $(document).ready(function(){
 	    var detail = Math.max(-1, Math.min(1, (e.wheelDelta || -e.detail)));
 	    
 	    if(detail > 0){
-		    sessionStorage.setItem("volume", Math.min(1, parseFloat(sessionStorage.getItem("volume")) + 0.025));
+		    localStorage.setItem("volume", Math.min(1, parseFloat(localStorage.getItem("volume")) + 0.025));
 	    } else {
-		    sessionStorage.setItem("volume", Math.max(0, parseFloat(sessionStorage.getItem("volume")) - 0.025));
+		    localStorage.setItem("volume", Math.max(0, parseFloat(localStorage.getItem("volume")) - 0.025));
 	    }
-		console.log("Volume set to: " + sessionStorage.getItem("volume"));
-        song.volume = Math.pow(parseFloat(sessionStorage.getItem("volume")), 2.0);
+		console.log("Volume set to: " + localStorage.getItem("volume"));
+        song.volume = Math.pow(parseFloat(localStorage.getItem("volume")), 2.0);
         e.preventDefault();
     }
 });
