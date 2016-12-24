@@ -11,7 +11,7 @@
 		<script type="text/javascript" src="../js/script_menu.js"></script>
 		<script type="text/javascript" src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?skin=sunburst"></script>
 	</head>
-    <!--December 24 2016 15:40:53.-->
+    <!--December 24 2016 15:44:17.-->
     <body name="body">
 
 	<div id="menu">
@@ -148,6 +148,14 @@ MainWindowCallback(HWND Window,
       ce que l'on peut/ne peut pas acceder, le mieux c'est.
       Et c'est dans cette optique là que les variables globales posent
       un probléme: tout le monde peut la toucher, à n'importe quel moment.
+    </p>
+    <p>
+      Notre code Windows sera toujours un p'tit peu "sâle", car
+      on cherche à s'interfacer avec Windows. Windows qui
+      n'a pas été bien designé. Il n'a pas une bonne API.
+      Donc je serais un peu plus flexible/sâle dans le platform
+      layer. Sachant bien sûr que le plus gros du code ne sera
+      pas dans ce layer.
     </p>
     <p>
       On va aussi modifier les messages WM_CLOSE & WM_DESTROY.
