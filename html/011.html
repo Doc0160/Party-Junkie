@@ -11,7 +11,7 @@
 		<script type="text/javascript" src="../js/script_menu.js"></script>
 		<script type="text/javascript" src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?skin=sunburst"></script>
 	</head>
-    <!--December 24 2016 15:50:33.-->
+    <!--December 24 2016 15:53:02.-->
     <body name="body">
 
 	<div id="menu">
@@ -204,7 +204,13 @@ MainWindowCallback(HWND Window,
     <pre class="prettyprint lang-cpp">
       #define local_persist static
       #define global_variable static
+      #define internal static
     </pre>
+    <p>
+      J'ai dit deux, mais il y a aussi une troisiéme, qui est
+      l'utilisation de static sur une fonction. Cette fonction ne
+      pourra être utilisé que dans le fichier où elle a été définie.
+    </p>
 </article>
 
 <article id="a3">
