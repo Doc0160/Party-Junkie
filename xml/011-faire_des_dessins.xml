@@ -65,7 +65,7 @@
     <p>
       On va utiliser une variable globale.
     </p>
-    <pre class="red">
+    <pre class="red tooltip">
    ▄▄▄▄▄▄▄▄       
  ▄▀ ▄   ▄  ▀▄     
 █   █   █    █    
@@ -81,7 +81,7 @@
      ▄▀▀▀▄        
      █   █        
      █   █        
-Robert, développeur expérimenté.
+     <span class="tooltiptext">Robert, développeur expérimenté.</span>
     </pre>
   </article>
   
