@@ -6,8 +6,19 @@
 
 global_variable bool Running;
 
+internal void
+Win32ResizeDIBSSection(int width, int height)
+{
+	
+}
+internal void
+Win32UpdateWindow(HWDN Window, int X, int Y, int Width, int Height)
+{
+	
+}
+
 LRESULT CALLBACK
-MainWindowCallback(HWND Window,
+Win32MainWindowCallback(HWND Window,
     UINT   Message,
     WPARAM WParam,
     LPARAM LParam)
@@ -15,7 +26,11 @@ MainWindowCallback(HWND Window,
     LRESULT Result = 0;
     switch(Message){
 		case WM_SIZE:{
-			OutputDebugString("WM_SIZE\n");
+			RECT ClientRect;
+			GetClientRect(Window, &ClientRect);
+			int Height = ClientRect.bottom - ClientRect.top;
+			int Width = ClientRect.right - ClientRect.left;
+			ResizeDIBSSection(Width, Height);
 		}break;
 		case WM_DESTROY:{
 			Running = false;
@@ -27,22 +42,13 @@ MainWindowCallback(HWND Window,
 			OutputDebugString("WM_ACTIVATEAPP\n");
 		}break;
 		case WM_PAINT:{
-			local_persist DWORD Color = WHITENESS;
-			if(Color == WHITENESS)
-			{
-				Color = BLACKNESS;
-			}
-			else
-			{
-				Color = WHITENESS;
-			}
 			PAINTSTRUCT Paint;
 			HDC DeviceContext = BeginPaint(Window, &Paint);
 			int X = Paint.rcPaint.left;
 			int Y = Paint.rcPaint.top;
 			int Height = Paint.rcPaint.bottom - Paint.rcPaint.top;
 			int Width = Paint.rcPaint.right - Paint.rcPaint.left;
-			PatBlt(DeviceContext, X, Y, Width, Height, Color);
+			Win32UpdateWindow(Window, X, Y, Width, Height);
 			EndPaint(Window, &Paint);
 		}break;
 		default:{
@@ -61,7 +67,7 @@ WinMain(HINSTANCE Instance,
 {
 	WNDCLASS WindowClass = {0};
 	WindowClass.style = CS_OWNDC|CS_HREDRAW|CS_VREDRAW;
-	WindowClass.lpfnWndProc = MainWindowCallback;
+	WindowClass.lpfnWndProc = Win32MainWindowCallback;
 	WindowClass.hInstance = Instance;
 	WindowClass.lpszClassName = "RainbowCreatorWindowClass";
 	
