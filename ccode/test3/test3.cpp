@@ -1,6 +1,9 @@
 #include <windows.h>
 
-static bool Running;
+#define local_persist static
+#define global_variable static
+
+global_variable bool Running;
 
 LRESULT CALLBACK
 MainWindowCallback(HWND Window,
@@ -23,7 +26,7 @@ MainWindowCallback(HWND Window,
 			OutputDebugString("WM_ACTIVATEAPP\n");
 		}break;
 		case WM_PAINT:{
-			static DWORD Color = WHITENESS;
+			local_persist DWORD Color = WHITENESS;
 			if(Color == WHITENESS)
 			{
 				Color = BLACKNESS;

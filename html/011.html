@@ -11,7 +11,7 @@
 		<script type="text/javascript" src="../js/script_menu.js"></script>
 		<script type="text/javascript" src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?skin=sunburst"></script>
 	</head>
-    <!--December 24 2016 15:44:17.-->
+    <!--December 24 2016 15:50:33.-->
     <body name="body">
 
 	<div id="menu">
@@ -193,6 +193,17 @@ MainWindowCallback(HWND Window,
             }
         }
       // .......
+    </pre>
+    <p>
+      Si vous avez un peu regardé le code de la page précédente,
+      vous avez surement remarqué que l'on a déjà utilisé static.
+      Sachant que l'on utilise static la pluspart du temps
+      dans deux différents contextes, le plus souvent,
+      j'ajoute une macro pour les différencier:
+    </p>
+    <pre class="prettyprint lang-cpp">
+      #define local_persist static
+      #define global_variable static
     </pre>
 </article>
 
