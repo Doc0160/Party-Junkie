@@ -187,20 +187,10 @@ MainWindowCallback(HWND Window,
   </article>
   
   <article>
-    <h1>MainWindowCallback</h1>
+    <h1>La bureaucratie ...</h1>
     <p>
-      Vous vous souvenez de
-      <a href="https://msdn.microsoft.com/fr-fr/library/windows/desktop/ms644936(v=vs.85).aspx">GetMessage</a>
-      ?<br/>
-      Cette méthode <b>attend</b> que windows est un message à pop de la queue
-      de messages. Et pendant ce temps, notre application ne fais strictement rien.
-      C'est un gos désavantage pour pouvoir faire un jeu video.
-    </p>
-    <p>
-      La solution est d'utiliser
-      <a href="https://msdn.microsoft.com/fr-fr/library/windows/desktop/ms644943(v=vs.85).aspx">PeekMessage</a>
-      pour vérifier si il y a des messages dans la queue avant de chercher à
-      les récuperer.
+      ResizeDIBSSection()
+      <a href="https://msdn.microsoft.com/fr-fr/library/windows/desktop/ms633503(v=vs.85).aspx">GetClientRect</a>
     </p>
   </article>
 </div>
