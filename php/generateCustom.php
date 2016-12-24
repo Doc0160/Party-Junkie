@@ -123,7 +123,8 @@ for ($a = $nb -1; $a > 1; $a--) {
              make_html_filename_from_xml_filename($name[$a])."\"/>
              <id>//TODO //PARTY //JUNKIE //RULES //".$name[$a]."</id>
     <updated>".date("F d Y H:i:s.", filemtime("../xml/".$name[$a]))."</updated>
-    <summary>".$temp[1]."
+    <summary>".$temp[1]." 
+<a href=\"https://doc0160.github.io/Party-Junkie/html/".make_html_filename_from_xml_filename($name[$a])."\">link</a>
 //TODO //PARTY //JUNKIE //RULES</summary>
     </entry>
 
