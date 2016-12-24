@@ -108,6 +108,18 @@ MainWindowCallback(HWND Window,
       l'acessibilité au fichier.
     </p>
     <p>
+      //SIDENOTE(doc): Je ne suis ni pour, ni contre les vaiables globales.
+      Mais si le dogme qui dit "Tu n'utilisera point de variables globales" existe,
+      c'est qu'il y a de très bonnes raisons.<br/>
+      L'une des choses que l'on va faire pour eviter de faire des erreurs,
+      on va eviter de faire du code qui "ne doit pas toucher des choses",
+      "toucher ses choses" (//TODO(doc): trouver de meilleurs termes ?).
+      Donc le plus clair on peut faire dans notre code pour indiquer
+      ce que l'on peut/ne peut pas acceder, le mieux c'est.
+      Le probléme avec les variables globales
+      c'est que .
+    </p>
+    <p>
       On va aussi modifier les messages WM_CLOSE & WM_DESTROY.
     </p>
     <pre class="prettyprint lang-cpp">
@@ -115,6 +127,7 @@ MainWindowCallback(HWND Window,
             Running = false;
         }break;
         case WM_CLOSE:{
+            //TODO(doc): do the user really want to quit ?
             Running = false;
         }break;
     </pre>
