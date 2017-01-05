@@ -207,6 +207,25 @@ MainWindowCallback(HWND Window,
   
   <article>
     <h1>La bureaucratie ...</h1>
+    <p>
+internal void
+Win32ResizeDIBSSection(int width, int height)
+{
+    BITMAPINFO BitmapInfo;
+    void *BitmapMemory;
+    HBITMAP BitmapHandle = CreateDIBSection(
+        DeviceContext, &BitmapInfo,
+        DIB_RGB_COLORS,
+        &BitmapMemory,
+        HANDLE     hSection,
+        DWORD      dwOffset
+    );
+
+}
+    </p>
+    <pre class="prettyprint lang-cpp">
+
+    </pre>
     <pre>
       internal void ResizeDIBSSection(int width, int height)
 
