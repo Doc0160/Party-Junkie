@@ -217,6 +217,9 @@ global_variable HBITMAP BitmapHandle;
 global_variable HDC BitmapDeviceContext;
 global_variable void * BitmapMemory;
     </pre>
+    <p>
+
+    </p>
     <pre class="prettyprint lang-cpp">
 internal void
 Win32ResizeDIBSection(int Width, int Height)
