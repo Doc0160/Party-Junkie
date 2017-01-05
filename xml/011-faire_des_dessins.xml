@@ -259,5 +259,8 @@ Win32UpdateWindow(HDC DeviceContext, int X, int Y, int Width, int Height)
       https://msdn.microsoft.com/fr-fr/library/windows/desktop/dd183494(v=vs.85).aspx
       https://msdn.microsoft.com/fr-fr/library/windows/desktop/dd145121(v=vs.85).aspx
     </pre>
+    <p>
+      <img src="../img/backbuffer/test3.gif">
+    </p>
   </article>
 </div>
