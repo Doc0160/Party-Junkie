@@ -195,6 +195,10 @@ MainWindowCallback(HWND Window,
       Nous voulons faire le rendu graphique par nous même
       donc nous allons utiliser Windows GDI le moins possible.
     </p>
+    <p>
+      Concrétement, nous allons passer à GDI un bitmap déjà rendu
+      et lui demander de l'afficher à l'écan.
+    </p>
   </article>
   
   <article>
