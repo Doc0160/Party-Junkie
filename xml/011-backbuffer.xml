@@ -218,6 +218,10 @@ global_variable HDC BitmapDeviceContext;
 global_variable void * BitmapMemory;
     </pre>
     <p>
+      "void *", est un pointeur pointant sur de la mémoire n'ayant pas de
+      type.
+    </p>
+    <p>
 
     </p>
     <pre class="prettyprint lang-cpp">
