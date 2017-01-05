@@ -208,12 +208,13 @@ MainWindowCallback(HWND Window,
   <article>
     <h1>La bureaucratie ...</h1>
     <p>
-
+      Pour nous simplifier un peu la tâche, nous allons utiliser des
+      variables globales (celà changera dans le futur).
     </p>
     <pre class="prettyprint lang-cpp">
 global_variable BITMAPINFO BitmapInfo;
 global_variable HBITMAP BitmapHandle;
-global_variable HDC BitmapDeviceHandle;
+global_variable HDC BitmapDeviceContext;
 global_variable void * BitmapMemory;
     </pre>
     <pre class="prettyprint lang-cpp">
@@ -225,9 +226,9 @@ Win32ResizeDIBSection(int Width, int Height)
         DeleteObject(BitmapHandle);
     }
     
-    if(BitmapDeviceHandle == 0)
+    if(BitmapDeviceContext == 0)
     {
-        BitmapDeviceHandle = CreateCompatibleDC(0);
+        BitmapDeviceContext = CreateCompatibleDC(0);
     }
     
     BitmapInfo.bmiHeader.biSize = sizeof(BitmapInfo.bmiHeader);
@@ -238,7 +239,7 @@ Win32ResizeDIBSection(int Width, int Height)
     BitmapInfo.bmiHeader.biCompression = BI_RGB;
     
     BitmapHandle = CreateDIBSection(
-        BitmapDeviceHandle,
+        BitmapDeviceContext,
         &BitmapInfo,
         DIB_RGB_COLORS,
         &BitmapMemory,
