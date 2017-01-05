@@ -199,6 +199,10 @@ MainWindowCallback(HWND Window,
       Concrétement, nous allons passer à GDI un bitmap déjà rendu
       et lui demander de l'afficher à l'écan.
     </p>
+    <p>
+      Pour faire ça, GDI nous impose d'utiliser une méthode pour allouer
+      un bitmap à notre place.
+    </p>
   </article>
   
   <article>
