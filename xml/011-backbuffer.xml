@@ -225,6 +225,25 @@ global_variable void * BitmapMemory;
 
     </p>
     <pre class="prettyprint lang-cpp">
+      case WM_SIZE:{
+            RECT ClientRect;
+            GetClientRect(Window, &ClientRect);
+            int Height = ClientRect.bottom - ClientRect.top;
+            int Width = ClientRect.right - ClientRect.left;
+            Win32ResizeDIBSection(Width, Height);
+      }break;
+      case WM_PAINT:{
+            PAINTSTRUCT Paint;
+            HDC DeviceContext = BeginPaint(Window, &Paint);
+            int X = Paint.rcPaint.left;
+            int Y = Paint.rcPaint.top;
+            int Height = Paint.rcPaint.bottom - Paint.rcPaint.top;
+            int Width = Paint.rcPaint.right - Paint.rcPaint.left;
+            Win32UpdateWindow(DeviceContext, X, Y, Width, Height);
+            EndPaint(Window, &Paint);
+      }break;
+    </pre>
+    <pre class="prettyprint lang-cpp">
 internal void
 Win32ResizeDIBSection(int Width, int Height)
 {
@@ -264,25 +283,6 @@ Win32UpdateWindow(HDC DeviceContext,int X, int Y, int Width, int Height)
         &BitmapInfo,
         DIB_RGB_COLORS,SRCCOPY);
 }
-    </pre>
-    <pre class="prettyprint lang-cpp">
-      case WM_SIZE:{
-            RECT ClientRect;
-            GetClientRect(Window, &ClientRect);
-            int Height = ClientRect.bottom - ClientRect.top;
-            int Width = ClientRect.right - ClientRect.left;
-            Win32ResizeDIBSection(Width, Height);
-      }break;
-      case WM_PAINT:{
-            PAINTSTRUCT Paint;
-            HDC DeviceContext = BeginPaint(Window, &Paint);
-            int X = Paint.rcPaint.left;
-            int Y = Paint.rcPaint.top;
-            int Height = Paint.rcPaint.bottom - Paint.rcPaint.top;
-            int Width = Paint.rcPaint.right - Paint.rcPaint.left;
-            Win32UpdateWindow(DeviceContext, X, Y, Width, Height);
-            EndPaint(Window, &Paint);
-      }break;
     </pre>
     <pre>
       <a href="https://doc0160.github.io/Party-Junkie/ccode/test3/test3.cpp">test3.cpp</a>
