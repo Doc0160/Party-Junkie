@@ -185,6 +185,17 @@ MainWindowCallback(HWND Window,
       Et maintenant notre fenétre se ferme !
     </p>
   </article>
+
+  <article>
+    <h1>GDI</h1>
+    <p>
+      Windows GDI est l'API graphique de windows.
+    </p>
+    <p>
+      Nous voulons faire le rendu graphique par nous même
+      donc nous allons utiliser Windows GDI le moins possible.
+    </p>
+  </article>
   
   <article>
     <h1>La bureaucratie ...</h1>

@@ -9,12 +9,26 @@ global_variable bool Running;
 internal void
 Win32ResizeDIBSSection(int width, int height)
 {
-	
+	BITMAPINFO BitmapInfo;
+	void *BitmapMemory;
+	HBITMAP BitmapHandle = CreateDIBSection(
+		DeviceContext, &BitmapInfo,
+		DIB_RGB_COLORS,
+		&BitmapMemory,
+		HANDLE     hSection,
+		DWORD      dwOffset
+	);
+
 }
 internal void
-Win32UpdateWindow(HWDN Window, int X, int Y, int Width, int Height)
+Win32UpdateWindow(HDC DeviceContext, int X, int Y, int Width, int Height)
 {
-	
+	StretchDIBits(DeviceContext,
+		X, Y, Width, Height,
+		X, Y, Width, Height,
+		const VOID       *lpBits,
+		const BITMAPINFO *lpBitsInfo,
+		DIB_RGB_COLORS, SRCOPY);
 }
 
 LRESULT CALLBACK
@@ -48,7 +62,7 @@ Win32MainWindowCallback(HWND Window,
 			int Y = Paint.rcPaint.top;
 			int Height = Paint.rcPaint.bottom - Paint.rcPaint.top;
 			int Width = Paint.rcPaint.right - Paint.rcPaint.left;
-			Win32UpdateWindow(Window, X, Y, Width, Height);
+			Win32UpdateWindow(DeviceContext, X, Y, Width, Height);
 			EndPaint(Window, &Paint);
 		}break;
 		default:{
