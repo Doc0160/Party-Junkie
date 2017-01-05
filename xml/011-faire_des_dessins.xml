@@ -286,6 +286,7 @@ Win32UpdateWindow(HDC DeviceContext,int X, int Y, int Width, int Height)
     </pre>
     <p>
       <img src="../img/backbuffer/test3.gif">
+        Ca n'a peut-être pas l'air mais c'est bel et bien une progression.
     </p>
   </article>
 </div>
