@@ -240,15 +240,15 @@ Win32ResizeDIBSection(int Width, int Height)
 }
     </pre>
     <pre class="prettyprint lang-cpp">
-internal void
-Win32UpdateWindow(HDC DeviceContext, int X, int Y, int Width, int Height)
+internal void 
+Win32UpdateWindow(HDC DeviceContext,int X, int Y, int Width, int Height)
 {
     StretchDIBits(DeviceContext,
-        X, Y, Width, Height,
-        X, Y, Width, Height,
-        const VOID       *lpBits,
-        const BITMAPINFO *lpBitsInfo,
-        DIB_RGB_COLORS, SRCOPY);
+        X,Y,Width,Height,
+        X,Y,Width,Height,
+        BitmapMemory,
+        &BitmapInfo,
+        DIB_RGB_COLORS,SRCCOPY);
 }
     </pre>
     <pre class="prettyprint lang-cpp">
