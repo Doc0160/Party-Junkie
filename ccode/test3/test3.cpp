@@ -38,7 +38,6 @@ Win32ResizeDIBSection(int Width, int Height)
 		0,0);
 }
 
-
 internal void 
 Win32UpdateWindow(HDC DeviceContext,int X, int Y, int Width, int Height)
 {
