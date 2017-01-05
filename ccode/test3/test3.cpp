@@ -5,21 +5,10 @@
 #define internal static
 
 global_variable bool Running;
-
-internal void
-Win32ResizeDIBSSection(int width, int height)
-{
-	BITMAPINFO BitmapInfo;
-	void *BitmapMemory;
-	HBITMAP BitmapHandle = CreateDIBSection(
-		DeviceContext, &BitmapInfo,
-		DIB_RGB_COLORS,
-		&BitmapMemory,
-		HANDLE     hSection,
-		DWORD      dwOffset
-	);
-}
-
+global_variable BITMAPINFO BitmapInfo;
+global_variable HBITMAP BitmapHandle;
+global_variable HDC BitmapDeviceHandle;
+global_variable void * BitmapMemory;
 
 internal void
 Win32ResizeDIBSection(int Width, int Height)
@@ -46,18 +35,19 @@ Win32ResizeDIBSection(int Width, int Height)
 		&BitmapInfo,
 		DIB_RGB_COLORS,
 		&BitmapMemory,
-	0,0);
+		0,0);
 }
 
-internal void
-Win32UpdateWindow(HDC DeviceContext, int X, int Y, int Width, int Height)
+
+internal void 
+Win32UpdateWindow(HDC DeviceContext,int X, int Y, int Width, int Height)
 {
 	StretchDIBits(DeviceContext,
-		X, Y, Width, Height,
-		X, Y, Width, Height,
-		const VOID       *lpBits,
-		const BITMAPINFO *lpBitsInfo,
-		DIB_RGB_COLORS, SRCOPY);
+		X,Y,Width,Height,
+		X,Y,Width,Height,
+		BitmapMemory,
+		&BitmapInfo,
+		DIB_RGB_COLORS,SRCCOPY);
 }
 
 LRESULT CALLBACK
@@ -73,7 +63,7 @@ Win32MainWindowCallback(HWND Window,
 			GetClientRect(Window, &ClientRect);
 			int Height = ClientRect.bottom - ClientRect.top;
 			int Width = ClientRect.right - ClientRect.left;
-			ResizeDIBSSection(Width, Height);
+			Win32ResizeDIBSection(Width, Height);
 		}break;
 		case WM_DESTROY:{
 			Running = false;
