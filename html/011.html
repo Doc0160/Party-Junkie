@@ -11,7 +11,7 @@
 		<script type="text/javascript" src="../js/script_menu.js"></script>
 		<script type="text/javascript" src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?skin=sunburst"></script>
 	</head>
-    <!--January 05 2017 23:39:19.-->
+    <!--January 05 2017 23:43:31.-->
     <body name="body">
 
 	<div id="menu">
@@ -241,6 +241,12 @@ MainWindowCallback(HWND Window,
 
     </p>
     <pre class="prettyprint lang-cpp">
+global_variable BITMAPINFO BitmapInfo;
+global_variable HBITMAP BitmapHandle;
+global_variable HDC BitmapDeviceHandle;
+global_variable void * BitmapMemory;
+    </pre>
+    <pre class="prettyprint lang-cpp">
 internal void
 Win32ResizeDIBSection(int Width, int Height)
 {
@@ -268,12 +274,6 @@ Win32ResizeDIBSection(int Width, int Height)
         &BitmapMemory,
     0,0);
 }
-    </pre>
-    <pre class="prettyprint lang-cpp">
-global_variable BITMAPINFO BitmapInfo;
-global_variable HBITMAP BitmapHandle;
-global_variable HDC BitmapDeviceHandle;
-global_variable void * BitmapMemory;
     </pre>
     <pre class="prettyprint lang-cpp">
 internal void 
