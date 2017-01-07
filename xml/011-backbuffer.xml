@@ -244,6 +244,9 @@ global_variable void * BitmapMemory;
             EndPaint(Window, &Paint);
       }break;
     </pre>
+    <p>
+      <a href="https://msdn.microsoft.com/fr-fr/library/windows/desktop/dd183494(v=vs.85).aspx">CreateDIBSection</a>
+    </p>
     <pre class="prettyprint lang-cpp">
 internal void
 Win32ResizeDIBSection(int Width, int Height)
