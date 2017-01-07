@@ -225,7 +225,7 @@ global_variable void * BitmapMemory;
       <a href="https://msdn.microsoft.com/fr-fr/library/windows/desktop/ms633503(v=vs.85).aspx">GetClientRect</a>
       qui retourne le rectangle ayant la taille de l'intérieur de la fenétre.
       <a href="https://msdn.microsoft.com/fr-fr/library/windows/desktop/dd183362(v=vs.85).aspx">BeginPaint</a>
-      
+      <a href="https://msdn.microsoft.com/fr-fr/library/windows/desktop/dd162598(v=vs.85).aspx">EndPaint</a>
     </p>
     <pre class="prettyprint lang-cpp">
       case WM_SIZE:{
