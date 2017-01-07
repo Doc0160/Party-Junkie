@@ -273,6 +273,9 @@ Win32ResizeDIBSection(int Width, int Height)
     0,0);
 }
     </pre>
+    <p>
+      <a href="https://msdn.microsoft.com/fr-fr/library/windows/desktop/dd145121(v=vs.85).aspx">StretchDIBits</a>
+    </p>
     <pre class="prettyprint lang-cpp">
 internal void 
 Win32UpdateWindow(HDC DeviceContext,int X, int Y, int Width, int Height)
