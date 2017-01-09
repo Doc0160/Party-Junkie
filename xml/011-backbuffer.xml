@@ -265,7 +265,8 @@ Win32ResizeDIBSection(int Width, int Height)
     {
         DeleteObject(BitmapHandle);
     }
-    
+
+    // if we don't have a HDC
     if(BitmapDeviceContext == 0)
     {
         BitmapDeviceContext = CreateCompatibleDC(0);
