@@ -67,6 +67,11 @@ Win32ResizeDIBSection(int Width, int Height)
   BitmapMemory = VirtualAlloc(0, BitmapMemorysize, MEM_COMMIT, PAGE_READWRITE);
 }
     </pre>
+    <p>
+      Maintenant que le bitmap n'est pas obligatoirement de la taille de
+      la fenétre, il fait modifier Win32UpdateWindow pour qu'elle fonctionne
+      correctement.
+    </p>
     <pre class="prettyprint lang-cpp">
 internal void 
 Win32UpdateWindow(HDC DeviceContext,int WindowWidth, int WindowHeight)
