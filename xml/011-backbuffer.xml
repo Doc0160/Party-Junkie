@@ -281,7 +281,7 @@ Win32ResizeDIBSection(int Width, int Height)
     BitmapInfo.bmiHeader.biBitCount = 32;
     BitmapInfo.bmiHeader.biCompression = BI_RGB;
 
-    // NOTEd(doc): 
+    // NOTEd(doc): get buffer (BitmapMemory)
     BitmapHandle = CreateDIBSection(
         BitmapDeviceContext,
         &BitmapInfo,
