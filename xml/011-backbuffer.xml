@@ -222,6 +222,10 @@ global_variable void * BitmapMemory;
       type.
     </p>
     <p>
+      Nous ajouterons deux fonctions: Win32ResizeDIBSection qui permettera de
+      "redimensioner" la zone de mémoire stockant les visuels (bitmap),
+      et Win32UpdateWindow qui affichera ce bitmap sur l'écran.
+      <br/>
       <a href="https://msdn.microsoft.com/fr-fr/library/windows/desktop/ms633503(v=vs.85).aspx">GetClientRect</a>
       qui retourne le rectangle ayant la taille de l'intérieur de la fenétre.
       <a href="https://msdn.microsoft.com/fr-fr/library/windows/desktop/dd183362(v=vs.85).aspx">BeginPaint</a>
