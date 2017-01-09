@@ -261,6 +261,7 @@ global_variable void * BitmapMemory;
 internal void
 Win32ResizeDIBSection(int Width, int Height)
 {
+
     if(BitmapHandle)
     {
         DeleteObject(BitmapHandle);
