@@ -31,7 +31,8 @@ typedef double real64;
   <article>
     <h1></h1>
     <p>
-      
+      <a href="https://msdn.microsoft.com/en-us/library/windows/desktop/aa366887(v=vs.85).aspx">VirtualAlloc</a>
+      <a href="https://msdn.microsoft.com/en-us/library/windows/desktop/aa366892(v=vs.85).aspx">VirtualFree</a>
     </p>
     <pre class="prettyprint lang-cpp">
 internal void
