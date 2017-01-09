@@ -77,7 +77,7 @@ Win32UpdateWindow(HDC DeviceContext,int WindowWidth, int WindowHeight)
     0,0,WindowWidth,WindowHeight,
     BitmapMemory,
     &BitmapInfo,
-    DIB_RGB_COLORS,SRCCOPY);
+    DIB_RGB_COLORS, SRCCOPY);
 }
     </pre>
     <pre class="prettyprint lang-cpp">
