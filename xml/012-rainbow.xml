@@ -54,6 +54,9 @@ Win32ResizeDIBSection(int Width, int Height)
   BitmapMemory = VirtualAlloc(0, BitmapMemorysize, MEM_COMMIT, PAGE_READWRITE);
 }
     </pre>
+    <pre class="prettyprint lang-cpp">
+
+    </pre>
   </article>
   
   <article>
