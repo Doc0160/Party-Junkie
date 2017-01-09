@@ -13,7 +13,23 @@
             int Width = ClientRect.right - ClientRect.left;
     </pre>
     <pre class="prettyprint lang-cpp">
+struct win32_window_dimension
+{
+  int Width;
+  int Height;
+};
+  
+win32_window_dimension
+Win32GetWindowDimension(HWND Window)
+{
+  win32_window_dimension Result;
 
+  RECT ClientRect;
+  GetClientRect(Window, &ClientRect);
+  Result.Width = ClientRect.right - ClientRect.left;
+  Result.Height = ClientRect.bottom - ClientRect.top;
+  return Result;
+}
     </pre>
   </article>
   <article>

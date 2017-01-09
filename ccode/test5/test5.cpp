@@ -42,7 +42,8 @@ global_variable bool GlobalRunning;
 global_variable win32_offscreen_buffer GlobalBackbuffer;
 
 win32_window_dimension
-Win32GetWindowDimension(HWND Window){
+Win32GetWindowDimension(HWND Window)
+{
   win32_window_dimension Result;
 
   RECT ClientRect;
