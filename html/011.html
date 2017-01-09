@@ -11,7 +11,7 @@
 		<script type="text/javascript" src="../js/script_menu.js"></script>
 		<script type="text/javascript" src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?skin=sunburst"></script>
 	</head>
-    <!--January 09 2017 03:51:34.-->
+    <!--January 09 2017 03:51:44.-->
     <body name="body">
 
 	<div id="menu">
@@ -296,7 +296,7 @@ Win32ResizeDIBSection(int Width, int Height)
         DeleteObject(BitmapHandle);
     }
 
-    // if we don't have a HDC
+    // if we don't have a HDC / Device Context
     if(BitmapDeviceContext == 0)
     {
         BitmapDeviceContext = CreateCompatibleDC(0);
