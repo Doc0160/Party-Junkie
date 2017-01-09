@@ -25,7 +25,8 @@ typedef uint64_t bool64;
 
 typedef float real32;
 typedef double real64;
-
+    </pre>
+    <pre class="prettyprint lang-cpp">
 global_variable bool Running;
 global_variable BITMAPINFO BitmapInfo;
 global_variable HBITMAP BitmapHandle;
