@@ -2,7 +2,7 @@
 	<!DOCTYPE html>
 	<html name="html">
 	<head>
-		<title>PJ-003-les pointeurs</title>
+		<title>PJ-013-Nettoyage</title>
 		<link rel="icon" type="image/png" href="../img/favicon.png" />
 		<link rel="alternate" type="application/atom+xml" title="Atom" href="../atom.xml" />
 		<link rel="stylesheet" type="text/css" href="../css/style.css">
@@ -11,7 +11,7 @@
 		<script type="text/javascript" src="../js/script_menu.js"></script>
 		<script type="text/javascript" src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?skin=sunburst"></script>
 	</head>
-    <!--December 02 2016 03:45:51.-->
+    <!--January 09 2017 18:16:21.-->
     <body name="body">
 
 	<div id="menu">
@@ -31,49 +31,15 @@
 </div>
 <div class="content" id="content">
 <article id="a0">
-<h1>Les tableaux</h1>
-        <p>On a déjà vu comment stocker une seule variable à la fois, avouez c'est un peu chiant quand on a plusieurs centaines de valeurs à stocker.
-        les ingénieurs sont vraiment des fainéant et ont inventés les tableaux pour stocker facilement une multitude de valeurs (Du même type !).
-        On va donc voir comment sa marche.
-        </p>
-        <div class="code">
-            <pre class="prettyprint lang-cpp">
+<h1></h1>
+    <p>
+      
+    </p>
+</article>
 
-//pour déclarer un tableau : type de données stockées, nom de la variable et sa taille
-
-float tailleDeshobbits[4] = { 1.02, 1.10, 1.17, 0.95}; //leurs tailles en m !
-
-//pour modifier directement une valeur
-
-tailleDesHobbits[1] = 1.19; //ici on modifit la deuxième case du tableau (donc le deuxième hobbit)
-
-
-            </pre>
-        </div>
-        <p>Et maintenant .. les POINTEURS. Et oui sa fait aussi peur que sa en à l'air.
-        Alors comment expliquer un pointeur :</br> C'est une variable qui contient l'adresse d'une variable en mémoire.</br>
-        Je vous l'avez dit, sa fait peur.</br></br>
-        En c++ le pointeurs sait vers quel type de donnée il pointe (retenez bien ça). En gros ce qu'il faut retenir c'est que un pointeur fait référence à l'adresse d'une 
-        variable et non son contenu. Vous verez avec le temps on s'y fait pas mais on y voit leurs utilités.
-        </p>
-        <div class="code">
-            <pre class="prettyprint lang-cpp">
-
-bool gandalf = true;
-
-bool* pointeurVersGandalf; //ici on créer un pointeur non initaliser (donc vide, donc faut éviter sinon trou noir)
-pointeurVersGandalf = &amp;gandalf; //ici on prend l'adresse de la variable gandale grâce au \"&amp\"
-//ouch c'est dure tu comrpends quelque chose toi ?
-
-            </pre>
-        </div>
-        <img src="../img/pointeur/gandalfisgay.png">
-          <p>Mais c'est quoi l'utilité ? </br>
-          Tu verras bientôt mon précieux</p>
-          <video width="720" height="405" autoplay loop poster="https://i.imgur.com/bIuC3ku.gif">
-            <source src="https://i.imgur.com/bIuC3ku.mp4" type="video/mp4"/>
-            <img src="https://i.imgur.com/bIuC3ku.gif"/>
-          </video>
+<article id="a1">
+<a href="https://doc0160.github.io/Party-Junkie/ccode/test5/test4.cpp">test5.cpp</a>
+    <img src="../img/tests/test5.gif"/>
 </article>
 
 	</div>
