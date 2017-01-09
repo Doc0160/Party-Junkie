@@ -67,6 +67,33 @@ Win32UpdateWindow(HDC DeviceContext,int WindowWidth, int WindowHeight)
 }
     </pre>
     <pre class="prettyprint lang-cpp">
+internal void
+RenderWeirdGradient(int BlueOffset, int GreenOffset)
+{
+  int Width = BitmapWidth;
+  int Height = BitmapHeight;
+
+  int Pitch = Width * BytesPerPixel;
+  uint8 *Row = (uint8 *)BitmapMemory;
+
+  for(int Y = 0;Y < BitmapHeight; Y++)
+  {
+    uint32 *Pixel = (uint32 *)Row;
+    for(int X = 0; X < BitmapWidth; X++)
+    {
+      // Memory Order: BB GG RR XX
+      // 0xXXBBGGRR
+      uint8 Blue = X + BlueOffset;
+      uint8 Green = Y + GreenOffset;
+
+      *Pixel++ = ((Green << 8) | Blue );
+
+    }
+    Row += Pitch;
+  }
+}
+    </pre>
+    <pre class="prettyprint lang-cpp">
             while(Running)
             {
                 while(PeekMessage(&Message,WindowHandle,0,0, PM_REMOVE))
