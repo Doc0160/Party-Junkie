@@ -11,7 +11,7 @@
 		<script type="text/javascript" src="../js/script_menu.js"></script>
 		<script type="text/javascript" src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?skin=sunburst"></script>
 	</head>
-    <!--January 09 2017 03:50:27.-->
+    <!--January 09 2017 03:51:06.-->
     <body name="body">
 
 	<div id="menu">
@@ -305,7 +305,8 @@ Win32ResizeDIBSection(int Width, int Height)
     BitmapInfo.bmiHeader.biWidth = Width;
     BitmapInfo.bmiHeader.biHeight = Height;
     BitmapInfo.bmiHeader.biPlanes = 1;
-    BitmapInfo.bmiHeader.biBitCount = 32; // 32bits : (red: 8 bits), (blue : 8 bits), (green : 8 bits) , and 8 bits of padding
+    // Note(doc): 32bits = (red: 8 bits) + (blue : 8 bits) (green : 8 bits) + 8 bits of padding
+    BitmapInfo.bmiHeader.biBitCount = 32;
     BitmapInfo.bmiHeader.biCompression = BI_RGB;
     
     BitmapHandle = CreateDIBSection(
