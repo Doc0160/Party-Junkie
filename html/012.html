@@ -11,7 +11,7 @@
 		<script type="text/javascript" src="../js/script_menu.js"></script>
 		<script type="text/javascript" src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?skin=sunburst"></script>
 	</head>
-    <!--January 09 2017 08:40:32.-->
+    <!--January 09 2017 08:41:26.-->
     <body name="body">
 
 	<div id="menu">
@@ -130,6 +130,8 @@ RenderWeirdGradient(int BlueOffset, int GreenOffset)
       Donc en utilisant
       <a href="https://msdn.microsoft.com/fr-fr/library/windows/desktop/ms644943(v=vs.85).aspx">PeekMessage</a>
       PeekMessage revoi un nombre différent de 0 quand il y a un message.
+      De plus, on peut spécifier PM_REMOVE pour dépiler le message en même
+      temps.
     </p>
     <pre class="prettyprint lang-cpp">
       // ...

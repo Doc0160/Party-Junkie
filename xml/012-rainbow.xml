@@ -100,6 +100,8 @@ RenderWeirdGradient(int BlueOffset, int GreenOffset)
       Donc en utilisant
       <a href="https://msdn.microsoft.com/fr-fr/library/windows/desktop/ms644943(v=vs.85).aspx">PeekMessage</a>
       PeekMessage revoi un nombre différent de 0 quand il y a un message.
+      De plus, on peut spécifier PM_REMOVE pour dépiler le message en même
+      temps.
     </p>
     <pre class="prettyprint lang-cpp">
       // ...
