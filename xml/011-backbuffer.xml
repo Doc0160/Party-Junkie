@@ -232,6 +232,7 @@ global_variable void * BitmapMemory;
       <a href="https://msdn.microsoft.com/fr-fr/library/windows/desktop/dd162598(v=vs.85).aspx">EndPaint</a>
       <a href="https://msdn.microsoft.com/fr-fr/library/windows/desktop/dd162768(v=vs.85).aspx">PAINTSTRUCT</a>
       <a href="https://msdn.microsoft.com/fr-fr/library/windows/desktop/dd183375(v=vs.85).aspx">BITMAPINFO </a>
+      
     </p>
     <pre class="prettyprint lang-cpp">
       case WM_SIZE:{
@@ -254,6 +255,7 @@ global_variable void * BitmapMemory;
     </pre>
     <p>
       <a href="https://msdn.microsoft.com/fr-fr/library/windows/desktop/dd183494(v=vs.85).aspx">CreateDIBSection</a>
+      <a href="https://msdn.microsoft.com/fr-fr/library/windows/desktop/dd183489(v=vs.85).aspx">CreateCompatibleDC</a>
     </p>
     <pre class="prettyprint lang-cpp">
 internal void
