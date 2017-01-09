@@ -60,7 +60,7 @@ Win32ResizeDIBSection(int Width, int Height)
   BitmapInfo.bmiHeader.biWidth = Width;
   BitmapInfo.bmiHeader.biHeight = Height;
   BitmapInfo.bmiHeader.biPlanes = 1;
-  BitmapInfo.bmiHeader.biBitCount = 32;
+  BitmapInfo.bmiHeader.biBitCount = 32; //NOTE(doc): 8 * BytesPerPixel
   BitmapInfo.bmiHeader.biCompression = BI_RGB;
 
   int BitmapMemorysize = Width * Height * BytesPerPixel;
