@@ -30,12 +30,11 @@ typedef double real64;
   
   <article>
     <h1></h1>
+    <p>
+      Nous allons rajouter quelques variables globales pour stocker
+      la largeur et hauteur de notre bitmap, ainsi ques les octets par pixel.
+    </p>
     <pre class="prettyprint lang-cpp">
-global_variable bool Running;
-global_variable BITMAPINFO BitmapInfo;
-global_variable HBITMAP BitmapHandle;
-global_variable HDC BitmapDeviceContext;
-global_variable void * BitmapMemory;
 global_variable int BitmapWidth;
 global_variable int BitmapHeight;
 global_variable int BytesPerPixel = 4;
