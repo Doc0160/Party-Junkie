@@ -125,11 +125,7 @@ RenderWeirdGradient(int BlueOffset, int GreenOffset)
             {
                 while(PeekMessage(&Message,WindowHandle,0,0, PM_REMOVE))
                 {
-                    if(Message.message == WM_QUIT){
-                        Running = false;
-                    }
-                    TranslateMessage(&Message);
-                    DispatchMessage(&Message);
+                    // ...
                 }
 
                 HDC DeviceContext = GetDC(WindowHandle);
