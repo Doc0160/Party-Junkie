@@ -231,6 +231,7 @@ global_variable void * BitmapMemory;
       <a href="https://msdn.microsoft.com/fr-fr/library/windows/desktop/dd183362(v=vs.85).aspx">BeginPaint</a>
       <a href="https://msdn.microsoft.com/fr-fr/library/windows/desktop/dd162598(v=vs.85).aspx">EndPaint</a>
       <a href="https://msdn.microsoft.com/fr-fr/library/windows/desktop/dd162768(v=vs.85).aspx">PAINTSTRUCT</a>
+      <a href="https://msdn.microsoft.com/fr-fr/library/windows/desktop/dd183375(v=vs.85).aspx">BITMAPINFO </a>
     </p>
     <pre class="prettyprint lang-cpp">
       case WM_SIZE:{
