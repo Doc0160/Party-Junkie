@@ -240,7 +240,8 @@ global_variable void * BitmapMemory;
             int Height = ClientRect.bottom - ClientRect.top;
             int Width = ClientRect.right - ClientRect.left;
             Win32ResizeDIBSection(Width, Height);
-      }break;
+            }break;
+            
       case WM_PAINT:{
             PAINTSTRUCT Paint;
             HDC DeviceContext = BeginPaint(Window, &Paint);

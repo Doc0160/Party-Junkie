@@ -11,7 +11,7 @@
 		<script type="text/javascript" src="../js/script_menu.js"></script>
 		<script type="text/javascript" src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?skin=sunburst"></script>
 	</head>
-    <!--January 09 2017 03:57:09.-->
+    <!--January 09 2017 04:00:15.-->
     <body name="body">
 
 	<div id="menu">
@@ -270,7 +270,8 @@ global_variable void * BitmapMemory;
             int Height = ClientRect.bottom - ClientRect.top;
             int Width = ClientRect.right - ClientRect.left;
             Win32ResizeDIBSection(Width, Height);
-      }break;
+            }break;
+            
       case WM_PAINT:{
             PAINTSTRUCT Paint;
             HDC DeviceContext = BeginPaint(Window, &Paint);
