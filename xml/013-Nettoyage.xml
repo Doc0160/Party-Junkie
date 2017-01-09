@@ -3,7 +3,7 @@
   <article>
     <h1></h1>
     <p>
-      Vous l'avez peut-être remarqu", mais nous avons plusieurs fois
+      Vous l'avez peut-être remarqué, mais nous avons plusieurs fois
       du code qui ressemble à ça:
     </p>
     <pre class="prettyprint lang-cpp">
@@ -12,6 +12,10 @@
             int Height = ClientRect.bottom - ClientRect.top;
             int Width = ClientRect.right - ClientRect.left;
     </pre>
+    <p>
+      Pour celà, nous allons créer une structure (pour pouvoir
+      return plusieurs valeurs).
+    </p>
     <pre class="prettyprint lang-cpp">
 struct win32_window_dimension
 {
