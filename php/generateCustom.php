@@ -66,7 +66,7 @@ for ($a = $nb -1; $a > 1; $a--) {
 
 	<div id="menu">
 		<ul>';
-    $i =2;
+    $i = 2;
     while ($i < $nb) {
 		$temp = explode("-", $name[$i]);
 	    $page .= '<li>'.
