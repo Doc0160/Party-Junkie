@@ -25,6 +25,15 @@ typedef uint64_t bool64;
 
 typedef float real32;
 typedef double real64;
+
+global_variable bool Running;
+global_variable BITMAPINFO BitmapInfo;
+global_variable HBITMAP BitmapHandle;
+global_variable HDC BitmapDeviceContext;
+global_variable void * BitmapMemory;
+global_variable int BitmapWidth;
+global_variable int BitmapHeight;
+global_variable int BytesPerPixel = 4;
     </pre>
   </article>
   

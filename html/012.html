@@ -11,7 +11,7 @@
 		<script type="text/javascript" src="../js/script_menu.js"></script>
 		<script type="text/javascript" src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?skin=sunburst"></script>
 	</head>
-    <!--January 09 2017 08:24:50.-->
+    <!--January 09 2017 08:25:21.-->
     <body name="body">
 
 	<div id="menu">
@@ -55,6 +55,15 @@ typedef uint64_t bool64;
 
 typedef float real32;
 typedef double real64;
+
+global_variable bool Running;
+global_variable BITMAPINFO BitmapInfo;
+global_variable HBITMAP BitmapHandle;
+global_variable HDC BitmapDeviceContext;
+global_variable void * BitmapMemory;
+global_variable int BitmapWidth;
+global_variable int BitmapHeight;
+global_variable int BytesPerPixel = 4;
     </pre>
 </article>
 
