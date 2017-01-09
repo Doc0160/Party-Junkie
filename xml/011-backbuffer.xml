@@ -293,6 +293,7 @@ Win32ResizeDIBSection(int Width, int Height)
     <p>
       <a href="https://msdn.microsoft.com/fr-fr/library/windows/desktop/dd145121(v=vs.85).aspx">StretchDIBits</a>
       va étirer et afficher à l'écran notre bitmap.
+      (SRCCOPY veut dire de ne rien faire, à part copier de la source)
     </p>
     <pre class="prettyprint lang-cpp">
 internal void 
