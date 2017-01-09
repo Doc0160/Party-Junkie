@@ -67,7 +67,32 @@ Win32UpdateWindow(HDC DeviceContext,int WindowWidth, int WindowHeight)
 }
     </pre>
     <pre class="prettyprint lang-cpp">
+            while(Running)
+            {
+                while(PeekMessage(&Message,WindowHandle,0,0, PM_REMOVE))
+                {
+                    if(Message.message == WM_QUIT){
+                        Running = false;
+                    }
+                    TranslateMessage(&Message);
+                    DispatchMessage(&Message);
+                }
 
+                HDC DeviceContext = GetDC(WindowHandle);
+
+                RenderWeirdGradient(XOffset, YOffset);
+                RECT ClientRect;
+                GetClientRect(WindowHandle, &ClientRect);
+            
+                int WindowWidth = ClientRect.right - ClientRect.left;
+                int WindowHeight = ClientRect.bottom - ClientRect.top;
+            
+                Win32UpdateWindow(DeviceContext, WindowWidth, WindowHeight);
+                ReleaseDC(WindowHandle, DeviceContext);
+
+                XOffset++;
+                YOffset += 2;
+            }
     </pre>
   </article>
   
