@@ -30,6 +30,34 @@ typedef double real64;
   
   <article>
     <h1></h1>
+    <p>
+      
+    </p>
+    <pre class="prettyprint lang-cpp">
+internal void
+Win32ResizeDIBSection(int Width, int Height)
+{
+  if(BitmapMemory){
+    VirtualFree(BitmapMemory, 0, MEM_RELEASE);
+  }
+  BitmapWidth = Width;
+  BitmapHeight = Height;
+
+  BitmapInfo.bmiHeader.biSize = sizeof(BitmapInfo.bmiHeader);
+  BitmapInfo.bmiHeader.biWidth = Width;
+  BitmapInfo.bmiHeader.biHeight = Height;
+  BitmapInfo.bmiHeader.biPlanes = 1;
+  BitmapInfo.bmiHeader.biBitCount = 32;
+  BitmapInfo.bmiHeader.biCompression = BI_RGB;
+
+  int BitmapMemorysize = Width * Height * BytesPerPixel;
+  BitmapMemory = VirtualAlloc(0, BitmapMemorysize, MEM_COMMIT, PAGE_READWRITE);
+}
+    </pre>
+  </article>
+  
+  <article>
+    <h1></h1>
     <pre>
       PeekMessage
       VirtalAlloc
