@@ -256,7 +256,6 @@ global_variable void * BitmapMemory;
       <a href="https://msdn.microsoft.com/fr-fr/library/windows/desktop/dd183494(v=vs.85).aspx">CreateDIBSection</a>
       <a href="https://msdn.microsoft.com/fr-fr/library/windows/desktop/dd183489(v=vs.85).aspx">CreateCompatibleDC</a>
       <a href="https://msdn.microsoft.com/fr-fr/library/windows/desktop/dd183375(v=vs.85).aspx">BITMAPINFO</a>
-
     </p>
     <pre class="prettyprint lang-cpp">
 internal void
@@ -276,7 +275,7 @@ Win32ResizeDIBSection(int Width, int Height)
     BitmapInfo.bmiHeader.biWidth = Width;
     BitmapInfo.bmiHeader.biHeight = Height;
     BitmapInfo.bmiHeader.biPlanes = 1;
-    BitmapInfo.bmiHeader.biBitCount = 32;
+    BitmapInfo.bmiHeader.biBitCount = 32; // 32bits : (red: 8 bits), (blue : 8 bits), (green : 8 bits) , and 8 bits of padding
     BitmapInfo.bmiHeader.biCompression = BI_RGB;
     
     BitmapHandle = CreateDIBSection(
