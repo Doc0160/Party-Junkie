@@ -36,6 +36,9 @@
     <p>
       Pour capturer l'entree manette, nous allons utiliser XInput.
     </p>
+    <p>
+
+    </p>
     <pre class="prettyprint lang-cpp">
 #define X_INPUT_GET_STATE(name) DWORD name(DWORD dwUserIndex,XINPUT_STATE *pState)
 typedef X_INPUT_GET_STATE(f_x_input_get_state);
@@ -55,6 +58,9 @@ X_INPUT_SET_STATE(XInputSetStateStub)
 global_variable f_x_input_set_state *XInputSetState_ = XInputSetStateStub;
 #define XInputSetState XInputSetState_
     </pre>
+    <p>
+
+    </p>
     <pre class="prettyprint lang-cpp">
 internal void
 Win32LoadXInput(void){
