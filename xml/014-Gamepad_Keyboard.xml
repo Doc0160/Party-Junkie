@@ -34,7 +34,7 @@
   <article>
     <h1>xinput</h1>
     <p>
-      Nous allons utiliser XInput.
+      Pour capturer l'entree manette, nous allons utiliser XInput.
     </p>
     <pre class="prettyprint lang-cpp">
 #define X_INPUT_GET_STATE(name) DWORD name(DWORD dwUserIndex,XINPUT_STATE *pState)
