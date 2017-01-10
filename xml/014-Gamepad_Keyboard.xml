@@ -5,7 +5,25 @@
     <p>
       
     </p>
-    <pre class="prettyprint lang-cpp"></pre>
+    <pre class="prettyprint lang-cpp">
+        case WM_SYSKEYDOWN:
+        case WM_SYSKEYUP:
+        case WM_KEYDOWN:
+        case WM_KEYUP:
+        {
+            uint32 VKCode = WParam;
+            switch(VKCode){
+                case 'W':
+                {
+                    OutputDebugStringA("W");
+                } break;
+                case 'D':
+                {
+                    OutputDebugStringA("D");
+                } break;
+            }
+        }
+    </pre>
     <pre class="prettyprint lang-cpp"></pre>
     <pre class="prettyprint lang-cpp"></pre>
     <pre class="prettyprint lang-cpp"></pre>

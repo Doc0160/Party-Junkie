@@ -173,7 +173,7 @@ Win32MainWindowCallback(HWND WindowHandle,
 		case WM_KEYDOWN:
 		case WM_KEYUP:
 		{
-			uint32_t VKCode = WParam;
+			uint32 VKCode = WParam;
 			bool WasDown = ((LParam & (1 << 30)) != 0);
 			bool IsDown = ((LParam & (1<< 31)) == 0 );
 			switch(VKCode){
