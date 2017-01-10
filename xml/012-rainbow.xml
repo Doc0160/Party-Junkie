@@ -3,7 +3,8 @@
   <article>
     <h1></h1>
     <p>
-      
+      Nouspour plus de clartée, nous allons définir nos propres
+      types (à terme, stdint partira).
     </p>
     <pre class="prettyprint lang-cpp">
 #include &lt;stdint.h&gt;
