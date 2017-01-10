@@ -145,7 +145,8 @@ Win32MainWindowCallback(HWND WindowHandle,
 			PAINTSTRUCT Paint;
 			HDC DeviceContext = BeginPaint(WindowHandle,&Paint);
 			win32_window_dimension Dimension = Win32GetWindowDimension(WindowHandle);
-			Win32DisplayBufferInWindow(DeviceContext, Dimension.Width, Dimension.Height, GlobalBackbuffer);
+			Win32DisplayBufferInWindow(DeviceContext, Dimension.Width, Dimension.Height, 
+				GlobalBackbuffer);
 			EndPaint(WindowHandle,&Paint);
 		} break;
 		default:{
@@ -196,12 +197,11 @@ WinMain(HINSTANCE Instance,
 					TranslateMessage(&Message);
 					DispatchMessage(&Message);
 				}
-
 				
 				RenderWeirdGradient(GlobalBackbuffer, XOffset, YOffset);
 				win32_window_dimension Dimension = Win32GetWindowDimension(WindowHandle);
-				Win32DisplayBufferInWindow(DeviceContext, Dimension.Width, Dimension.Height, GlobalBackbuffer);
-				ReleaseDC(WindowHandle, DeviceContext);
+				Win32DisplayBufferInWindow(DeviceContext, Dimension.Width, Dimension.Height, 
+					GlobalBackbuffer);
 
 				XOffset++;
 				YOffset += 2;
