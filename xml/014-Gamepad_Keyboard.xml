@@ -30,6 +30,9 @@
             }
         }
     </pre>
+  </article>
+  <article>
+    <h1></h1>
     <pre class="prettyprint lang-cpp">
 #define X_INPUT_GET_STATE(name) DWORD name(DWORD dwUserIndex,XINPUT_STATE *pState)
 typedef X_INPUT_GET_STATE(f_x_input_get_state);
