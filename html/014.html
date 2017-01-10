@@ -2,7 +2,7 @@
 	<!DOCTYPE html>
 	<html name="html">
 	<head>
-		<title>PJ-000-presentation</title>
+		<title>PJ-014-Gamepad Keyboard</title>
 		<link rel="icon" type="image/png" href="../img/favicon.png" />
 		<link rel="alternate" type="application/atom+xml" title="Atom" href="../atom.xml" />
 		<link rel="stylesheet" type="text/css" href="../css/style.css">
@@ -11,7 +11,7 @@
 		<script type="text/javascript" src="../js/script_menu.js"></script>
 		<script type="text/javascript" src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?skin=sunburst"></script>
 	</head>
-    <!--December 01 2016 16:06:13.-->
+    <!--January 10 2017 18:39:53.-->
     <body name="body">
 
 	<div id="menu">
@@ -31,10 +31,59 @@
 </div>
 <div class="content" id="content">
 <article id="a0">
-<h1>Presentation</h1>
-<p>Party Junkie est un projet mené par Tristan (A2) sur le developpement de jeux vidéos en 2D vue du dessus (pour le moment). 
-Il utilisera un système de carte a tuile (tilemap). Pour ce qui est de la Story Board du jeux, il vous laisse choisir au grès de votre imagination.</p>
-<img src="../img/introduction/Zelda01.jpg" />
+<h1></h1>
+    <p>
+      Vous l'avez peut-être remarqué, mais nous avons plusieurs fois
+      du code qui ressemble à ça:
+    </p>
+    <pre class="prettyprint lang-cpp">
+            RECT ClientRect;
+            GetClientRect(Window, &ClientRect);
+            int Height = ClientRect.bottom - ClientRect.top;
+            int Width = ClientRect.right - ClientRect.left;
+    </pre>
+    <p>
+      Pour celà, nous allons créer une structure (pour pouvoir
+      return plusieurs valeurs).
+    </p>
+    <pre class="prettyprint lang-cpp">
+struct win32_window_dimension
+{
+  int Width;
+  int Height;
+};
+  
+win32_window_dimension
+Win32GetWindowDimension(HWND Window)
+{
+  win32_window_dimension Result;
+
+  RECT ClientRect;
+  GetClientRect(Window, &ClientRect);
+  Result.Width = ClientRect.right - ClientRect.left;
+  Result.Height = ClientRect.bottom - ClientRect.top;
+  return Result;
+}
+    </pre>
+    <pre class="prettyprint lang-cpp">
+struct win32_offscreen_buffer
+{
+  BITMAPINFO Info;
+  void *Memory;
+  int Width;
+  int Height;
+  int Pitch;
+};
+    </pre>
+    <pre class="prettyprint lang-cpp"></pre>
+    <pre class="prettyprint lang-cpp"></pre>
+    <pre class="prettyprint lang-cpp"></pre>
+    <pre class="prettyprint lang-cpp"></pre>
+</article>
+
+<article id="a1">
+<a href="https://doc0160.github.io/Party-Junkie/ccode/test6/test6.cpp">test5.cpp</a>
+    <img src="../img/tests/test4.gif"/>
 </article>
 
 	</div>
