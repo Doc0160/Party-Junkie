@@ -97,6 +97,9 @@ for ($a = $nb -1; $a > 1; $a--) {
     for($j = 0; $j < sizeof($array["div"]["article"]); $j++)
 	    $page .= "\n<article id=\"a".$j."\">\n".$array["div"]["article"][$j]."\n</article>\n";
     $page .= '
+    <article>
+'.date("F d Y H:i:s.", filemtime("../xml/".$name[$a])).'
+    </article>
 	</div>
 
 

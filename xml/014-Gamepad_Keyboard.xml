@@ -6,45 +6,6 @@
       Vous l'avez peut-être remarqué, mais nous avons plusieurs fois
       du code qui ressemble à ça:
     </p>
-    <pre class="prettyprint lang-cpp">
-            RECT ClientRect;
-            GetClientRect(Window, &ClientRect);
-            int Height = ClientRect.bottom - ClientRect.top;
-            int Width = ClientRect.right - ClientRect.left;
-    </pre>
-    <p>
-      Pour celà, nous allons créer une structure (pour pouvoir
-      return plusieurs valeurs).
-    </p>
-    <pre class="prettyprint lang-cpp">
-struct win32_window_dimension
-{
-  int Width;
-  int Height;
-};
-  
-win32_window_dimension
-Win32GetWindowDimension(HWND Window)
-{
-  win32_window_dimension Result;
-
-  RECT ClientRect;
-  GetClientRect(Window, &ClientRect);
-  Result.Width = ClientRect.right - ClientRect.left;
-  Result.Height = ClientRect.bottom - ClientRect.top;
-  return Result;
-}
-    </pre>
-    <pre class="prettyprint lang-cpp">
-struct win32_offscreen_buffer
-{
-  BITMAPINFO Info;
-  void *Memory;
-  int Width;
-  int Height;
-  int Pitch;
-};
-    </pre>
     <pre class="prettyprint lang-cpp"></pre>
     <pre class="prettyprint lang-cpp"></pre>
     <pre class="prettyprint lang-cpp"></pre>
