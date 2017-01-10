@@ -32,7 +32,7 @@
     </pre>
   </article>
   <article>
-    <h1>xinput</h1>
+    <h1>XInput</h1>
     <p>
       Pour capturer l'entree manette, nous allons utiliser XInput.
     </p>
