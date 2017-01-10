@@ -3,8 +3,7 @@
   <article>
     <h1></h1>
     <p>
-      Vous l'avez peut-être remarqué, mais nous avons plusieurs fois
-      du code qui ressemble à ça:
+      
     </p>
     <pre class="prettyprint lang-cpp"></pre>
     <pre class="prettyprint lang-cpp"></pre>
