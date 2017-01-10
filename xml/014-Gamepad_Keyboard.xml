@@ -14,6 +14,10 @@
         {
             uint32 VKCode = WParam;
             switch(VKCode){
+                case VK_TAB:
+                {
+                    OutputDebugStringA("TAB");
+                } break;
                 case 'W':
                 {
                     OutputDebugStringA("W");

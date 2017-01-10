@@ -177,6 +177,10 @@ Win32MainWindowCallback(HWND WindowHandle,
 			bool WasDown = ((LParam & (1 << 30)) != 0);
 			bool IsDown = ((LParam & (1<< 31)) == 0 );
 			switch(VKCode){
+				case VK_TAB:
+				{
+					OutputDebugStringA("TAB");
+				} break;
 				case 'W':
 				{
 					OutputDebugStringA("W");
