@@ -270,8 +270,8 @@ WinMain(HINSTANCE Instance,
 						bool BButton = (Pad->wButtons & XINPUT_GAMEPAD_B);
 						bool XButton = (Pad->wButtons & XINPUT_GAMEPAD_X);
 						bool YButton = (Pad->wButtons & XINPUT_GAMEPAD_Y);
-						int16_t StickX = Pad->sThumbLX;
-						int16_t StickY = Pad->sThumbLY;
+						int16 StickX = Pad->sThumbLX;
+						int16 StickY = Pad->sThumbLY;
 					}
 					else
 					{
