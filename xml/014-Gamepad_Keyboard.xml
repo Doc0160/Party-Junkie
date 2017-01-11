@@ -37,7 +37,8 @@
       Pour capturer l'entree manette, nous allons utiliser XInput.
     </p>
     <p>
-
+      Les fonctions que l'on va utiliser sont dans une dll externe que nous allons
+      charger à l'éxécution.
     </p>
     <pre class="prettyprint lang-cpp">
 #define X_INPUT_GET_STATE(name) DWORD name(DWORD dwUserIndex,XINPUT_STATE *pState)
