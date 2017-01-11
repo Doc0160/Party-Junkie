@@ -34,7 +34,9 @@
   <article>
     <h1>XInput</h1>
     <p>
-      Pour capturer l'entree manette, nous allons utiliser XInput.
+      Pour capturer l'entree manette, nous allons utiliser XInput. J'ai chois
+      XInput parmis les API pour manettes existante pour Windows car il
+      est shippé avec l'OS.
     </p>
     <p>
       Les fonctions que l'on va utiliser sont dans une DLL externe que nous allons
