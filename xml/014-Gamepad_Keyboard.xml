@@ -37,8 +37,11 @@
       Pour capturer l'entree manette, nous allons utiliser XInput.
     </p>
     <p>
-      Les fonctions que l'on va utiliser sont dans une dll externe que nous allons
-      charger à l'éxécution.
+      Les fonctions que l'on va utiliser sont dans une DLL externe que nous allons
+      charger à l'éxécution. Donc nous allons préparer deux pointeurs de fonctions,
+      ainsi que deux "stubs" (un module logiciel simulant la présence d'un autre),
+      au cas où l'on arrive pas à charger cette DLL.
+      <a href="https://en.wikipedia.org/wiki/Dynamic-link_library">DLL - Wikipedia</a>
     </p>
     <pre class="prettyprint lang-cpp">
 #define X_INPUT_GET_STATE(name) DWORD name(DWORD dwUserIndex,XINPUT_STATE *pState)
