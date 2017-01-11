@@ -11,7 +11,7 @@
 		<script type="text/javascript" src="../js/script_menu.js"></script>
 		<script type="text/javascript" src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?skin=sunburst"></script>
 	</head>
-    <!--January 11 2017 07:51:36.-->
+    <!--January 11 2017 07:51:49.-->
     <body name="body">
 
 	<div id="menu">
@@ -131,8 +131,10 @@ Win32LoadXInput(void){
                         bool Right = (Pad->wButtons & XINPUT_GAMEPAD_DPAD_RIGHT);
                         bool Start = (Pad->wButtons & XINPUT_GAMEPAD_START);
                         bool Back = (Pad->wButtons & XINPUT_GAMEPAD_BACK);
-                        bool LeftShoulder = (Pad->wButtons & XINPUT_GAMEPAD_LEFT_SHOULDER);
-                        bool RightShoulder = (Pad->wButtons & XINPUT_GAMEPAD_RIGHT_SHOULDER);
+                        bool LeftShoulder = (Pad->wButtons &
+                            XINPUT_GAMEPAD_LEFT_SHOULDER);
+                        bool RightShoulder = (Pad->wButtons &
+                            XINPUT_GAMEPAD_RIGHT_SHOULDER);
                         bool AButton = (Pad->wButtons & XINPUT_GAMEPAD_A);
                         bool BButton = (Pad->wButtons & XINPUT_GAMEPAD_B);
                         bool XButton = (Pad->wButtons & XINPUT_GAMEPAD_X);
@@ -160,7 +162,7 @@ Win32LoadXInput(void){
 </article>
 
     <article>
-January 11 2017 07:51:36.
+January 11 2017 07:51:49.
     </article>
 	</div>
 

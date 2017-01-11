@@ -100,8 +100,10 @@ Win32LoadXInput(void){
                         bool Right = (Pad->wButtons & XINPUT_GAMEPAD_DPAD_RIGHT);
                         bool Start = (Pad->wButtons & XINPUT_GAMEPAD_START);
                         bool Back = (Pad->wButtons & XINPUT_GAMEPAD_BACK);
-                        bool LeftShoulder = (Pad->wButtons & XINPUT_GAMEPAD_LEFT_SHOULDER);
-                        bool RightShoulder = (Pad->wButtons & XINPUT_GAMEPAD_RIGHT_SHOULDER);
+                        bool LeftShoulder = (Pad->wButtons &
+                            XINPUT_GAMEPAD_LEFT_SHOULDER);
+                        bool RightShoulder = (Pad->wButtons &
+                            XINPUT_GAMEPAD_RIGHT_SHOULDER);
                         bool AButton = (Pad->wButtons & XINPUT_GAMEPAD_A);
                         bool BButton = (Pad->wButtons & XINPUT_GAMEPAD_B);
                         bool XButton = (Pad->wButtons & XINPUT_GAMEPAD_X);
