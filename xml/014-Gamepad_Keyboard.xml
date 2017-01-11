@@ -67,6 +67,8 @@ global_variable f_x_input_set_state *XInputSetState_ = XInputSetStateStub;
 #define XInputSetState XInputSetState_
     </pre>
     <p>
+      <a>LoadLibrary</a>
+      permet de charger dynamiquement une bibliothéque Windows.
       <a href="https://msdn.microsoft.com/fr-fr/library/windows/desktop/microsoft.directx_sdk.reference.xinputgetstate(v=vs.85).aspx">XInputGetState</a>
       <a href="https://msdn.microsoft.com/fr-fr/library/windows/desktop/microsoft.directx_sdk.reference.xinputsetstate(v=vs.85).aspx">XInputSetState</a>
     </p>
