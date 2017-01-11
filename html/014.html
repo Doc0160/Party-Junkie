@@ -11,7 +11,7 @@
 		<script type="text/javascript" src="../js/script_menu.js"></script>
 		<script type="text/javascript" src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?skin=sunburst"></script>
 	</head>
-    <!--January 11 2017 07:51:19.-->
+    <!--January 11 2017 07:51:36.-->
     <body name="body">
 
 	<div id="menu">
@@ -121,7 +121,8 @@ Win32LoadXInput(void){
                     ControllerIndex < XUSER_MAX_COUNT; ControllerIndex++)
                 {
                     XINPUT_STATE ControllerState;
-                    if(XInputGetState(ControllerIndex, &ControllerState) == ERROR_SUCCESS)
+                    if(XInputGetState(ControllerIndex, &ControllerState)
+                        == ERROR_SUCCESS)
                     {
                         XINPUT_GAMEPAD *Pad = &ControllerState.Gamepad;
                         bool Up = (Pad->wButtons & XINPUT_GAMEPAD_DPAD_UP);
@@ -159,7 +160,7 @@ Win32LoadXInput(void){
 </article>
 
     <article>
-January 11 2017 07:51:19.
+January 11 2017 07:51:36.
     </article>
 	</div>
 

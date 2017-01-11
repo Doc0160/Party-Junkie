@@ -90,7 +90,8 @@ Win32LoadXInput(void){
                     ControllerIndex < XUSER_MAX_COUNT; ControllerIndex++)
                 {
                     XINPUT_STATE ControllerState;
-                    if(XInputGetState(ControllerIndex, &ControllerState) == ERROR_SUCCESS)
+                    if(XInputGetState(ControllerIndex, &ControllerState)
+                        == ERROR_SUCCESS)
                     {
                         XINPUT_GAMEPAD *Pad = &ControllerState.Gamepad;
                         bool Up = (Pad->wButtons & XINPUT_GAMEPAD_DPAD_UP);
