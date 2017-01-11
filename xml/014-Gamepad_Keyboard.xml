@@ -67,7 +67,7 @@ global_variable f_x_input_set_state *XInputSetState_ = XInputSetStateStub;
 #define XInputSetState XInputSetState_
     </pre>
     <p>
-
+      <a href="https://msdn.microsoft.com/fr-fr/library/windows/desktop/microsoft.directx_sdk.reference.xinputgetstate(v=vs.85).aspx">XInputGetState</a>
     </p>
     <pre class="prettyprint lang-cpp">
 internal void
