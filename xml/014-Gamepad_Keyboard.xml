@@ -86,7 +86,8 @@ Win32LoadXInput(void){
                 }
                 
                 // Poll message from controller
-                for(DWORD ControllerIndex = 0; ControllerIndex < XUSER_MAX_COUNT; ControllerIndex++)
+                for(DWORD ControllerIndex = 0;
+                    ControllerIndex < XUSER_MAX_COUNT; ControllerIndex++)
                 {
                     XINPUT_STATE ControllerState;
                     if(XInputGetState(ControllerIndex, &ControllerState) == ERROR_SUCCESS)
